@@ -65,9 +65,6 @@ Masukkan nilai D: **1**
 Persamaan yang mungkin adalah: 10 / 3 = 2 + 1
 ***
 
----------------------------------
----------------------------------
-
 
 ## Bab 2 - Pengulangan
 ---------------------------------
@@ -87,9 +84,6 @@ Masukan nilai N :2
 Teks aslinya adalah "i love you!"
 ```
 
------------------------
------------------------
-------
 
 ## Bab 3 - Fungsi dan Prosedur
 ---------------------------------
@@ -145,8 +139,7 @@ Masukkan koefisien x^0 : **2**
 Maka hasil turunannya adalah 3x^2 + 10x^0 + 2x^0
 ***
 
------------------
------------------
+
 ## Bab 5 - Matriks dan File Eksternal
 
 ### Problem 8
