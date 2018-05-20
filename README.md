@@ -27,7 +27,6 @@ Petunjuk:
 ------
 
 ## Bab 1 - Percabangan
----------------------------------
 ### Problem 10
 
 Tuan Vin sedang mengetik chat dan baru belajar emoticon. Emoticon dapat digunakan untuk mengekspreikan perasaan dalam chat. Karena baru belajar, jumlah emoticon yang diketahuinya hanya sedikit. Berikut adalah emoticon yang diketahui Tuan Vin:
@@ -51,11 +50,8 @@ Tuan Vin sedang tertawa
 ***
 
 ---------------------------------
----------------------------------
-
 
 ## Bab 2 - Pengulangan
----------------------------------
 ### Problem 9
 
 
@@ -83,11 +79,8 @@ Pedagang terdekat adalah pedagang 2.
 Hint : buatlah fungsi yang menghitung jarak 2 titik.
 
 -----------------------
------------------------
-------
 
 ## Bab 3 - Fungsi dan Prosedur
----------------------------------
 ### Problem 8
 
 Diberikan 2 bilangan positif a dan b. Tentukan nilai a^b!
@@ -107,7 +100,6 @@ Masukan B : **10**
 ------
 
 ## Bab 4 - *Array*
----------------------------------
 ### Problem 7
 
 Tiga kerajaan Wei, Wu ,dan Shu sedang membuat perjanjian untuk membagikan kekayaan yang mereka miliki untuk kerajaan kecil lain. Namun, agar tidak rugi, mereka hanya membagikan kekayaan yang mereka semua miliki. Untuk itu mereka membutuhkan program yang dapat menentukan mana saja kekayaan yang tiga negara tersebut miliki
@@ -191,9 +183,8 @@ Ketiga negara tersebut tidak memiliki kekayaan yang sama
 ***
 
 -----------------
------------------
+
 ## Bab 5 - Matriks dan File Eksternal
----------------------------------
 ### Problem 6
 
 Pearl sedang belajar matriks di sekolahnya. Hari ini, Ibu Puff menerangkan mengenai *orthogonal matrix*. *Orthogonal matrix* merupakan suatu jenis matriks persegi `A` yang memenuhi sifat `A`x`(A^t)` = `I`, dimana `(A^t)` merupakan matriks transpose dari `A`, dan `I` adalah matriks identitas. Ibu Puff memberikan PR kepada murid-muridnya untuk menentukan apakah suatu matriks adalah *orthogonal matrix* atau bukan. Pearl meminta Anda sebagai *programmer* kepercayaan keluarga Krab untuk membantunya menyelesaikan permasalahan tersebut.
