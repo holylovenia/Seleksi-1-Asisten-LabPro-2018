@@ -1,3 +1,4 @@
+#Bab 2 Problem 9
 #Pembuat : Kurniandha Sukma Yunastrian (13516106)
 
 from math import sqrt
@@ -12,9 +13,13 @@ X1 = int(input('X :'))
 Y1 = int(input('Y :'))
 
 max_idx = int(input('Masukan banyaknya percetakan :'))
+
+#jarak_skrg untuk menampung jarak mahasiswa ke percetakan yang sedang diproses
 jarak_skrg = -1
+#nomor_prctkn untuk menampung nomor percetakan terdekat
 nomor_prctkn = 0
 
+#Looping menerima masukan sekaligus memilih percetakan dengan jarak terdekat
 for i in range(int(max_idx)) :
     print('Masukan posisi percetakan '+str(i+1))
     X2 = int(input('X :'))

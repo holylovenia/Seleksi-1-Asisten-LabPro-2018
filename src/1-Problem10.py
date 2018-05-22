@@ -1,3 +1,4 @@
+#Bab 1 Problem 10
 #Pembuat : Kurniandha Sukma Yunastrian (13516106)
 
 #Fungsi switch yang mengembalikan keterangan dari emotikon masukan

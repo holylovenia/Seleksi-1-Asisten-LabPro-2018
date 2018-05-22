@@ -41,6 +41,10 @@ def cek_orthogonal (matriks) :
     check = 0
     i=0
     j=0
+
+    #Proses pengecekan
+    #Jika elemen di baris dan kolom yang sama tidak bernilai 1, maka bukan matriks orthogonal
+    #Jika elemen di baris dan kolom yang berbeda tidak bernilai 0, maka bukan matriks orthogonal
     while ((i<len(matriks)) and (check == 0)) :
         if (i == j) :
             if (hasil[i][j] != 1) :
