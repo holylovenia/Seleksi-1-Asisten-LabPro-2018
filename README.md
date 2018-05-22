@@ -106,19 +106,19 @@ int main(){
 	cin>>nilai;
 	
 	cout<<nama<<" mendapat nilai ";
-	if(nilai >= 81){		/* nilai >= 81 dan nilai <= 100 */
+	if(nilai >= 81){       /* nilai >= 81 dan nilai <= 100 */
 		cout<<"A";
 	}
-	else if(nilai >= 61){	/* nilai >= 61 dan nilai <= 80 */
+	else if(nilai >= 61){  /* nilai >= 61 dan nilai <= 80 */
 		cout<<"B";
 	}
-	else if(nilai >= 41){	/* nilai >= 41 dan nilai <= 60 */
+	else if(nilai >= 41){  /* nilai >= 41 dan nilai <= 60 */
 		cout<<"C";
 	}
-	else if(nilai >= 21){	/* nilai >= 21 dan nilai <= 40 */
+	else if(nilai >= 21){  /* nilai >= 21 dan nilai <= 40 */
 		cout<<"D";
 	}
-	else{					/* nilai >= 0 dan nilai <= 20 */
+	else{                  /* nilai >= 0 dan nilai <= 20 */
 		cout<<"E";
 	}
 	cout<<endl;
@@ -157,6 +157,41 @@ Total mahasiswa yang tidak lulus = 0
 ```
 
 -----------------------
+### Solusi
+
+```
+#include <iostream>
+
+using namespace std;
+
+int main(){
+	/* Kamus */
+	int banyak_mahasiswa, nilai_mahasiswa;
+	int banyak_lulus, banyak_tidak_lulus;
+	
+	/* Algoritma */
+	banyak_lulus = 0;
+	banyak_tidak_lulus = 0;
+	cout<<"Banyak mahasiswa :";
+	cin>>banyak_mahasiswa;
+	
+	for(int i=1;i<=banyak_mahasiswa;++i){
+		cout<<"Nilai anak ke-"<<i<<" :";
+		cin>>nilai_mahasiswa;
+		if(nilai_mahasiswa>=60){
+			banyak_lulus++;
+		}
+		else{
+			banyak_tidak_lulus++;
+		}
+	}
+	
+	cout<<"Total mahasiswa yang lulus = "<<banyak_lulus<<endl;
+	cout<<"Total mahasiswa yang tidak lulus = "<<banyak_tidak_lulus<<endl;
+	return 0;
+}
+```
+
 -----------------------
 ------
 
@@ -212,6 +247,47 @@ Bilangan komposit diantara 10 sampai 25 adalah:
 ***
 
 ------------------
+### Solusi
+```
+#include <iostream>
+
+using namespace std;
+
+bool komposit(int nilai){
+	/* Algoritma */
+	for(int pem=2;pem<nilai;++pem){
+		if(nilai%pem==0){
+			return true;
+		}
+	}
+	return false;
+}
+
+int main(){
+	/* Kamus */
+	int A, B, tmp;
+	
+	/* Algoritma */
+	cout<<"Masukkan nilai A : ";
+	cin>>A;
+	cout<<"Masukkan nilai B : ";
+	cin>>B;
+	if(A>B){   /* Jika nilai A lebih besar dari B, ditukar nilainya */
+		tmp = A;
+		A = B;
+		B = tmp;
+	}
+	
+	cout<<"Bilangan komposit diantara "<<A<<" sampai "<<B<<" adalah:"<<endl;
+	for(int nilai=A+1;nilai<B;++nilai){
+		if(komposit(nilai)){
+			cout<<nilai<<endl;
+		}
+	}
+	return 0;
+}
+```
+
 -----------------
 ------
 
