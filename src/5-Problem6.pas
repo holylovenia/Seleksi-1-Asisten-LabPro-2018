@@ -8,8 +8,8 @@ type
 // dan mengembalikan matriks
 procedure parseFile(var data : TextFile; var n : integer; var output : matrix);
 var
-    s : string;
-    i, j : integer;
+    s : string;     // String temporary, untuk membaca tiap line pada file
+    i, j : integer; // Variabel iterasi
 begin
     readln(data, s);
     n := StrToInt(s);
@@ -33,8 +33,8 @@ end;
 // berukuran n x n
 function identity(n : integer) : matrix;
 var
-    res : matrix;
-    i, j : integer;
+    res : matrix;   // Matriks hasil
+    i, j : integer; // Variabel iterasi
 begin
     setLength(res, n, n);
     for i := 0 to n-1 do
@@ -48,8 +48,8 @@ end;
 // dari sebuah matrix masukan
 function transpose(data : matrix; n : integer) : matrix;
 var
-    output : matrix;
-    i, j : integer;
+    output : matrix;    // Matriks hasil
+    i, j : integer;     // Variabel iterasi
 begin
     setLength(output, n, n);
     for i := 0 to n-1 do begin
@@ -87,11 +87,11 @@ end;
 // Fungsi mengembalikan boolean
 function isOrthogonal(data : matrix; n : integer) : boolean;
 var
-    i, j : integer;             // Variabel iterasi
     transposeMatrix : matrix;   // Matriks transpose
     productMatrix : matrix;     // Matriks hasil dot product
     identityMatrix : matrix;    // Matriks identitas
-    res : boolean;              // Hasil
+    res : boolean;              // Hasil (orthogonal / tidak)
+    i, j : integer;             // Variabel iterasi
 begin
     setLength(transposeMatrix, n, n);
     transposeMatrix := transpose(data, n);

@@ -7,6 +7,7 @@ var
     x : longint;    // Angka yang akan dipangkatkan
 // Algoritma
 begin
+    // Inisialisasi
     res := 1;
     pow := b;
     x := a;
