@@ -1,87 +1,97 @@
-#Author : Kurniandha Sukma Yunastrian (13516106)
+#Pembuat : Kurniandha Sukma Yunastrian (13516106)
 
-#Main Program
+#Fungsi untuk mengurutkan negara dari yang terkaya ke yang termiskin
+def Posisi(min_kaya,max_kaya) :
+    if (min_kaya == 0) :
+        negara1 = Wei
+        if (max_kaya == 1) :
+            negara2 = Shu
+            negara3 = Wu
+        else :
+            negara2 = Wu
+            negara3 = Shu
+    elif (min_kaya == 1) :
+        negara1 = Wu
+        if (max_kaya == 0) :
+            negara2 = Shu
+            negara3 = Wei
+        else :
+            negara2 = Wei
+            negara3 = Shu
+    else :
+        negara1 = Shu
+        if (max_kaya == 1) :
+            negara2 = Wei
+            negara3 = Wu
+        else :
+            negara2 = Wu
+            negara3 = Wei
+    return [negara1,negara2,negara3]
+
+#Program Utama
 Wei = []
 Wu = []
 Shu = []
 
-wealth = int(input('Masukkan jumlah kekayaan negara Wei : '))
+kekayaan = int(input('Masukkan jumlah kekayaan negara Wei : '))
 print('Masukkan kekayaan negara Wei :')
-for i in range(wealth) :
+for i in range(kekayaan) :
     x = input()
     Wei.append(x)
-    min_wealth = wealth
-    min_nation = 0
-    max_wealth = wealth
-    max_nation = 0
+    min_kekayaan = kekayaan
+    negara_termiskin = 0
+    max_kekayaan = kekayaan
+    negara_terkaya = 0
     
-wealth = int(input('Masukkan jumlah kekayaan negara Wu : '))
+kekayaan = int(input('Masukkan jumlah kekayaan negara Wu : '))
 print('Masukkan kekayaan negara Wu :')
-for i in range(wealth) :
+for i in range(kekayaan) :
     x = input()
     Wu.append(x)
-    if (min_wealth > wealth) :
-        min_wealth = wealth
-        min_nation = 1
-    if (max_wealth < wealth) :
-        max_wealth = wealth
-        max_nation = 1
+    if (min_kekayaan > kekayaan) :
+        min_kekayaan = kekayaan
+        negara_termiskin = 1
+    if (max_kekayaan < kekayaan) :
+        max_kekayaan = kekayaan
+        negara_terkaya = 1
     
-wealth = int(input('Masukkan jumlah kekayaan negara Shu : '))
+kekayaan = int(input('Masukkan jumlah kekayaan negara Shu : '))
 print('Masukkan kekayaan negara Shu :')
-for i in range(wealth) :
+for i in range(kekayaan) :
     x = input()
     Shu.append(x)
-    if (min_wealth > wealth) :
-        min_wealth = wealth
-        min_nation = 2
-    if (max_wealth < wealth) :
-        max_wealth = wealth
-        max_nation = 2
+    if (min_kekayaan > kekayaan) :
+        min_kekayaan = kekayaan
+        negara_termiskin = 2
+    if (max_kekayaan < kekayaan) :
+        max_kekayaan = kekayaan
+        negara_terkaya = 2
 
-if (min_nation == 0) :
-    nation1 = Wei
-    if (max_nation == 1) :
-        nation2 = Shu
-        nation3 = Wu
-    else :
-        nation2 = Wu
-        nation3 = Shu
-elif (min_nation == 1) :
-    nation1 = Wu
-    if (max_nation == 0) :
-        nation2 = Shu
-        nation3 = Wei
-    else :
-        nation2 = Wei
-        nation3 = Shu
-else :
-    nation1 = Shu
-    if (max_nation == 1) :
-        nation2 = Wei
-        nation3 = Wu
-    else :
-        nation2 = Wu
-        nation3 = Wei
+negara = Posisi(negara_termiskin,negara_terkaya)
+negara1 = negara[0]
+negara2 = negara[1]
+negara3 = negara[2]
         
-same_check = 0
-for i in range (min_wealth) :
-    check = 0
+berhasil = False
+for i in range (min_kekayaan) :
+    cek = 0
     j = 0
-    while ((check == 0) and (j != len(nation2))) :
-        if (nation1[i] == nation2[j]) :
-            check = 1
-        j += 1
-    if (check == 1) :
-        j = 0
-        while ((check == 1) and (j != len(nation3))) :
-            if (nation1[i] == nation3[j]) :
-                check = 2
-                if (same_check == 0) :
-                    print('Ketiga negara tersebut harus membagikan :')
-                same_check = 1
-                print(nation1[i])
+    while ((cek == 0) and (j != len(negara2))) :
+        if (negara1[i] == negara2[j]) :
+            cek = 1
+        else :
             j += 1
+    if (cek == 1) :
+        j = 0
+        while ((cek == 1) and (j != len(negara3))) :
+            if (negara1[i] == negara3[j]) :
+                cek = 2
+                if (berhasil == False) :
+                    print('Ketiga negara tersebut harus membagikan :')
+                berhasil = True
+                print(negara1[i])
+            else :
+                j += 1
             
-if (same_check == 0) :
+if (berhasil == False) :
     print('Ketiga negara tersebut tidak memiliki kekayaan yang sama')

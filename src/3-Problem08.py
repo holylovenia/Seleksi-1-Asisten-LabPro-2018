@@ -1,13 +1,19 @@
-#Author : Kurniandha Sukma Yunastrian (13516106)
+#Pembuat : Kurniandha Sukma Yunastrian (13516106)
 
-#Function for calculate a^b
-def power(a,b) :
-    hasil = int(a)
-    for i in range(int(b)-1) :
-        hasil *= int(a)
+#Fungsi untuk menghitung a^b
+def pangkat(a,b) :
+    hasil = a
+    while (b % 2 == 0) :
+        hasil *= hasil
+        b /= 2
+    a = hasil
+    while (b>1) :
+        hasil *= a
+        b -= 1
+            
     return str(hasil)
 
-#Main Program
-A = input('Masukan A:')
-B = input('Masukan B:')
-print(A+'^'+B+' = '+power(A,B))
+#Program Utama
+A = int(input('Masukan A:'))
+B = int(input('Masukan B:'))
+print(str(A)+'^'+str(B)+' = '+pangkat(A,B))

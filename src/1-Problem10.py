@@ -1,15 +1,15 @@
-#Author : Kurniandha Sukma Yunastrian (13516106)
+#Pembuat : Kurniandha Sukma Yunastrian (13516106)
 
-#Function switch that return expression from input emoticon
-def emoticon(x) :
+#Fungsi switch yang mengembalikan keterangan dari emotikon masukan
+def emotikon(x) :
     return {
         ':)' : 'senyum',
         ':(' : 'sedih',
         ':D' : 'tertawa',
         ":'(" : 'menangis',
         ':))' : 'ROTFL'
-    }.get(x,'tidak diketahui')
+    }.get(x,'tidak diketahui') #Untuk masukan selain yang telah dispesifikasikan
 
-#Main Program
-x = input('Masukan emoticon: ')
-print('Tuan Vin sedang '+emoticon(x))
+#Program Utama
+x = input('Masukan emotikon: ')
+print('Tuan Vin sedang '+emotikon(x))

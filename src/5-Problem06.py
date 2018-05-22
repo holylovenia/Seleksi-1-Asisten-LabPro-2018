@@ -1,31 +1,31 @@
-#Author : Kurniandha Sukma Yunastrian (13516106)
+#Pembuat : Kurniandha Sukma Yunastrian (13516106)
 
-def readFile (fileName) :
-    file = open(fileName,'r')
+#Fungsi untuk membaca matriks dari file
+def readFile (namaFile) :
+    file = open(namaFile,'r')
     n = int(file.read(1))
-    matrix = [[0 for i in range(n)] for j in range(n)]
+    matriks = [[0 for i in range(n)] for j in range(n)]
     file.read(1)
     for i in range(int(n)) :
         for j in range (int(n)) :
-            matrix[i][j] = file.read(1)
+            matriks[i][j] = file.read(1)
             file.read(1)
     file.close()
     print('matriks loaded!')
-    return matrix
+    return matriks
 
-def transpose (matrix) :
-    temp = [[0 for i in range(len(matrix))] for j in range(len(matrix))]
-    for i in range(len(matrix)) :
-        for j in range(len(matrix)) :
-            temp[i][j] = matrix[j][i]
+#Fungsi untuk menentukan transpose dari matriks
+def transpose (matriks) :
+    temp = [[0 for i in range(len(matriks))] for j in range(len(matriks))]
+    for i in range(len(matriks)) :
+        for j in range(len(matriks)) :
+            temp[i][j] = matriks[j][i]
             
     return temp
 
-def multiply (mat1,mat2) :
-    temp = [[0 for i in range(len(matrix))] for j in range(len(matrix))]
-    for i in range(len(temp)) :
-        for j in range(len(temp)) :
-            temp[i][j] = 0
+#Fungsi untuk mengalikan matriks
+def kaliMatriks (mat1,mat2) :
+    temp = [[0 for i in range(len(mat1))] for j in range(len(mat2))]
             
     for i in range(len(mat1)) :
         for j in range(len(mat2)) :
@@ -34,20 +34,21 @@ def multiply (mat1,mat2) :
                 
     return temp
 
-def orthogonal_check (matrix) :
-    mat_trans = transpose(matrix)
-    result = multiply(matrix,mat_trans)
+#Fungsi untuk mengecek apakah matriks orthogonal atau bukan
+def cek_orthogonal (matriks) :
+    mat_trans = transpose(matriks)
+    hasil = kaliMatriks(matriks,mat_trans)
     check = 0
     i=0
     j=0
-    while ((i<len(matrix)) and (check == 0)) :
+    while ((i<len(matriks)) and (check == 0)) :
         if (i == j) :
-            if (result[i][j] != 1) :
+            if (hasil[i][j] != 1) :
                 check = 1
         else :
-            if (result[i][j] != 0) :
+            if (hasil[i][j] != 0) :
                 check = 1
-        if (j == len(matrix)-1) :
+        if (j == len(matriks)-1) :
             i += 1
             j = 0
         else :
@@ -57,6 +58,6 @@ def orthogonal_check (matrix) :
     else :
         return 'No'
 
-#Main Program
-matrix = readFile('matriks.txt')
-print (orthogonal_check(matrix))
+#Program Utama
+matriks = readFile('matriks.txt')
+print (cek_orthogonal(matriks))
