@@ -1,10 +1,11 @@
 # Seleksi 1 Asisten LabPro 2018
 -----------------------------------
 Pembuat : Kurniandha Sukma Yunastrian (13516106)
------------------------------------
+
+------
 ## Bab 1 - Percabangan
-### Problem 10
-#### Deskripsi Soal
+## Problem 10
+### Deskripsi Soal
 Tuan Vin sedang mengetik chat dan baru belajar emoticon. Emoticon dapat digunakan untuk mengekspreikan perasaan dalam chat. Karena baru belajar, jumlah emoticon yang diketahuinya hanya sedikit. Berikut adalah emoticon yang diketahui Tuan Vin:
 
 
@@ -26,7 +27,7 @@ Tuan Vin sedang tertawa
 ***
 
 #### Source Code
-```
+```python
 #Bab 1 Problem 10
 #Pembuat : Kurniandha Sukma Yunastrian (13516106)
 
@@ -73,7 +74,7 @@ Pedagang terdekat adalah pedagang 2.
 Hint : buatlah fungsi yang menghitung jarak 2 titik.
 
 #### Source Code
-```
+```python
 #Bab 2 Problem 9
 #Pembuat : Kurniandha Sukma Yunastrian (13516106)
 
@@ -124,7 +125,7 @@ Masukan B : **10**
 ***
 
 #### Source Code
-```
+```python
 #Bab 3 Problem 8
 #Pembuat : Kurniandha Sukma Yunastrian (13516106)
 
@@ -235,10 +236,9 @@ Masukkan kekayaan negara Shu :
 **Ternak**
 
 Ketiga negara tersebut tidak memiliki kekayaan yang sama
-***
 
 #### Source Code
-```
+```python
 #Bab 4 Problem 7
 #Pembuat : Kurniandha Sukma Yunastrian (13516106)
 
@@ -387,7 +387,7 @@ Yes
 ```
 
 #### Source Code
-```
+```python
 #Pembuat : Kurniandha Sukma Yunastrian (13516106)
 
 #Fungsi untuk membaca matriks dari file
