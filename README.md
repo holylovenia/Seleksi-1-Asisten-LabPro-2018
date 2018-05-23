@@ -27,7 +27,7 @@ Tuan Vin sedang tertawa
 ***
 
 #### Source Code
-[Referensi] (https://github.com/yunastrian/Seleksi-1-Asisten-LabPro-2018/blob/master/src/1-Problem10.py) 
+[Referensi](https://github.com/yunastrian/Seleksi-1-Asisten-LabPro-2018/blob/master/src/1-Problem10.py) 
 ```python
 #Bab 1 Problem 10
 #Pembuat : Kurniandha Sukma Yunastrian (13516106)
@@ -46,10 +46,11 @@ def emotikon(x) :
 x = input('Masukan emotikon: ')
 print('Tuan Vin sedang '+emotikon(x))
 ```
-#### Penjelasan
+#### Penjelasan  
 Program menerima masukan dari pengguna berupa emotikon. Lalu, masukan tersebut dimasukkan ke dalam fungsi **emotikon** lalu dicek keterangan yang sesuai dengan masukan.
 Jika ada emotikon yang sesuai dengan masukan, maka program akan mengeluarkan keterangan sesuai emotikon. Jika tidak ada yang sesuai, maka program akan mengeluarkan "tidak diketahui".
-Fungsi **emotikon** bekerja seperti konsep percabangan *case of*. <br/>
+Fungsi **emotikon** bekerja seperti konsep percabangan *case of*. 
+
 ---------------------------------
 
 ## Bab 2 - Pengulangan
@@ -79,7 +80,7 @@ Pedagang terdekat adalah pedagang 2.
 Hint : buatlah fungsi yang menghitung jarak 2 titik.
 
 #### Source Code
-[Referensi] (https://github.com/yunastrian/Seleksi-1-Asisten-LabPro-2018/blob/master/src/2-Problem09.py)
+[Referensi](https://github.com/yunastrian/Seleksi-1-Asisten-LabPro-2018/blob/master/src/2-Problem09.py)
 ```python
 #Bab 2 Problem 9
 #Pembuat : Kurniandha Sukma Yunastrian (13516106)
@@ -114,11 +115,13 @@ for i in range(int(max_idx)) :
 print ('Pedagang terdekat adalah pedagang '+str(nomor_prctkn)+'.')
 ```
 #### Penjelasan
+
 Program menerima masukan dari pengguna berupa koordinat tempat mahasiswa berada lalu jumlah percetakan sekaligus koordinat percetakan tersebut.
 Selanjutnya program akan menentukan percetakan terdekat dari lokasi mahasiswa saat ini. Proses mencari percetakan terdekat dilakukan saat proses memasukkan koordinat percetakan.
 Inisiasi dahulu percetakan terdekat adalah percetakan ke-1. Lalu, setelah memasukkan koordinat percetakan ke-2, akan dihitung jarak percetakan ke-2 dari lokasi mahasiswa.
 Jika jarak percetakan ke-2 lebih dekat dari percetakan ke-1, maka ubah percetakan terdekat menjadi percetakan ke-2. Langkah tersebut dilakukan sampai percetakan terkahir.
-Hal ini dapat meminimasi proses perbandingan yang terjadi sehingga program lebih efisien. <br/>
+Hal ini dapat meminimasi proses perbandingan yang terjadi sehingga program lebih efisien. 
+
 -----------------------
 
 ## Bab 3 - Fungsi dan Prosedur
@@ -137,7 +140,7 @@ Masukan B : **10**
 ***
 
 #### Source Code
-[Referensi] (https://github.com/yunastrian/Seleksi-1-Asisten-LabPro-2018/blob/master/src/3-Problem08.py)
+[Referensi](https://github.com/yunastrian/Seleksi-1-Asisten-LabPro-2018/blob/master/src/3-Problem08.py)
 ```python
 #Bab 3 Problem 8
 #Pembuat : Kurniandha Sukma Yunastrian (13516106)
@@ -254,7 +257,7 @@ Masukkan kekayaan negara Shu :
 Ketiga negara tersebut tidak memiliki kekayaan yang sama
 
 #### Source Code
-[Referensi] (https://github.com/yunastrian/Seleksi-1-Asisten-LabPro-2018/blob/master/src/4-Problem07.py)
+[Referensi](https://github.com/yunastrian/Seleksi-1-Asisten-LabPro-2018/blob/master/src/4-Problem07.py)
 ```python
 #Bab 4 Problem 7
 #Pembuat : Kurniandha Sukma Yunastrian (13516106)
@@ -380,8 +383,10 @@ Selanjutnya, program akan mengurutkan negara dari yang memiliki **jumlah kekayaa
 Untuk meminimasi proses, pengecekan kekayaan dilakukan dari yang memiliki **jumlah kekayaan** terkecil. 
 Selanjutnya, kekayaan negara tersebut dicek di negara yang memiliki **jumlah kekayaan** terkecil kedua.
 1. Jika ditemukan kekayaan yang sama, maka dilanjutkan pengecekan di negara yang memiliki **jumlah kekayaan** terbesar.
-2. Jika tidak ditemukan kekayaan yang sama, maka pengecekan dilanjutkan ke **kekayaan** selanjutnya dari negara dengan **jumlah kekayaan** terkecil. <br/>
-Langkah tersebut dilakukan hingga semua kekayaan di negara dengan **jumlah kekayaan** terkecil dicek. <br/>
+2. Jika tidak ditemukan kekayaan yang sama, maka pengecekan dilanjutkan ke **kekayaan** selanjutnya dari negara dengan **jumlah kekayaan** terkecil. <br><br/>
+
+Langkah tersebut dilakukan hingga semua kekayaan di negara dengan **jumlah kekayaan** terkecil dicek. 
+
 -----------------
 
 ## Bab 5 - Matriks dan File Eksternal
@@ -411,7 +416,7 @@ Yes
 ```
 
 #### Source Code
-[Referensi] (https://github.com/yunastrian/Seleksi-1-Asisten-LabPro-2018/blob/master/src/5-Problem06.py)
+[Referensi](https://github.com/yunastrian/Seleksi-1-Asisten-LabPro-2018/blob/master/src/5-Problem06.py)
 ```python
 #Pembuat : Kurniandha Sukma Yunastrian (13516106)
 
