@@ -80,7 +80,7 @@ N! = 720
 </pre>
 
 
-### Bab 4 - *Array*
+### Bab 4 - Array
 
 #### Problem 9
 
