@@ -73,11 +73,11 @@ Buatlah sebuah program yang menghitung nilai faktorial dari sebuah bilangan bula
 
 
 **Format Input & Output (input di-*bold*)**
-***
-Masukan N: **6**
+<pre>
+Masukan N: <b>6</b>
 
 N! = 720
-***
+</pre>
 
 
 ### Bab 4 - *Array*
@@ -87,30 +87,31 @@ N! = 720
 Julia baru saja membolos kelas kalkulus. Padahal saat itu baru saja diajarkan tentang turunan persamaan matematika biasa. Sebagai teman yang baik, buatlah sebuah program yang dapat menurunkan persamaan matematika
 
 **Format Input & Output (input di-*bold*)**
-***
-Masukkan pangkat paling besar : **2**
+<pre>
+Masukkan pangkat paling besar : <b>2</b>
 
-Masukkan koefisien x^2 : **5**
+Masukkan koefisien x^2 : <b>5</b>
 
-Masukkan koefisien x^1 : **2**
+Masukkan koefisien x^1 : <b>2</b>
 
-Masukkan koefisien x^0 : **2**
+Masukkan koefisien x^0 : <b>2</b>
 
 Maka hasil turunannya adalah 10x^1 + 2x^0
-***
-***
+</pre>
+
+<pre>
 Masukkan pangkat paling besar : **3**
 
-Masukkan koefisien x^3 : **1**
+Masukkan koefisien x^3 : <b>1</b>
 
-Masukkan koefisien x^2 : **5**
+Masukkan koefisien x^2 : <b>5</b>
 
-Masukkan koefisien x^1 : **2**
+Masukkan koefisien x^1 : <b>2</b>
 
-Masukkan koefisien x^0 : **2**
+Masukkan koefisien x^0 : <b>2</b>
 
 Maka hasil turunannya adalah 3x^2 + 10x^0 + 2x^0
-***
+</pre>
 
 
 ### Bab 5 - Matriks dan File Eksternal
