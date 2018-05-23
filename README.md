@@ -46,10 +46,10 @@ def emotikon(x) :
 x = input('Masukan emotikon: ')
 print('Tuan Vin sedang '+emotikon(x))
 ```
-#### Penjelasan <br>
+#### Penjelasan
 Program menerima masukan dari pengguna berupa emotikon. Lalu, masukan tersebut dimasukkan ke dalam fungsi **emotikon** lalu dicek keterangan yang sesuai dengan masukan.
 Jika ada emotikon yang sesuai dengan masukan, maka program akan mengeluarkan keterangan sesuai emotikon. Jika tidak ada yang sesuai, maka program akan mengeluarkan "tidak diketahui".
-Fungsi **emotikon** bekerja seperti konsep percabangan *case of*.
+Fungsi **emotikon** bekerja seperti konsep percabangan *case of*. <br/>
 ---------------------------------
 
 ## Bab 2 - Pengulangan
@@ -113,12 +113,12 @@ for i in range(int(max_idx)) :
     
 print ('Pedagang terdekat adalah pedagang '+str(nomor_prctkn)+'.')
 ```
-#### Penjelasan <br>
+#### Penjelasan
 Program menerima masukan dari pengguna berupa koordinat tempat mahasiswa berada lalu jumlah percetakan sekaligus koordinat percetakan tersebut.
 Selanjutnya program akan menentukan percetakan terdekat dari lokasi mahasiswa saat ini. Proses mencari percetakan terdekat dilakukan saat proses memasukkan koordinat percetakan.
 Inisiasi dahulu percetakan terdekat adalah percetakan ke-1. Lalu, setelah memasukkan koordinat percetakan ke-2, akan dihitung jarak percetakan ke-2 dari lokasi mahasiswa.
 Jika jarak percetakan ke-2 lebih dekat dari percetakan ke-1, maka ubah percetakan terdekat menjadi percetakan ke-2. Langkah tersebut dilakukan sampai percetakan terkahir.
-Hal ini dapat meminimasi proses perbandingan yang terjadi sehingga program lebih efisien.
+Hal ini dapat meminimasi proses perbandingan yang terjadi sehingga program lebih efisien. <br/>
 -----------------------
 
 ## Bab 3 - Fungsi dan Prosedur
@@ -380,8 +380,8 @@ Selanjutnya, program akan mengurutkan negara dari yang memiliki **jumlah kekayaa
 Untuk meminimasi proses, pengecekan kekayaan dilakukan dari yang memiliki **jumlah kekayaan** terkecil. 
 Selanjutnya, kekayaan negara tersebut dicek di negara yang memiliki **jumlah kekayaan** terkecil kedua.
 1. Jika ditemukan kekayaan yang sama, maka dilanjutkan pengecekan di negara yang memiliki **jumlah kekayaan** terbesar.
-2. Jika tidak ditemukan kekayaan yang sama, maka pengecekan dilanjutkan ke **kekayaan** selanjutnya dari negara dengan **jumlah kekayaan** terkecil.
-Langkah tersebut dilakukan hingga semua kekayaan di negara dengan **jumlah kekayaan** terkecil dicek.
+2. Jika tidak ditemukan kekayaan yang sama, maka pengecekan dilanjutkan ke **kekayaan** selanjutnya dari negara dengan **jumlah kekayaan** terkecil. <br/>
+Langkah tersebut dilakukan hingga semua kekayaan di negara dengan **jumlah kekayaan** terkecil dicek. <br/>
 -----------------
 
 ## Bab 5 - Matriks dan File Eksternal
