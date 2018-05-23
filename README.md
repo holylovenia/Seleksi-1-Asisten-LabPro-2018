@@ -46,7 +46,7 @@ def emotikon(x) :
 x = input('Masukan emotikon: ')
 print('Tuan Vin sedang '+emotikon(x))
 ```
-#### Penjelasan
+#### Penjelasan <br>
 Program menerima masukan dari pengguna berupa emotikon. Lalu, masukan tersebut dimasukkan ke dalam fungsi **emotikon** lalu dicek keterangan yang sesuai dengan masukan.
 Jika ada emotikon yang sesuai dengan masukan, maka program akan mengeluarkan keterangan sesuai emotikon. Jika tidak ada yang sesuai, maka program akan mengeluarkan "tidak diketahui".
 Fungsi **emotikon** bekerja seperti konsep percabangan *case of*.
@@ -113,7 +113,7 @@ for i in range(int(max_idx)) :
     
 print ('Pedagang terdekat adalah pedagang '+str(nomor_prctkn)+'.')
 ```
-#### Penjelasan
+#### Penjelasan <br>
 Program menerima masukan dari pengguna berupa koordinat tempat mahasiswa berada lalu jumlah percetakan sekaligus koordinat percetakan tersebut.
 Selanjutnya program akan menentukan percetakan terdekat dari lokasi mahasiswa saat ini. Proses mencari percetakan terdekat dilakukan saat proses memasukkan koordinat percetakan.
 Inisiasi dahulu percetakan terdekat adalah percetakan ke-1. Lalu, setelah memasukkan koordinat percetakan ke-2, akan dihitung jarak percetakan ke-2 dari lokasi mahasiswa.
@@ -167,7 +167,7 @@ print(str(A)+'^'+str(B)+' = '+pangkat(A,B))
 #### Penjelasan
 Program akan menerima sebuah bilangan **a** dan **b** lalu menentukan nilai **a^b**.
 Untuk meminimasi proses pemangkatan, akan dicek dahulu nilai **b** termasuk bilangan ganjil atau genap. <br>
-1. Jika **b** adalah bilangan ganjil, maka lakukan operasi a\*a\*...\*a dengan **a** sebanyak **b**. 
+1. Jika **b** adalah bilangan ganjil, maka lakukan operasi **a\*a\*...\*a** dengan **a** sebanyak **b**. 
 2. Jika **b** adalah bilangan genap, maka jumlah operasi dapat dikurangi menjadi **b/2** dengan mengubah **a^b** menjadi **(a\*a)^(b/2)**. Langkah tersebut diulangi hingga nilai **b** bernilai ganjil. Jika nilai **b** sudah bernilai ganjil dan **b != 1**, maka lakukan langkah (1).
 ------------------
 
