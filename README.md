@@ -47,7 +47,7 @@ x = input('Masukan emotikon: ')
 print('Tuan Vin sedang '+emotikon(x))
 ```
 #### Penjelasan  
-Program menerima masukan dari pengguna berupa emotikon. Lalu, masukan tersebut dimasukkan ke dalam fungsi **emotikon** lalu dicek keterangan yang sesuai dengan masukan.
+Program menerima masukan dari pengguna berupa emotikon. Lalu, masukan tersebut dimasukkan ke dalam fungsi **emotikon** lalu dicek emotikon yang sesuai dengan masukan.
 Jika ada emotikon yang sesuai dengan masukan, maka program akan mengeluarkan keterangan sesuai emotikon. Jika tidak ada yang sesuai, maka program akan mengeluarkan "tidak diketahui".
 Fungsi **emotikon** bekerja seperti konsep percabangan *case of*. 
 
@@ -116,10 +116,10 @@ print ('Pedagang terdekat adalah pedagang '+str(nomor_prctkn)+'.')
 ```
 #### Penjelasan
 
-Program menerima masukan dari pengguna berupa koordinat tempat mahasiswa berada lalu jumlah percetakan sekaligus koordinat percetakan tersebut.
+Program menerima masukan dari pengguna berupa **koordinat tempat mahasiswa** berada lalu **jumlah percetakan** sekaligus **koordinat percetakan** tersebut.
 Selanjutnya program akan menentukan percetakan terdekat dari lokasi mahasiswa saat ini. Proses mencari percetakan terdekat dilakukan saat proses memasukkan koordinat percetakan.
 Inisiasi dahulu percetakan terdekat adalah percetakan ke-1. Lalu, setelah memasukkan koordinat percetakan ke-2, akan dihitung jarak percetakan ke-2 dari lokasi mahasiswa.
-Jika jarak percetakan ke-2 lebih dekat dari percetakan ke-1, maka ubah percetakan terdekat menjadi percetakan ke-2. Langkah tersebut dilakukan sampai percetakan terkahir.
+Jika **jarak percetakan ke-2** lebih dekat **dari percetakan ke-1**, maka ubah **percetakan terdekat** menjadi **percetakan ke-2**. Langkah tersebut dilakukan sampai koordinat **percetakan terakhir** dimasukkan.
 Hal ini dapat meminimasi proses perbandingan yang terjadi sehingga program lebih efisien. 
 
 -----------------------
@@ -171,7 +171,7 @@ print(str(A)+'^'+str(B)+' = '+pangkat(A,B))
 Program akan menerima sebuah bilangan **a** dan **b** lalu menentukan nilai **a^b**.
 Untuk meminimasi proses pemangkatan, akan dicek dahulu nilai **b** termasuk bilangan ganjil atau genap. <br>
 1. Jika **b** adalah bilangan ganjil, maka lakukan operasi **a\*a\*...\*a** dengan **a** sebanyak **b**. 
-2. Jika **b** adalah bilangan genap, maka jumlah operasi dapat dikurangi menjadi **b/2** dengan mengubah **a^b** menjadi **(a\*a)^(b/2)**. Langkah tersebut diulangi hingga nilai **b** bernilai ganjil. Jika nilai **b** sudah bernilai ganjil dan **b != 1**, maka lakukan langkah (1).
+2. Jika **b** adalah bilangan genap, maka jumlah operasi dapat dikurangi menjadi **b/2** dengan mengubah **a^b** menjadi **(a\*a)^(b/2)**. Langkah tersebut diulangi hingga nilai **b** bernilai ganjil. Jika nilai **b** sudah bernilai ganjil dan **b != 1**, maka lakukan langkah (1). Jika nilai **b=1**, maka proses berhenti dan hasil dicetak ke layar. 
 ------------------
 
 ## Bab 4 - *Array*
@@ -378,7 +378,7 @@ if (berhasil == False) :
     print('Ketiga negara tersebut tidak memiliki kekayaan yang sama')
 ```
 #### Penjelasan
-Program menerima masukan dari pengguna berupa **jumlah kekayaan** beserta **kekayaan** setiap masing-masing negara yaitu Wei,Wu,Shu.
+Program menerima masukan dari pengguna berupa **jumlah kekayaan** beserta **kekayaan** setiap masing-masing negara yaitu Wei, Wu, Shu.
 Selanjutnya, program akan mengurutkan negara dari yang memiliki **jumlah kekayaan** terbesar hingga terkecil.
 Untuk meminimasi proses, pengecekan kekayaan dilakukan dari yang memiliki **jumlah kekayaan** terkecil. 
 Selanjutnya, kekayaan negara tersebut dicek di negara yang memiliki **jumlah kekayaan** terkecil kedua.
