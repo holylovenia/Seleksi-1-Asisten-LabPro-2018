@@ -18,27 +18,29 @@ Tuan Vin tahu bahwa operator yang mungkin hanya tambah, kurang, kali dan div dan
 
 
 **Format Input & Output (input di-*bold*)**
-***
-Masukkan nilai A: **2**
+<pre>
+Masukkan nilai A: <b>2</b>
 
-Masukkan nilai B: **3**
+Masukkan nilai B: <b>3</b>
 
-Masukkan nilai C: **7**
+Masukkan nilai C: <b>7</b>
 
-Masukkan nilai D: **1**
+Masukkan nilai D: <b>1</b>
 
 Persamaan yang mungkin adalah: 2 * 3 = 7 - 1
-***
-Masukkan nilai A: **10**
+</pre>
 
-Masukkan nilai B: **3**
+<pre>
+Masukkan nilai A: <b>10</b>
 
-Masukkan nilai C: **2**
+Masukkan nilai B: <b>3</b>
 
-Masukkan nilai D: **1**
+Masukkan nilai C: <b>2</b>
+
+Masukkan nilai D: <b>1</b>
 
 Persamaan yang mungkin adalah: 10 / 3 = 2 + 1
-***
+</pre>
 
 
 ### Bab 2 - Pengulangan
