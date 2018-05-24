@@ -78,11 +78,11 @@ begin
 			writeln('Persamaan yang mungkin adalah: ',a,' / ',b,' = ',c,' / ',d);
 		end
 		else
-			writeln('Tidak ada persamaan a op1 b = c op2 d yang memenuhi');
+			writeln('Tidak ada persamaan A op1 B = C op2 D yang memenuhi');
 	end
 	{ Jika tidak ada kemungkinan yang dapat dilakukan, maka diberikan pesan kesalahan }
 	else
 	begin
-		writeln('Tidak ada persamaan a op1 b = c op2 d yang memenuhi');
+		writeln('Tidak ada persamaan A op1 B = C op2 D yang memenuhi');
 	end;
 end.

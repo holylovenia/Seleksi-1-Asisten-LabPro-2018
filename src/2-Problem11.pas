@@ -8,7 +8,8 @@ MAX_LOWER = Ord('z');
 
 var
 input, output : string;
-n, i, asciiValue, max, min: integer;
+n, i, max, min: integer;
+asciiValue : byte;  { menyimpan nilai dari karakter yang sedang diolah dalam bentuk ASCII }
 alphabet : boolean; { menentukan apakah suatu karakter yang dibaca ada dalam alphabet atau tidak }
 begin
 	write('Masukan teks terenkripsi :');

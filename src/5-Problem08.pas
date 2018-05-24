@@ -1,15 +1,22 @@
 program bab5problem8;
 
-
 uses Sysutils;
 
 { deklarasi tipe Tile }
+{ 
+  	Tile berfungsi sebagai satuan kotak dalam board catur yang menyimpan keberadaan benteng dan apakah benteng
+  	tersebut saling serang dengan benteng lain
+}
 type
 	Tile = record       { Struktur data Tile sebagai kotak dalam board catur }
 	bishop : integer;   { Menyimpan keberadaan benteng pada kotak catur. 1 jika ada, 0 jika tidak }
 	checked : boolean;  { Menyimpan apakah tile ini sudah dihitung saling serang jika ada benteng di tile ini }
 end;
 
+{ deklarasi tipe ChessBoard }
+{
+	Representasi kotak catur yang akan diolah. Menyimpan jumlah benteng apda bidak catur dan Matriks of Tile.
+}
 type 
 	ChessBoard = record             { Struktur data ChessBoard sebagai papan catur beserta benteng yang ada }
 	board : array of array of Tile; { Menyimpan keadaan chessboard }
