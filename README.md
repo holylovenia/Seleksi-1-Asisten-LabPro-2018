@@ -263,8 +263,10 @@ MAX_LOWER = Ord('z');
 
 var
 input, output : string;
-n, i, asciiValue, max, min: integer;
+n, i, max, min: integer;
+asciiValue : byte;  { menyimpan nilai dari karakter yang sedang diolah dalam bentuk ASCII }
 alphabet : boolean; { menentukan apakah suatu karakter yang dibaca ada dalam alphabet atau tidak }
+
 begin
 	write('Masukan teks terenkripsi :');
 	readln(input);
@@ -314,6 +316,19 @@ end.
 ```
 
 #### Penjelasan Solusi
+Untuk mengerjakan soal ini, akan dilakukan pengulangan untuk setiap huruf pada teks. Setiap pengulangan, teks yang berupa huruf alphabet (A-Z, a-z) akan diubah menjadi angka urutan abjadnya (A = 1, Z = 26, a = 1, z = 26). Setelah itu, nilai dari angka tersebut akan dikurangi dengan nilai masukan N. Jika setelah dikurang nilainya menjadi di atas 26 atau kurang dari satu (di luar range alphabet), maka nilai tersebut akan dikembalikan dalam range tersebut. Setelah itu, nilai tersebut diubah kembali ke dalam alphabet sesuai dengan kapitalisasi hurufnya.
+
+Untuk mengatasi kasus huruf kapital dan tidak kapital, dibuat empat konstanta sebagai pembatas minimal dan maksimal nomor karakter dalam komputer untuk huruf kapital dan huruf kecil. Dalam kasus ini, diasumsikan komputer menggunakan penomoran ASCII.
+
+Fungsi bawaan yang dipakai:
+
+- `Function ord (c : Char) : byte;`
+
+Mengembalikan nilai ASCII dari karakter c.
+
+- `function chr(b: byte): char;`
+
+Mengembalikan char yang mempunyai nilai ASCII b.
 
 ---
 
@@ -352,6 +367,25 @@ end.
 ```
 
 #### Penjelasan Solusi
+
+Untuk menyelesaikan permasalahan penghitungan faktorial, akan dibuat suatu fungsi rekursif dengan spesifikasi sebagai berikut
+
+```Pascal
+function Factorial(n : longint) : longint;
+{ Mengembalikan nilai n! dalam bentuk long integer untuk memenuhi angka-angka besar }
+```
+
+Fungsi rekursif akan mempunyai basis dan rekurens sebagai berikut
+
+- **BASIS**
+
+Jika nilai n adalah 0 atau satu, akan dikembalikan nilai 1
+
+- **REKURENS**
+
+Jika nilai n lebih dari 1, akan dikembalikan nilai `n * (n-1)!`
+
+Fungsi ini akan dipanggil di program utama untuk dicetak hasilnya.
 
 ---
 
@@ -418,6 +452,19 @@ end.
 
 #### Penjelasan Solusi
 
+Untuk menyelesaikan permasalahan ini, akan dibuat suatu *array* bernama result berukuran n, di mana n adalah derajat dari persamaan yang akan diturunkan dan result[i] menyimpan koefisien dari elemen x pangkat i. Persamaan asli tidak disimpan, tetapi langsung dihitung dan dimasukkan ke dalam result. Untuk menghitung turunan dari fungsi berderajat n, akan digunakan rumus sebagai berikut
+
+```
+for i = n downto 1 do
+   pangkat[i-1] = x * i
+```
+
+Setelah itu, hasil result dicetak dengan algoritma sebagai berikut 
+```
+1. Pada penulisan X^(n-1), jika koefisiennya tidak negatif, tanda '+' tidak perlu ditulis.
+2. Pada penulisan koefisien pangkat lain, jika koefisien negatif, harus didahului ' - '. 
+3. Pada penulisan koefisien pangkat lain, jika koefisien positif, harus didahului '+'.
+```
 ---
 
 ### Bab 5 Problem 8
@@ -585,5 +632,54 @@ end.
 ```
 
 #### Penjelasan Solusi
+
+Untuk menyelesaikan permasalahan ini, pertama-tama akan didefinisikan struktur data dan fungsi yang berfungsi sebagai *parser* dari file `chess.txt` yang berisi dari kondisi board. 
+
+Struktur data yang digunakan adalah `Tile` dan `ChessBoard`. Spesifikasi dari `Tile` adalah sebagai berikut
+
+```Pascal
+{ 
+  Tile berfungsi sebagai satuan kotak dalam board catur yang menyimpan keberadaan benteng dan apakah benteng
+  tersebut saling serang dengan benteng lain
+}
+type
+	Tile = record       { Struktur data Tile sebagai kotak dalam board catur }
+	bishop : integer;   { Menyimpan keberadaan benteng pada kotak catur. 1 jika ada, 0 jika tidak }
+	checked : boolean;  { Menyimpan apakah tile ini sudah dihitung saling serang jika ada benteng di tile ini }
+end;
+```
+
+Spesifikasi dari `ChessBoard` yang merupakan representasi kotak catur adalah sebagai berikut
+
+```Pascal
+{
+	Representasi kotak catur yang akan diolah. Menyimpan jumlah benteng apda bidak catur dan Matriks of Tile.
+}
+type 
+	ChessBoard = record             { Struktur data ChessBoard sebagai papan catur beserta benteng yang ada }
+	board : array of array of Tile; { Menyimpan keadaan chessboard }
+	nBishop : integer;              { Menyimpan jumlah benteng dalam chessboard}
+end;
+```
+
+Fungsi parser mempunyai spesifikasi sebagai berikut
+
+```Pascal
+function ParseChessBoard(): ChessBoard;
+{ Parsing dari file chess.txt ke dalam matrix of Tile }
+```
+
+Fungsi `ParseChessBoard()` akan mengembalikan ChessBoard yang akan diproses untuk mendapatkan jumlah benteng yang tidak saling serang.
+
+Untuk menghitung jumlah dari benteng yang tidak saling serang, langkah yang harus dilakukan adalah sebagai berikut 
+1. Inisiasi nilai `counter = 0`
+2. Periksa salah satu Tile. Periksa apabila suatu Tile mengandung Benteng (misal namanya Tile A).
+3. Jika terdapat Benteng, mulai pencarian untuk seluruh Tile di sebelah kanan dan di bawah Tile A (misal namanya Tile B).
+4. Jika pada salah satu Tile B terdapat benteng, periksa apabila benteng tersebut pernah dihitung saling serang.
+5. Jika Tile B belum pernah ditandai, tandai Tile B, `counter = counter + 1`. Hentikan pencarian pada arah kanan.
+7. Lakukan langkah 3-5 untuk pencarian pada arah ke bawah.
+8. Jika Tile A belum pernah ditandai, tandai Tile A, `counter = counter + 1`.
+9. Lakukan langkah 3-8 untuk semua tile.
+10. `Jumlah benteng yang tidak saling serang = Jumlah benteng - counter`
 
 ---
