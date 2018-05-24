@@ -221,8 +221,53 @@ TIDAK ADA
 Buatlah suatu fungsi yang memeriksa apakah suatu bilangan adalah bilangan palindrome atau bukan.
 
 ### Source Code Solusi
+```Pascal
+program bab3_problem9;
+var
+    a,b,i:longint;
+    found: boolean;
+
+function isPalindrom(num:longint): boolean;
+var
+    temp, reverse: longint;
+begin
+    temp := num;
+    reverse := 0;
+    while(temp <> 0) do
+    begin
+        reverse := reverse + (temp mod 10);
+        temp := temp div 10;
+        if (temp <> 0) then
+            reverse := reverse*10;
+    end;
+    
+    isPalindrom := num = reverse;
+end;
+
+begin
+    write('Masukkan nilai range bilangan A dan B : ');
+    readln(a, b);
+
+    found := false;
+    for i := a to b do
+    begin
+        if isPalindrom(i) then
+        begin
+            writeln(i);
+            found := true;
+        end;
+    end;
+
+    if not found then
+        writeln('TIDAK ADA');
+end.
+```
 
 ### Pembahasan Solusi
+Pertama-tama, buat terlebih dahulu fungsi untuk mencari apakah suatu angka palindrom atau tidak. algoritma fungsi nya adalah sebagai berikut.
+- Tentukan angka yang merupakan reverse dari angka yang ingin kita cek. gunakan mod dan div
+- Cek apakah angka yang sudah di reverse tersebut sama dengan angka yang kita cari atau tidak. Jika sama, maka palindrom, jika tidak, maka bukan palindrom.
+Pada program utama, pertama-tama terima masukan longint A dan B, kemudian lakukan perulangan dari A dan B dan cek setiap angka nya apakah palindrom atau bukan, jika palindrom, print angka tersebut ke layar. Jika tidak ada angka palindrom, print 'TIDAK ADA'
 
 ## Bab 4 *Array* - Problem 8
 ### Deskripsi Soal
