@@ -97,7 +97,7 @@ begin
 end.
 ```
 ### Pembahasan Solusi
-
+Pertama-tama, input disimpan dulu dalam matriks karakter berukuran 3x3. Setelah itu, enumerasi semua kemungkinan menang (ada 8 kemungkinan posisi menang) dengan menggunakan percabangan (if-else atau menggunakan case). Kondisi else dari percabangan itu adalah ketika tidak ada pemain yang menang.
 
 ## Bab 2 Pengulangan - Problem 10
 ### Deskripsi Soal
