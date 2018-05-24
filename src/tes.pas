@@ -1,6 +1,15 @@
 program tes;
+uses sysutils;
 var
-    arr: array [3] of integer = (1,2,3);
+    a,b,c:integer;
+    fin: textfile;
+    line: string;
 begin
+    assign(fin,'tes.txt');
+    reset(fin);
     
+    read(fin, a);
+    read(fin, b);
+    read(fin, c);
+    writeln(a,b,c);
 end.
