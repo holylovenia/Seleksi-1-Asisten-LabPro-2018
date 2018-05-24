@@ -267,6 +267,7 @@ end.
 Pertama-tama, buat terlebih dahulu fungsi untuk mencari apakah suatu angka palindrom atau tidak. algoritma fungsi nya adalah sebagai berikut.
 - Tentukan angka yang merupakan reverse dari angka yang ingin kita cek. gunakan mod dan div
 - Cek apakah angka yang sudah di reverse tersebut sama dengan angka yang kita cari atau tidak. Jika sama, maka palindrom, jika tidak, maka bukan palindrom.
+
 Pada program utama, pertama-tama terima masukan longint A dan B, kemudian lakukan perulangan dari A dan B dan cek setiap angka nya apakah palindrom atau bukan, jika palindrom, print angka tersebut ke layar. Jika tidak ada angka palindrom, print 'TIDAK ADA'
 
 ## Bab 4 *Array* - Problem 8
