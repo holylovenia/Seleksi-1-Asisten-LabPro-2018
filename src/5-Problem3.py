@@ -44,6 +44,7 @@ def solve(mat):
     for i in range(len(mat)):
         ar.append(mat[i][len(mat) - 1 - i])
     liCheck.append(ar)
+    # check element in liCheck.
     for line in liCheck:
         N = len(line)
         x = 0
@@ -58,8 +59,6 @@ def solve(mat):
         elif o == N:
             return 1
     return 0
-
-
 
 if __name__ == '__main__':
     main()
