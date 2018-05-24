@@ -119,9 +119,66 @@ Bilangan tertinggi kedua adalah 34
 ---------------------------------
 
 ### Source Code Solusi
+```Pascal
+program bab2_problem10;
+var
+    max, max2, min, min2, n, i, val: integer;
+begin
+    write('Masukan jumlah bilangan :');
+    readln(n);
+    if n > 0 then
+        write('Bilangan ke-1 :');
+        readln(val);
+        max := val;
+        min := val;
+        write('Bilangan ke-2 :');
+        readln(val);
+        if val > max then
+        begin
+            max2 := max;
+            max := val;
+        end
+        else begin
+            max2 := val;
+        end;
+        if val < min then
+        begin
+            min2 := min;
+            min := val;
+        end
+        else begin
+            min2 := val;
+        end;
+    for i := 3 to n do
+    begin
+        write('Bilangan ke-', i, ' :');
+        readln(val);
+        if val > max then
+        begin
+            max2 := max;
+            max := val;
+        end 
+        else if val > max2 then 
+        begin
+            max2 := val;
+        end;
+        if val < min then
+        begin
+            min2 := min;
+            min := val;
+        end
+        else if val < min2 then
+        begin
+            min2 := val;
+        end;
+    end;
+    writeln('Bilangan terendah kedua adalah ', min2);
+    writeln('Bilangan tertinggi kedua adalah ', max2);
+end.
+```
 
 ### Pembahasan Solusi
-
+Pertama-tama tentukan terlebih dahulu maksimum, maksimum ke 2, minimum, dan minimum ke 2 untuk 2 input pertama. setelah itu lakukan perulangan mulai dari input ke 3 sampai ke N sembari di cek apakah input nya melebihi maksimum atau sekedar melebihi maksimum ke 2, atau kurang dari minimum atau sekedar kurang dari minimum ke 2. dengan kondisi-kondisi tersebut, sesuaikan nilai minimum, maksimum, minimum ke 2, dan maksimum ke 2 seiring dengan berjalannya perulangan. Terakhir, print minimum ke 2 dan maksimum ke 2 ke layar.
 
 ## Bab 3 Fungsi dan Prosedur - Problem 9
 ### Deskripsi Soal
