@@ -31,6 +31,8 @@ Petunjuk:
 # Solusi Soal
 ## Bab 1 - Percabangan - Problem 3
 ---------------------------------
+### Soal
+
 Tuan Vin sedang belajar tentang trigonometri. Dia tahu bahwa nilai sin suatu sudut tergantung kuadrannya, dimana pada kuadran 1 sin(a) = sin(a), kuadran 2 sin(180-a) = sin(a), kuadran 3 sin(180+a) = -sin(a), kuadran 4 sin(360-a) = -sin(a). Tuan Vin menantang Anda untuk membuat kalkulator untuk mempermudah perhitungan sin dengan mengubah sudutnya menjadi antara 0 sampai 90. Dapatkah Anda menjawab tantangan Tuan Vin? (0 dan 90 dihitung kuadran 1, 180 dihitung kuadran 2, 270 dihitung kuadran 3 dan 360 dihitung kuadran 4. Nilai sudut selalu di antara 0 hingga 360).
 
 
@@ -49,9 +51,14 @@ Masukan nilai sudut: **270**
 sin(270) = -sin(90)
 ***
 
+### Source Code Solusi
+
+### Penjelasan Solusi
 ---------------------------------
 ## Bab 2 - Pengulangan - Problem 2
 ---------------------------------
+### Soal
+
 Seorang mahasiswa mengklasifikasikan sebuah bilangan menjadi 3 kategori, yaitu **bilangan A**, **bilangan B**, dan **bilangan C**. 
 - **Bilangan A** adalah bilangan yang seluruh faktornya kurang dari nilai bilangan tersebut.
 - **Bilangan B** adalah bilangan yang seluruh faktornya sama dari nilai bilangan tersebut.
@@ -91,9 +98,15 @@ Masukan tipe bilangan :C
 Tipe bilangan C pada rentang 1 sampai 10 adalah  
 Tidak ada
 ```
+
+### Source Code Solusi
+
+### Penjelasan Solusi
 ---------------------------------
 ## Bab 3 - Fungsi dan Prosedur - Problem 1
 ---------------------------------
+### Soal
+
 Saat sedang mengerjakan PR kalkulus, seorang mahasiswa mendapatkan soal berikut.
 
 
@@ -125,9 +138,14 @@ Tidak ada x yang sesuai
 
 Anda diwajibkan membuat fungsi f(x) untuk nilainya dicocokan dengan masukan.
 
+### Source Code Solusi
+
+### Penjelasan Solusi
 ---------------------------------
 ## Bab 4 - *Array* - Problem 12
 ---------------------------------
+### Soal
+
 Lucio diminta oleh orangtuanya untuk menduplikat kunci kamar hotel yang tidak ada cadangannya. Setiap kunci, memiliki nomor yang menandakan nomor kamar. Buatlah program untuk menentukan mana saja kunci yang harus diduplikat oleh Lucio
 
 **Format Input & Output (input di-*bold*)**
@@ -162,10 +180,13 @@ Kunci yang harus diduplikat :
 202
 ***
 
+### Source Code Solusi
+
+### Penjelasan Solusi
 -----------------
 ## Bab 5 - Matriks dan File Eksternal - Problem 11
 -----------------
-### Problem 11
+### Soal
 
 Krasti Krab telah semakin maju. Kini, telah ada `N` kasir yang dapat melayani penjualan. Masing-masing kasir memiliki slot antrian sepanjang `M`. Tuan Krab ingin mengetahui panjang antrian yang paling panjang di antara semua kasir yang ada. Dia meminta bantuan Anda untuk memecahkan masalah tersebut.
 
@@ -190,3 +211,7 @@ Krasti Krab telah semakin maju. Kini, telah ada `N` kasir yang dapat melayani pe
 file loaded!
 Antrian terpanjang adalah 3
 ```
+
+### Source Code Solusi
+
+### Penjelasan Solusi
