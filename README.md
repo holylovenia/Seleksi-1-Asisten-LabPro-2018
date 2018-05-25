@@ -465,6 +465,17 @@ Setelah itu, hasil result dicetak dengan algoritma sebagai berikut
 2. Pada penulisan koefisien pangkat lain, jika koefisien negatif, harus didahului ' - '. 
 3. Pada penulisan koefisien pangkat lain, jika koefisien positif, harus didahului '+'.
 ```
+
+Fungsi dan Prosedur yang digunakan untuk menyelesaikan soal ini adalah:
+
+- `function Length(A: DynArrayType):Integer;`
+
+Mencari panjang array dinamik.
+
+- `procedure SetLength(var A: DynArrayType; Len: SizeInt);`
+
+Mengubah panjang array dinamik A menjadi sepanjang Len.
+
 ---
 
 ### Bab 5 Problem 8
@@ -640,5 +651,20 @@ Untuk menghitung jumlah dari benteng yang tidak saling serang, langkah yang haru
 6. Jika benteng B sebelumnya belum ditandai, `counter = counter + 1`.
 7. Ulangi langkah 2 - 6 untuk seluruh benteng.
 8. Jumlah benteng yang tidak menyerang adalah 	jumlah benteng - counter` 
+
+
+Fungsi bawaan yang dipakai
+
+- `function StrToInt(const s: string):LongInt;`
+
+Mengubah string menjadi angka. Menggunakan library Sysutils.
+
+- `function Length(A: DynArrayType):Integer;`
+
+Mencari panjang array dinamik.
+
+- `procedure SetLength(var A: DynArrayType; Len: SizeInt);`
+
+Mengubah panjang array dinamik A menjadi sepanjang Len.
 
 ---
