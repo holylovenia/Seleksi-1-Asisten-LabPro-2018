@@ -679,7 +679,14 @@ Untuk menghitung jumlah dari benteng yang tidak saling serang, langkah yang haru
 5. Jika Tile B belum pernah ditandai, tandai Tile B, `counter = counter + 1`. Hentikan pencarian pada arah kanan.
 7. Lakukan langkah 3-5 untuk pencarian pada arah ke bawah.
 8. Jika Tile A belum pernah ditandai, tandai Tile A, `counter = counter + 1`.
-9. Lakukan langkah 3-8 untuk semua tile.
+9. Lakukan langkah 2-8 untuk semua tile.
 10. `Jumlah benteng yang tidak saling serang = Jumlah benteng - counter`
+
+
+Fungsi bawaan yang dipakai
+
+- `function StrToInt(const s: string):LongInt;`
+
+Mengubah string menjadi angka. Menggunakan library Sysutils.
 
 ---
