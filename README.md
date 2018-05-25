@@ -1,113 +1,12 @@
 # Seleksi 1 Asisten LabPro 2018
 -----------------------------------
-Petunjuk:
-
-- Silahkan fork GitHub berikut agar dapat dikerjakan pada GitHub kalian masing-masing *(private)*.
-- Pembagian soal dapat dilihat pada [tautan](https://docs.google.com/spreadsheets/d/1l8SNlbK4EI8wFb5_3pDDi3IfioO7VglCcPmfFCK2jJU/edit?usp=sharing) berikut ini.
-- Kerjakan persoalan berikut (sesuai dengan pembagian) menggunakan algoritma yang menurut Anda mempunyai kinerja terbaik.
-- Tuliskan penjelasan algoritma tersebut beserta *source code* pada saat pengumpulan.
-- Perhatikan, yang perlu dikumpulkan adalah:
-  - **README.md**, tolong hapus bagian yang tidak perlu. Readme minimal berisi hal-hal berikut:
-    - Keterangan pembuat (NIM dan Nama Lengkap)
-    - Deskripsi semua soal yang dikerjakan
-    - *Source code* solusi untuk semua soal yang dikerjakan
-    - Penjelasan solusi untuk semua soal yang dikerjakan
-  - Direktori **src**, berisi file-file solusi soal, dengan format nama file **X-ProblemYY.eks**
-    - **X** adalah nomor bab
-    - **YY** adalah nomor problem
-    - **eks** adalah ekstensi file solusi (sesuai bahasa pemrograman)
-    - Contoh: 4-Problem03.pas
-- Pemakaian fungsi bawaan yang berlebihan tidak diperbolehkan.
-- ***Deadline pull request:*** Minggu, 27 Mei 2018 pukul 23.59, dengan subjek **[NIM] - Seleksi 1 Asisten LabPro 2018** (contoh: 13515113 - Seleksi 1 Asisten LabPro 2018). Jangan lupa segera di-*public* setelah melakukan *deadline* berlalu.
-- *Have a nice day!*
-------
-
-------
-
-------
-
-# Daftar Isi
-
-<!-- START doctoc generated TOC please keep comment here to allow auto update -->
-<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-
-
-- [Bab 1 - Percabangan](#bab-1---percabangan)
-  - [Problem 1](#problem-1)
-  - [Problem 2](#problem-2)
-  - [Problem 3](#problem-3)
-  - [Problem 4](#problem-4)
-  - [Problem 5](#problem-5)
-  - [Problem 6](#problem-6)
-  - [Problem 7](#problem-7)
-  - [Problem 8](#problem-8)
-  - [Problem 9](#problem-9)
-  - [Problem 10](#problem-10)
-  - [Problem 11](#problem-11)
-  - [Problem 12](#problem-12)
-- [Bab 2 - Pengulangan](#bab-2---pengulangan)
-  - [Problem 1](#problem-1-1)
-  - [Problem 2](#problem-2-1)
-  - [Problem 3](#problem-3-1)
-  - [Problem 4](#problem-4-1)
-  - [Problem 5](#problem-5-1)
-  - [Problem 6](#problem-6-1)
-  - [Problem 7](#problem-7-1)
-  - [Problem 8](#problem-8-1)
-  - [Problem 9](#problem-9-1)
-  - [Problem 10](#problem-10-1)
-  - [Problem 11](#problem-11-1)
-  - [Problem 12](#problem-12-1)
-- [Bab 3 - Fungsi dan Prosedur](#bab-3---fungsi-dan-prosedur)
-  - [Problem 1](#problem-1-2)
-  - [Problem 2](#problem-2-2)
-  - [Problem 3](#problem-3-2)
-  - [Problem 4](#problem-4-2)
-  - [Problem 5](#problem-5-2)
-  - [Problem 6](#problem-6-2)
-  - [Problem 7](#problem-7-2)
-  - [Problem 8](#problem-8-2)
-  - [Problem 9](#problem-9-2)
-  - [Problem 10](#problem-10-2)
-  - [Problem 11](#problem-11-2)
-  - [Problem 12](#problem-12-2)
-- [Bab 4 - *Array*](#bab-4---array)
-  - [Problem 1](#problem-1-3)
-  - [Problem 2](#problem-2-3)
-  - [Problem 3](#problem-3-3)
-  - [Problem 4](#problem-4-3)
-  - [Problem 5](#problem-5-3)
-  - [Problem 6](#problem-6-3)
-  - [Problem 7](#problem-7-3)
-  - [Problem 8](#problem-8-3)
-  - [Problem 9](#problem-9-3)
-  - [Problem 10](#problem-10-3)
-  - [Problem 11](#problem-11-3)
-  - [Problem 12](#problem-12-3)
-- [Bab 5 - Matriks dan File Eksternal](#bab-5---matriks-dan-file-eksternal)
-  - [Problem 1](#problem-1-4)
-  - [Problem 2](#problem-2-4)
-  - [Problem 3](#problem-3-4)
-  - [Problem 4](#problem-4-4)
-  - [Problem 5](#problem-5-4)
-  - [Problem 6](#problem-6-4)
-  - [Problem 7](#problem-7-4)
-  - [Problem 8](#problem-8-4)
-  - [Problem 9](#problem-9-4)
-  - [Problem 10](#problem-10-4)
-  - [Problem 11](#problem-11-4)
-  - [Problem 12](#problem-12-4)
-
-<!-- END doctoc generated TOC please keep comment here to allow auto update -->
-
-------------------------------------
-------
+### **13516145** - **Daniel Yudianto**
 
 ------
 
 ## Bab 1 - Percabangan
 ---------------------------------
-### Problem 1
+### Deskripsi Problem 1
 Tuan Vin diminta oleh temannya untuk mencatat jurusan-jurusan teman seangkatannya. Karena jumlahnya banyak, Tuan Vin tidak ingat siapa masuk jurusan mana. Dia hanya tahu bahwa 3 angka pertama NIM temannya menunjukkan jurusan mereka.
 
 
@@ -146,337 +45,55 @@ Albert adalah mahasiswa ???
 
 NIM dipastikan selalu 8 angka
 
-
-
-
-### Problem 2
-Tuan Vin ingin meminta bantuan Anda. Tuan Vin diminta untuk mengurutkan nilai ujian antara 3 orang. Ini adalah hal yang mudah, tetapi Tuan Vin perlu memeriksa ratusan orang. Karena malas, Tuan Vin meminta bantuan Anda, yang jago membuat program. Nilai ketiga orang dijamin berbeda.
-
-
-**Format Input & Output (input di-*bold*)**
-***
-Masukan Nama 1: **Kevin**
-
-Masukan Nilai 1: **70**
-
-Masukan Nama 2: **Richard**
-
-Masukan Nilai 2: **100**
-
-Masukan Nama 3: **Albert**
-
-Masukan Nilai 3: **80**
-
-Peringkat pertama adalah Richard
-
-Peringkat kedua adalah Albert
-
-Peringkat ketiga adalah Kevin
-***
-
-
-
-### Problem 3
-
-Tuan Vin sedang belajar tentang trigonometri. Dia tahu bahwa nilai sin suatu sudut tergantung kuadrannya, dimana pada kuadran 1 sin(a) = sin(a), kuadran 2 sin(180-a) = sin(a), kuadran 3 sin(180+a) = -sin(a), kuadran 4 sin(360-a) = -sin(a). Tuan Vin menantang Anda untuk membuat kalkulator untuk mempermudah perhitungan sin dengan mengubah sudutnya menjadi antara 0 sampai 90. Dapatkah Anda menjawab tantangan Tuan Vin? (0 dan 90 dihitung kuadran 1, 180 dihitung kuadran 2, 270 dihitung kuadran 3 dan 360 dihitung kuadran 4. Nilai sudut selalu di antara 0 hingga 360).
-
-
-**Format Input & Output (input di-*bold*)**
-***
-Masukan nilai sudut: **150**
-
-sin(150) = sin(30)
-***
-Masukan nilai sudut: **75**
-
-sin(75) = sin(75)
-***
-Masukan nilai sudut: **270**
-
-sin(270) = -sin(90)
-***
-
-
-
-### Problem 4
-
-Tuan Vin diajarkan tentang kuadran. Bidang kartesian dibagi menjadi kuadran 1, 2, 3, 4, serta sumbu x, sumbu y, dan titik origin. Karena Tuan Vin orang yang pelupa, dia lupa ciri-ciri masing-masing daerah. Tuan Vin meminta Anda untuk membantunya dengan membuat program yang dapat menentukan daeerah suatu titik.
-
-
-**Format Input & Output (input di-*bold*)**
-***
-Masukkan nilai X : **0**
-
-Masukkan nilai Y : **10**
-
-Titik (0,10) berada di sumbu Y
-***
-Masukkan nilai X : **-3**
-
-Masukkan nilai Y : **4**
-
-Titik (-3,4) berada di kuadran 2
-***
-Masukkan nilai X : **0**
-
-Masukkan nilai Y : **0**
-
-Titik (0,0) berada di titik origin
-***
-
-
-
-### Problem 5
-
-Tuan Vin diminta oleh dosennya untuk mencatat nilai ujian dalam indeks A-E, sementara nilai yang disediakan dalam bentuk 0-100. Berikut adalah konversina:
-
-
-- 81 - 100: A
-- 61 - 80: B
-- 41 - 60: C
-- 21 - 40: D
-- 0 - 20: E
-
-
-Karena banyak nilai yang harus dicatat, Tuan Vin meminta bantuan Anda untuk memudahkan merubah nilai.
-
-
-**Format Input & Output (input di-*bold*)**
-***
-Masukan Nama : **Kevin**
-
-Masukan Nilai : **88**
-
-Kevin mendapat nilai A
-***
-Masukan Nama : **Albert**
-
-Masukan Nilai : **63**
-
-Albert mendapat nilai B
-***
-
-
-
-### Problem 6
-
-Tuan Vin pergi meminjam buku ke perpustakaan. Perpustakaan tersebut meminjamkan buku dengan sewa pokok P per hari dan batas waktu sewa T. Jika setelah T hari tidak dikembalikan, harga sewa akan bertambah D per harinya. Saat Tuan Vin hendak mengembalikan buku, Tuan Vin bingung menghitung harga sewa bukunya. Agar tidak ditipu mengurus perusahaan, Tuan Vin memeinta bantuan Anda untuk menghitung uang sewa yang tepat.
-
-
-**Format Input & Output (input di-*bold*)**
-***
-Masukan harga sewa pokok: **1000**
-
-Masukan batas waktu sewa: **7**
-
-Masukan tambahan harga sewa: **500**
-
-Masukan lama Tuan Vin meminjam: **3**
-
-Harga sewa yang harus dibayar Tuan Vin adalah: 3000
-***
-Masukan harga sewa pokok: **3000**
-
-Masukan batas waktu sewa: **7**
-
-Masukan tambahan harga sewa: **500**
-
-Masukan lama Tuan Vin meminjam: **10**
-
-Harga sewa yang harus dibayar Tuan Vin adalah: 31500
-***
-
-
-Penjelasan contoh 1:
-Tuan Vin tidak melebihi batas waktu sewa sehingga tidak perlu membayar lebih
-
-
-Penjelasan contoh 2:
-Pada 7 hari pertama, harga sewa hanya 3000. Setelah itu, harga sewa naik menjadi 3500, sehingga total sewanya adalah 7*3000 + (10-7)*3500 = 31500
-
-
-
-### Problem 7
-
-Anda sedang bermain suit dengan Tuan Vin. Suit adalah permainan yang mengeluarkan batu, gunting atau kertas, dan pemenang ditentukan dari apa yang mereka keluarkan. Batu menang melawan gunting, gunting menang melawan kertas, kertas menang melawan batu. Karena Anda terus kalah, Anda menantang Tuan Vin untuk mengalahkan program Anda dalam suit. Tuan Vin pun setuju, tapi Anda hanya diperbolehkan menggunakan **batu atau kertas saja**. Dapatkah Anda membuat program yang tidak pernah kalah dari Tuan Vin?
-
-
-**Format Input & Output (input di-*bold*)**
-***
-Tuan Vin mengeluarkan: **gunting**
-
-Anda mengeluarkan: **batu**
-***
-Tuan Vin mengeluarkan: **kertas**
-
-Anda mengeluarkan: **kertas**
-***
-Penjelasan contoh 2:
-Karena Anda hanya boleh mengeluarkan batu atau kertas saja, maka agar tidak kalah Anda harus menang atau memaksa seri dengan mengeluarkan kertas lagi.
-
-
-
-### Problem 8
-
-Diketahui ada 5 jenis mineral (A, B, C, D, E) dan bahan-bahan makanan berikut mengandung mineral berikut:
-
-
-- ikan: A, C
-- daging: B, C, D
-- sayur: D, E
-- buah: B
-
-
-Tuan Vin akan memakan 2 dari 4 jenis makanan tersebut (bisa sama), tetapi Tuan Vin takut kekurangan mineral. Tuan Vin meminta bantuan Anda untuk mengetahui mineral apa yang dia tidak dapatkan.
-
-
-**Format Input & Output (input di-*bold*)**
-***
-Masukan makanan 1: **ikan**
-
-Masukan makanan 2: **sayur**
-
-Mineral B tidak didapatkan Tuan Vin
-***
-Masukan makanan 1: **buah**
-
-Masukan makanan 2: **ikan**
-
-Mineral D E tidak didapatkan Tuan Vin
-***
-Masukan makanan 1: **sayur**
-
-Masukan makanan 2: **sayur**
-
-Mineral A B C tidak didapatkan Tuan Vin
-***
-
-
-
-### Problem 9
-
-Tuan Vin ingin mengetahui suhu udara sekarang. Terdapat termometer pada dinding di dekatnya. Namun terkadang, satuan suhu yang tertulis tidak sesuai dengan yang ingin diketahuinya. Dari 3 jenis suhu R, C dan F, berikut adalah perbandingannya:
-
-
-C : R : (F-32) = 5 : 4 : 9
-
-
-Tuan Vin meminta bantuan Anda untuk dapat membaca suhu dengan lebih mudah
-
-
-**Format Input & Output (input di-*bold*)**
-***
-Masukan satuan suhu termometer: **C**
-
-Masukan besar suhu: **40**
-
-Masukan satuan yang ingin diketahui: **R**
-
-Besar suhu dalam R: 32
-***
-
-
-
-### Problem 10
-
-Tuan Vin sedang mengetik chat dan baru belajar emoticon. Emoticon dapat digunakan untuk mengekspreikan perasaan dalam chat. Karena baru belajar, jumlah emoticon yang diketahuinya hanya sedikit. Berikut adalah emoticon yang diketahui Tuan Vin:
-
-
-- Senyum: :)
-- Sedih: :(
-- Tertwa: :D
-- Menangis: :'(
-- ROTFL: :))
-
-
-Tuan Vin menantang Anda untuk menebak perasaan Tuan Vin berdasarkan emoticon yang dikirimnya.
-
-
-**Format Input & Output (input di-*bold*)**
-***
-Masukan emoticon: **:D**
-
-Tuan Vin sedang tertawa
-***
-
-
-
-### Problem 11
-
-Tuan Vin menjadi wasit dalam permainan tic tac toe. Tuan Vin diminta menentukan pemenang dari setiap permainan. Karena malas, Tuan Vin meminta Anda yang jag membuat program untuk membuat program yang dapat menentukan pemenang permainan tic tac toe. Karena Tuan Vin menjadi wasit, dipastikan pada permainan ini paling banyak hanya ada 1 pemenang, dan papan dibiarkan terisi penuh karena Tuan Vin kesulitan menentukan pemenang.
-
-
-**Format Input & Output (input di-*bold*)**
-***
-Masukkan isi papan:
-
-**O X O**
-
-**O O X**
-
-**X X O**
-
-Pemain O menang
-***
-Masukkan isi papan:
-
-**X X X**
-
-**O O X**
-
-**X O O**
-
-Pemain X menang
-***
-Masukkan isi papan:
-
-**O X O**
-
-**O X X**
-
-**X O O**
-
-Tidak ada yang menang
-***
-Hint: hanya ada 8 posisi yang menentukan pemenang dalam tic tac toe
-
-
-
-### Problem 12
-
-Tuan Vin menemukan sebuah kertas berisi persamaan matematika, tetapi operatornya ada yang hilang. Persamaan tersebut berbentuk:
-
-
-A op1 B = C op2 D
-
-
-Tuan Vin tahu bahwa operator yang mungkin hanya tambah, kurang, kali dan div dan pasti ada jawabnnya. Karena iseng, Tuan Vin menantang Anda untuk menyelesaikannya. Jika ada lebih dari 1 jawaban, tampilkan yang mana saja
-
-
-**Format Input & Output (input di-*bold*)**
-***
-Masukkan nilai A: **2**
-
-Masukkan nilai B: **3**
-
-Masukkan nilai C: **7**
-
-Masukkan nilai D: **1**
-
-Persamaan yang mungkin adalah: 2 * 3 = 7 - 1
-***
-Masukkan nilai A: **10**
-
-Masukkan nilai B: **3**
-
-Masukkan nilai C: **2**
-
-Masukkan nilai D: **1**
-
-Persamaan yang mungkin adalah: 10 / 3 = 2 + 1
-***
+### Source Code dan Penjelasan 
+
+#### Source Code
+```Pascal
+program JurusanCheck;
+
+(* DICTIONARY *)
+var
+	Nama : string;
+    Nim : string;
+	Jurusan : string;
+	nimHead : string;
+	
+(* MAIN PROGRAM *)
+Begin
+	//Input
+	write('Masukkan Nama : ');
+	readln(nama);
+	write('Masukkan NIM : ');
+	readln(nim);
+	
+	//Proses
+	nimHead := '000';
+	nimHead[1] := nim[1];
+	nimHead[2] := nim[2];
+	nimHead[3] := nim[3];
+	case nimHead of
+		'135' : Jurusan := 'Teknik Informatika';
+		'180' : Jurusan := 'Teknik Tenaga Listrik';
+		'181' : Jurusan := 'Teknik Telekomunikasi';
+		'182' : Jurusan := 'Sistem Teknologi dan Informasi';
+		else Jurusan := '???';
+	end;
+	
+	//Output
+	write(Nama);
+	write(' adalah mahasiswa ');
+	write(Jurusan); 
+	
+End.
+```
+#### Penjelasan 
+Penyelesaian dari permasalahan ini cukup sederhana, yaitu dengan membandingkan tiga angka pertama dari suatu NIM dengan ketentuan yang sudah ada. Pendekatan yang dilakukan oleh pembuat program adalah dengan pertama-tama mengambil tiga angka pertama dari nim tersebut dan memasukkannya ke dalam sebuah variabel string sementara yang berukuran tiga. Kemudian, barulah variabel tersebut dibandingkan dengan string lain (misal '135').
+
+Pembuat program menggunakan pendekatan ini dengan ide untuk memudahkan apabila ingin ditambahkan jurusan lain ke dalam program, sehingga hanya perlu menambahkannya di bagian *case* dari program.
 
 ---------------------------------
+
+
 ---------------------------------
 
 
