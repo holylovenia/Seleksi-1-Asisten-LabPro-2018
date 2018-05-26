@@ -52,8 +52,30 @@ sin(270) = -sin(90)
 ***
 
 ### Source Code Solusi
+```
+program Trigonometri;
 
+var
+   sudut : integer; 
+
+begin
+    write('Masukan nilai sudut:');
+    readln(sudut);
+
+    if ((sudut >= 0) and (sudut <= 90)) then
+        writeln('sin(',sudut,') = sin(',sudut,')')
+    else if ((sudut > 90) and (sudut <= 180)) then
+        writeln('sin(',sudut,') = sin(',180-sudut,')')
+    else if ((sudut > 180) and (sudut <= 270)) then
+        writeln('sin(',sudut,') = -sin(',sudut-180,')')
+    else //sudut > 270 and sudut < 360
+        writeln('sin(',sudut,') = -sin(',360-sudut,')');
+end.
+```
 ### Penjelasan Solusi
+
+Program diawali dengan meminta masukan besar sudur dari user yang disimpan pada variabel **sudut**. Setelah itu, dilakukan percabangan berdasarkan 4 kuadran yang didefinisikan di soal. Pada setiap percabangan akan dilakukan output ke layar berdasarkan rumus yang ditentukan di soal.
+
 ---------------------------------
 ## Bab 2 - Pengulangan - Problem 2
 ---------------------------------
@@ -100,8 +122,94 @@ Tidak ada
 ```
 
 ### Source Code Solusi
+```
+begin
+    write('Masukan X:');
+    readln(x);
+    
+    write('Masukan Y:');
+    readln(y);
 
+    write('Masukan tipe bilangan:');
+    readln(tipe);
+
+    writeln('Tipe bilangan ', tipe,' pada rentang ', x, ' sampai ', y, ' adalah');
+    
+    exist := false;
+
+    case tipe of
+        'A' :
+            begin
+                //Iterasi mencari bilangan tipe A di rentang x - y
+                for i:=x to y do
+                begin
+                    sum := 0;
+                    for j:= 1 to i-1 do
+                    begin
+                        if (i mod j = 0) then
+                            sum := sum + j;
+                    end;
+                    if (sum < i)then
+                    begin
+                        writeln(i);
+                        exist := true;
+                    end;
+                end;
+            end;     
+        'B' :
+            begin
+                //Iterasi mencari bilangan tipe B di rentang x - y
+                for i:=x to y do
+                begin
+                    sum := 0;
+                    for j:= 1 to i-1 do
+                    begin
+                        if (i mod j = 0) then
+                            sum := sum + j;
+                    end;
+                    if (sum = i)then
+                    begin
+                        writeln(i);
+                        exist := true;
+                    end;
+                end;
+            end;
+        'C' :
+            begin
+                //Iterasi mencari bilangan tipe C di rentang x - y
+                for i:=x to y do
+                begin
+                    sum := 0;
+                    for j:= 1 to i-1 do
+                    begin
+                        if (i mod j = 0) then
+                            sum := sum + j;
+                    end;
+                    if (sum > i)then
+                    begin
+                        writeln(i);
+                        exist := true;
+                    end;
+                end;
+            end;
+        end;
+
+    if (exist = false) then 
+        writeln('Tidak ada');
+end.
+```
 ### Penjelasan Solusi
+
+Di awal program, program akan meminta user untuk memasukkan nilai **x** (rentang awal), **y** (rentang akhir), dan **tipe** (tipe bilangan). Setelah itu program akan melakukan inisialisasi variabel boolean **exist** dengan false terlebih dahulu. Variabel ini merepresentasikan apakah ada bilangan dengan tipe tertentu pada rentang **x** dan **y**. Kemudian program akan masuk ke dalam loop for pertama, loop ini ada untuk mengiterasi setiap bilangan yang ada di rentang x dan y untuk ditentukan apakah dia tipe bilangan yang diminta oleh user. 
+
+Pada loop for ini, pertama-tama variabel **sum** yang digunakan untuk menhitung jumlah faktor suatu bilangan diinisialisasi dengan 0. Berikutnya akan masuk ke dalam for loop yang kedua untuk menghitung jumlah faktor suatu bilangan, loop ini diawal di **1** dan berakhir di **n-1** karena n tidak termasuk sebagai faktor dari n (n adalah bilangan yang sedang dicari jumlah faktornya). Setelah itu dilakukan perbandingan antara **sum** dengan **n** untuk menentukan tipe bilangan n, jika sesuai dengan tipe yang diminta user, maka akan dicetak ke layar dan nilai variabel **exist** diubah menjadi true.
+
+Untuk tipe bilangan A, syaratnya adalah **sum** < **n**.
+Untuk tipe bilangan B, syaratnya adalah **sum** = **n**.
+Untuk tipe bilangan C, syaratnya adalah **sum** > **n**.
+
+Terakhir, di akhir program akan dilakukan pengecekan terhadap nilai variabel **exist**. Apabila nilainya false, maka pesan 'Tidak ada' akan dicetak ke layar, menunjukkan tidak ada bilangan dengan tipe yang dicari pada rentang **x** dan **y**
+
 ---------------------------------
 ## Bab 3 - Fungsi dan Prosedur - Problem 1
 ---------------------------------
@@ -139,8 +247,38 @@ Tidak ada x yang sesuai
 Anda diwajibkan membuat fungsi f(x) untuk nilainya dicocokan dengan masukan.
 
 ### Source Code Solusi
+```
+program F(X);
 
+var
+   result : Longint;
+   x : integer; 
+
+function f(x : integer) : Longint;
+begin
+    f := 2*x*x*x*x*x+3*x*x*x*x+9*x*x*x- x*x+ 3*x -2;
+end;
+
+begin
+    write('Masukan f(x):');
+    readln(result);
+    
+    x:=1;
+    while ((x < 30) and (f(x)<>result)) do 
+        x:=i+1;
+    
+    if (x < 30) then writeln('Nilai x adalah ',x)
+    else writeln('Tidak ada x yang sesuai');
+end.
+```
 ### Penjelasan Solusi
+
+Pada program, dibuat fungsi **f** yang mengembalikan suatu longint dengan masukan suatu inteegr x. Funsgi ini diimplementasikan sesuai dengan rumus f(x) = 2x^5 + 3x^4 + 9x^3 − x^2 + 3x − 2 di soal. 
+
+Pada program utama, pertama-tama user akan memasukan nilai f(x) yang disimpan pada variabel **result**. Lalu program akan menginisialisasi nilai **x** dengan 1 lalu masuk ke loop. Program akan keluar dari loop hanya jika nilai x > 30 atau **f(x)** sama dengan **result**.
+
+Terakhir, dilakukan pengecekan terhadap nilai **x**, apabila nilainya kurang dari 30, artinya loop selesai karena ada **f(x)** yang nilainya sama dengan **result**, sehinggai nilai **x** dicetak ke layar. Jika tidak ada, maka tidak ada nilai **f(x)** yang sama dengan **result** pada rentang **x** 1-29 sehingga pesan 'Tidak ada x yang sesuai' akan dicetak ke layar.
+
 ---------------------------------
 ## Bab 4 - *Array* - Problem 12
 ---------------------------------
@@ -181,7 +319,8 @@ Kunci yang harus diduplikat :
 ***
 
 ### Source Code Solusi
-
+```
+```
 ### Penjelasan Solusi
 -----------------
 ## Bab 5 - Matriks dan File Eksternal - Problem 11
@@ -213,5 +352,6 @@ Antrian terpanjang adalah 3
 ```
 
 ### Source Code Solusi
-
+```
+```
 ### Penjelasan Solusi
