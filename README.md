@@ -25,7 +25,7 @@ Masukan nilai sudut: 270
 sin(270) = -sin(90)
 
 
-## Bab 1 Soal 3
+ Bab 1 Soal 3
 
 x = int(input("Masukan nilai sudut: "))
 out = "sin(%d) = " % x
@@ -40,17 +40,17 @@ if (x < 90) :
 else:
 	print out + "%d)" % (180 - x)
 
-# Penjelasan:
-# x menerima sebuah angka integer dari pengguna. Diasumsikan bukan berupa pecahan.
-# out adalah string keluaran, untuk meminimalisir kata-kata yang diulang.
-# Cara tercepat: membuat 4 cabang if-else untuk 4 kuadran.
-# Peserta menyadari bahwa kuadran 1 = kuadran 3, dengan sin berubah negatif,
-# sama halnya dengan kuadran 2 dan kuadran 4. Sehingga angka di-mod 360 lalu
-# dicek, apakah angka berada di kuadran 1/2 atau kuadran 3/4. Jika berada di kuadran
-# 3/4, ditambahkan tanda - sebelum sin.
-# Lalu karena kuadran 1 = kuadran 3 dan kuadran 2 = kuadran 4, x di-mod 180 lalu
-# diperiksa, apakah angka lebih atau kurang dari 90.
-# Hasilnya kemudian di-print segera.
+ Penjelasan:
+ x menerima sebuah angka integer dari pengguna. Diasumsikan bukan berupa pecahan.
+ out adalah string keluaran, untuk meminimalisir kata-kata yang diulang.
+ Cara tercepat: membuat 4 cabang if-else untuk 4 kuadran.
+ Peserta menyadari bahwa kuadran 1 = kuadran 3, dengan sin berubah negatif,
+ sama halnya dengan kuadran 2 dan kuadran 4. Sehingga angka di-mod 360 lalu
+ dicek, apakah angka berada di kuadran 1/2 atau kuadran 3/4. Jika berada di kuadran
+ 3/4, ditambahkan tanda - sebelum sin.
+ Lalu karena kuadran 1 = kuadran 3 dan kuadran 2 = kuadran 4, x di-mod 180 lalu
+ diperiksa, apakah angka lebih atau kurang dari 90.
+ Hasilnya kemudian di-print segera.
 
 --------------------------------------------------------
 
@@ -90,23 +90,23 @@ Masukan N :10
 10  
 
 
-## Bab 2 Soal 1
+ Bab 2 Soal 1
 
 x = int(input("Masukan N :"))
 for i in range(1, x+1):
 	if (not(i % 3 != 0) ^ (i % 7 != 0)):
 		print i
 
-# Penjelasan:
-# Peserta tiba-tiba teringat dari Logif suatu or jenis berbeda, yaitu
-# xor (tanda ^) yang seperti or, tapi false ketika kedua ekspresi
-# boolean bernilai true. Sehingga i yang tembus if adalah i yang
-# bukan berkelipatan 3 tetapi harus berkelipatan 7, atau bukan berkelipatan
-# 7 tapi harus berkelipatan 3. Oleh karena itu, ditambahkan not, sehingga
-# yang diprint adalah angka bukan berkelipatan 3 dan 7, tetapi boleh berkelipatan
-# 3 dan 7 sekaligus (atau berkelipatan 21). Pada awalnya, cara yang terpikirkan
-# adalah menggunakan if panjang, yang ternyata dapat disingkatkan menjadi not xor.
-# (Maaf jika peserta salah: peserta tidak tahu mengapa 24 muncul di contoh Output)
+ Penjelasan:
+ Peserta tiba-tiba teringat dari Logif suatu or jenis berbeda, yaitu
+ xor (tanda ^) yang seperti or, tapi false ketika kedua ekspresi
+ boolean bernilai true. Sehingga i yang tembus if adalah i yang
+ bukan berkelipatan 3 tetapi harus berkelipatan 7, atau bukan berkelipatan
+ 7 tapi harus berkelipatan 3. Oleh karena itu, ditambahkan not, sehingga
+ yang diprint adalah angka bukan berkelipatan 3 dan 7, tetapi boleh berkelipatan
+ 3 dan 7 sekaligus (atau berkelipatan 21). Pada awalnya, cara yang terpikirkan
+ adalah menggunakan if panjang, yang ternyata dapat disingkatkan menjadi not xor.
+ (Maaf jika peserta salah: peserta tidak tahu mengapa 24 muncul di contoh Output)
 
 ----------------------------------------------------
 
@@ -133,7 +133,7 @@ f(g(f(x))) = -1453
 Anda diwajibkan membuat fungsi f(x) dan g(x).
 
 
-## Bab 3 Soal 12
+ Bab 3 Soal 12
 
 def f(x):
 	return 2*x - 9
@@ -144,15 +144,15 @@ def g(x):
 x = int(input("Masukan nilai x: "))
 print "f(g(f(x))) = %d" % f(g(f(x)))
 
-# Penjelasan:
-# Python luar biasa haha.
-# saat memakai fungsi f dan g, masing-masing menerima suatu angka dilambangkan
-# sebagai variabel x, dan mengembalikan suatu nilai di return, yang adalah
-# rumus fungsi f(x) dan g(x). Salah satu kemudahan Python yang peserta
-# bersyukur atasnya adalah adanya operator eksponensial (**). Lalu,
-# pada saat print hasil, cukup ditulis seperti pada soal, sebab pada
-# g(f(x)), hasil dari f(x) menjadi angka masukan untuk g(x), begitu pula
-# untuk f(g(f(x))).
+ Penjelasan:
+ Python luar biasa haha.
+ saat memakai fungsi f dan g, masing-masing menerima suatu angka dilambangkan
+ sebagai variabel x, dan mengembalikan suatu nilai di return, yang adalah
+ rumus fungsi f(x) dan g(x). Salah satu kemudahan Python yang peserta
+ bersyukur atasnya adalah adanya operator eksponensial (**). Lalu,
+ pada saat print hasil, cukup ditulis seperti pada soal, sebab pada
+ g(f(x)), hasil dari f(x) menjadi angka masukan untuk g(x), begitu pula
+ untuk f(g(f(x))).
 
 ----------------------------------------------------
 
@@ -193,7 +193,7 @@ Rekap kehadiran mahasiswa :
 230 - 1 kali
 
 
-## Bab 4 Soal 11
+ Bab 4 Soal 11
 
 n = int(input("Masukkan jumlah kertas kehadiran : "))
 nimCount = []
@@ -223,23 +223,23 @@ while (i < n):
 	print "%s - %d kali" % (nimCount[x], i - x)
 	x = i
 
-# Penjelasan:
-# Maaf tak mengerti fungsi-fungsi python yang lebih baru.
-# Pada awalnya ingin menggunakan dictionary, tetapi peserta belum tahu cara
-# mensortir nim yang ditampilkan, sehingga beralih ke list.
-# Peserta mensortir masukan pada saat dimasukkan, dengan mencari list sampai ditemukan
-# posisi yang tepat. Maaf walau judulnya array, peserta tak dapat menemukan array
-# di tutorial python. 
-# Suatu dummy element ('a') ditambahkan ke akhir list untuk menghentikan proses pengecekan
-# apakah ada nim sama atau berbeda. Awal masukan diambil masukan pertama dahulu, agar
-# program tak perlu mengecek list kosong atau diisi. Program akan membaca list mulai
-# dari suatu nim, lalu membaca berapa kali nim sama muncul dalam list sampai ditemukan
-# nim berbeda atau dummy element. Asumsi print: satu newline saja.
-# Peserta berpikir menggunakan array 2-dimensi (pertama untuk nim, kedua untuk
-# jumlah kehadiran) tidak cocok karena bab 5 bertopik matriks. Maaf penjelasan
-# soal ini lebih banyak maafnya.
-# (Peserta juga tidak paham mengapa kertas yang ada 10, tetapi program hanya
-# meminta 9 kertas)
+ Penjelasan:
+ Maaf tak mengerti fungsi-fungsi python yang lebih baru.
+ Pada awalnya ingin menggunakan dictionary, tetapi peserta belum tahu cara
+ mensortir nim yang ditampilkan, sehingga beralih ke list.
+ Peserta mensortir masukan pada saat dimasukkan, dengan mencari list sampai ditemukan
+ posisi yang tepat. Maaf walau judulnya array, peserta tak dapat menemukan array
+ di tutorial python. 
+ Suatu dummy element ('a') ditambahkan ke akhir list untuk menghentikan proses pengecekan
+ apakah ada nim sama atau berbeda. Awal masukan diambil masukan pertama dahulu, agar
+ program tak perlu mengecek list kosong atau diisi. Program akan membaca list mulai
+ dari suatu nim, lalu membaca berapa kali nim sama muncul dalam list sampai ditemukan
+ nim berbeda atau dummy element. Asumsi print: satu newline saja.
+ Peserta berpikir menggunakan array 2-dimensi (pertama untuk nim, kedua untuk
+ jumlah kehadiran) tidak cocok karena bab 5 bertopik matriks. Maaf penjelasan
+ soal ini lebih banyak maafnya.
+ (Peserta juga tidak paham mengapa kertas yang ada 10, tetapi program hanya
+ meminta 9 kertas)
 
 ---------------------------------------
 
@@ -283,9 +283,9 @@ Keterangan: Ada 6 buah bidang tanah yang dapat dibeli. Bidang tanah yang tersebu
 20
 
 
-## Bab 5 Soal 10
+ Bab 5 Soal 10
 
-# mengecek apakah suatu karakter adalah sebuah integer
+ mengecek apakah suatu karakter adalah sebuah integer
 def isNumber(char):
 	try:
 		int(char)
@@ -293,7 +293,7 @@ def isNumber(char):
 	except ValueError:
 		return False
 
-# program utama
+ program utama
 try:
 	text = open('land.txt', 'r').read()
 except IOError:
@@ -341,20 +341,20 @@ else:
 	
 	
 	
-# Penjelasan:
-# Soal tersulit, karena baru belajar python haha.
-# try catch hanya bonus tersendiri. Dibutuhkan suatu fungsi isNumber sebab
-# dalam membaca file, typenya otomatis berupa string sehingga harus dicari cara
-# pengecekan apakah suatu karakter merupakan angka atau bukan. Lalu, dibuat suatu list
-# dengan inisialisasi n*n agar dapat dipakai sebagai matriks biasa. Yang disimpan dalam
-# matriks bukanlah harga petak, melainkan harga yang di-mod dengan pecahan uang masukan,
-# untuk mempermudah perhitungan. Setelah pembacaan selesai, peserta pada awalnya kebingungan
-# karena ditugaskan untuk mengecek semua petak persegi dengan segala ukuran. Akhirnya
-# ditemukan suatu cara, dimulai dari posisi-posisi berbeda pada matriks (brs, kol),
-# lalu di-loop dengan segala panjang dan tinggi yang mungkin (kemudian disimpan sebagai
-# brsmax dan kolmax). Setelah itu, dihitung jumlah harga yang di-mod dalam persegi berbatas
-# brs ke brsmax dan kol ke kolmax, lalu jumlah tersebut di-mod pecahan. Apabila 0, persegi
-# panjang tersebut valid, lalu counter ditambah 1. Peserta meninggalkan sepenggal kode
-# dalam komentar yang dapat dipakai untuk debugging, apabila peserta salah menjawab.
-# (Juga, dalam output ditemukan angka 18 sebelah 16, sedangkan di input tidak ada)
+ Penjelasan:
+ Soal tersulit, karena baru belajar python haha.
+ try catch hanya bonus tersendiri. Dibutuhkan suatu fungsi isNumber sebab
+ dalam membaca file, typenya otomatis berupa string sehingga harus dicari cara
+ pengecekan apakah suatu karakter merupakan angka atau bukan. Lalu, dibuat suatu list
+ dengan inisialisasi n*n agar dapat dipakai sebagai matriks biasa. Yang disimpan dalam
+ matriks bukanlah harga petak, melainkan harga yang di-mod dengan pecahan uang masukan,
+ untuk mempermudah perhitungan. Setelah pembacaan selesai, peserta pada awalnya kebingungan
+ karena ditugaskan untuk mengecek semua petak persegi dengan segala ukuran. Akhirnya
+ ditemukan suatu cara, dimulai dari posisi-posisi berbeda pada matriks (brs, kol),
+ lalu di-loop dengan segala panjang dan tinggi yang mungkin (kemudian disimpan sebagai
+ brsmax dan kolmax). Setelah itu, dihitung jumlah harga yang di-mod dalam persegi berbatas
+ brs ke brsmax dan kol ke kolmax, lalu jumlah tersebut di-mod pecahan. Apabila 0, persegi
+ panjang tersebut valid, lalu counter ditambah 1. Peserta meninggalkan sepenggal kode
+ dalam komentar yang dapat dipakai untuk debugging, apabila peserta salah menjawab.
+ (Juga, dalam output ditemukan angka 18 sebelah 16, sedangkan di input tidak ada)
 
