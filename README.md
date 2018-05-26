@@ -320,8 +320,51 @@ Kunci yang harus diduplikat :
 
 ### Source Code Solusi
 ```
+program DuplikatKunci;
+
+var
+   n,i,j : integer; 
+   kunci : array of integer;
+   unique : boolean;
+
+begin
+    write('Masukkan jumlah kunci yang ada:');
+    readln(n);
+    setlength(kunci,n);
+
+    writeln('Masukkan nomor ruangan kunci yang ada:');
+    for i:=0 to n-1 do
+    begin
+        readln(kunci[i]);
+    end;
+
+    writeln('Kunci yang harus diduplikat:');
+    for i:=0 to n-1 do
+    begin
+        unique:= true;
+        j:=0;
+
+        while ((j < n) and (unique)) do
+        begin
+            if ((kunci[i] = kunci[j]) and (j<>i)) then 
+                unique := false;
+
+            j:=j+1;
+        end;
+
+        if (unique) then 
+            writeln(kunci[i]);
+    end;
+end.
 ```
 ### Penjelasan Solusi
+
+Program diawali dengan meminta masukan user berupa jumlah kunci yang disimpan di variabel **n**. Kemudian array **kunci** diset agar ukurannya sesuai dengan jumlah kunci. Setelah itu, program akan meminta user memasukkan nomor-nomor kunci yang ada dan di simpan di array **kunci**.
+
+Pada bagian kedua dari program, akan ditentukan kunci mana saja yang harus diduplikat. Pertama-tama, program akan masuk ke for loop, for loop ini berguna untuk mengiterasi seluruh isi array **kunci** untuk dicek tiap elemennya, apakah kunci tersebut perlu diduplikat atau tidak. pada for loop tersebut, berikutnya akan dilakukan inisialisasi iterator **j** dan variabel **unique** dengan true. Setelah itu, pogram akan masuk ke while loop yang melakukan iterasi dari awal array hingga akhir array, pada loop tersebut, jika ditemukan nilai elemen yang sama dengan elemen yang sedang melakukan loop selain elemen itu sendiri, maka nilai variabel **unique** akan diubah menjadi false dan loop akan berhenti. Jika tidak ada, maka loop akan berhenti bila pengecekan sudah sampai ke elemen terakhir array.
+
+Apabila setelah keluar dari while loop, nilai **unique** masih true, maka elemen dari array **kunci** tersebut akan dicetak ke layar karena hanya ada satu sehingga perlu diduplikat.
+
 -----------------
 ## Bab 5 - Matriks dan File Eksternal - Problem 11
 -----------------
@@ -353,5 +396,53 @@ Antrian terpanjang adalah 3
 
 ### Source Code Solusi
 ```
+program AntrianKrastiKrab;
+
+var
+    file_antrian : text;
+    antrian : array of array of integer;
+    i,j,m,n: integer;
+    found : boolean;
+
+begin
+    assign(file_antrian,'Queue.txt');
+
+    reset(file_antrian);
+    
+    read(file_antrian,n);
+    read(file_antrian,m);
+    setlength(antrian,n,m);
+    
+    for i:=0 to n-1 do
+    begin
+        for j:=0 to m-1 do
+        begin
+            read(file_antrian,antrian[i][j]);
+        end;
+    end;
+
+    close(file_antrian);
+    writeln('file loaded!');
+   
+
+    j:=0;
+    found := false;
+    while ((j < m) and (not found)) do
+    begin
+        i:=0;
+        while ((i < n) and (not found)) do
+        begin
+            if (antrian[i][j] = 1) then 
+                found := true
+            else 
+                i:=i+1;
+        end;  
+        j:=j+1;
+    end;    
+
+    writeln('Antrian terpanjang adalah ', m-j+1);
+end.
 ```
 ### Penjelasan Solusi
+
+A
