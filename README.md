@@ -89,8 +89,18 @@ Penjelasan contoh 2:
 Pada 7 hari pertama, harga sewa hanya 3000. Setelah itu, harga sewa naik menjadi 3500, sehingga total sewanya adalah 7*3000 + (10-7)*3500 = 31500
 
 -----------------------
+
+#### Source Code
+
+[here](1-Problem06.pas)
+
 -----------------------
-------
+
+#### Penjelasan Solusi
+
+Menerima masukan user yaitu harga sewa pokok (P), batas waktu sewa (T), tambahan harga sewa (D), serta waktu lama tuan vin meminjam (L). Jika waktu tuan vin meminjam tidak melebihi batas waktu sewa, maka harga sewa yang harus dibayar hanya L * P, namun jika melebihi batas waktu sewa, harga sewa perharinya akan ditambah dengan D setelah melewati batas waktu sewa.
+
+-----------------------
 
 ## Bab 2 - Pengulangan
 ---------------------------------
@@ -111,8 +121,10 @@ Kelompok dengan anggota tersedikit adalah kelompok 3
 ```
 
 -----------------------
------------------------
-------
+
+#### Source Code
+
+
 
 ## Bab 3 - Fungsi dan Prosedur
 
