@@ -406,7 +406,6 @@ var
 
 begin
     assign(file_antrian,'Queue.txt');
-
     reset(file_antrian);
     
     read(file_antrian,n);
@@ -445,4 +444,8 @@ end.
 ```
 ### Penjelasan Solusi
 
-A
+Pertama-tama program akan membuka file Queue.txt dan disimpan di variabel **file_antrian**. Kemudian program akan membaca 2 angka petama dalam file tersebut, dan nilainya disimpan di variabel **n** dan **m**. Setelah itu, program akan menset ukuran array **antrian** berdasarkan nilai **n** dan **m** lalu membaca sisa angka pada **file_antrian** dan menyimpan nilainya ke array.
+
+Langkah selanjutnya adalah menentukan panjang antrian terpanjang. Penentuan panjang antrian panjang dilakukan dengan cara mengiterasi matriks per baris dari kolom paling belakang (paling kiri) ke paling depan (paling kanan), apabila ditemukan angka 1 atau seluruh elemen matriks telah dicek maka loop akan berhenti.
+
+Setelah itu, panjang antrian terpanjang dihitung dengan rumus m-j+1. Dimana m adalah slot kasir yang tersedia, j adalah jumlah kolom yang sudah dicek sebelum loop berhenti. 
