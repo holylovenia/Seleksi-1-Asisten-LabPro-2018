@@ -1,3 +1,6 @@
+Nama  : Muhammad Ashabul Kahfi
+Nim   : 18216042
+
 # Seleksi 1 Asisten LabPro 2018
 -----------------------------------
 Petunjuk:
@@ -90,6 +93,57 @@ Persamaan yang mungkin adalah: 10 / 3 = 2 + 1
 ---------------------------------
 ---------------------------------
 
+solusi :
+a=input("Masukkan nilai A: ");
+b=input("Masukkan nilai B: ");
+c=input("Masukkan nilai C: ");
+d=input("Masukkan nilai D: ");
+
+A=int(a)
+B=int(b)
+C=int(c)
+D=int(d)
+
+if (D!=0):
+	if((A+B)==int(C/D)):
+		print ("Persamaan yang mungkin adalah: "+a+" + "+b+" = "+c+" / "+d)
+	if((A-B)==int(C/D)):
+		print ("Persamaan yang mungkin adalah: "+a+" - "+b+" = "+c+" / "+d)
+	if((A*B)==int(C/D)):
+		print ("Persamaan yang mungkin adalah: "+a+" * "+b+" = "+c+" / "+d)
+if (B!=0):
+	if(int(A/B)==(C+D)):
+		print ("Persamaan yang mungkin adalah: "+a+" / "+b+" = "+c+" + "+d)
+	if(int(A/B)==(C-D)):
+		print ("Persamaan yang mungkin adalah: "+a+" / "+b+" = "+c+" - "+d)
+	if(int(A/B)==(C*D)):
+		print ("Persamaan yang mungkin adalah: "+a+" / "+b+" = "+c+" * "+d)
+if ((B!=0) and (D!=0)):
+	if(int(A/B)==int(C/D)):
+		print ("Persamaan yang mungkin adalah: "+a+" / "+b+" = "+c+" / "+d)
+
+if((A+B) == (C-D)):
+	print ("Persamaan yang mungkin adalah: "+a+" + "+b+" = "+c+" - "+d)
+if((A+B)==(C*D)):
+	print ("Persamaan yang mungkin adalah: "+a+" + "+b+" = "+c+" * "+d)
+if((A+B)==(C+D)):
+	print ("Persamaan yang mungkin adalah: "+a+" + "+b+" = "+c+" + "+d)
+if((A-B)==(C+D)):
+	print ("Persamaan yang mungkin adalah: "+a+" - "+b+" = "+c+" + "+d)
+if((A-B)==(C-D)):
+	print ("Persamaan yang mungkin adalah: "+a+" - "+b+" = "+c+" - "+d)
+if((A-B)==(C*D)):
+	print ("Persamaan yang mungkin adalah: "+a+" - "+b+" = "+c+" * "+d)
+
+if((A*B)==(C+D)):
+	print ("Persamaan yang mungkin adalah: "+a+" * "+b+" = "+c+" + "+d)
+if((A*B)==(C-D)):
+	print ("Persamaan yang mungkin adalah: "+a+" * "+b+" = "+c+" - "+d)
+if((A*B)==(C*D)):
+	print ("Persamaan yang mungkin adalah: "+a+" * "+b+" = "+c+" * "+d)
+  
+Penjelasan : 
+  Pada persoalan ini, saya mencoba untuk semua persamaan. untuk operasi pembagian, saya harus mengecek apakah penyebutnya bernilai 0 atau tidak, jika bernilai 0 maka tidak akan menjalankan operasi pembagian.
 
 ## Bab 2 - Pengulangan
 ---------------------------------
@@ -109,6 +163,30 @@ Teks aslinya adalah "i love you!"
 ```
 ---------------------------------
 
+solusi :
+message = input("Masukan teks terenkripsi: ")
+n=input("Masukan nilai N :")
+N=int(n);
+
+dmessage = ""
+for ch in message:
+	char = ord(ch)
+	if ((char>=ord('a')) and (char<=ord('z'))):
+		if (char-N < ord('a')):
+			char=char+ord('z')-N-ord('a')+1
+		else :
+			char=char-N
+	dmessage = dmessage + str(char) +" "
+decodedMessage = ""
+
+for item in dmessage.split():
+   decodedMessage += chr(int(item))   
+
+print ('Teks aslinya adalah "'+decodedMessage+'"')
+
+penjelasan :
+  Secara umum, pertama program akan menerima input string dan akan disimpan ke sebuah variabel. setiap character di string, akan diubah menjadi nilai ASCII untuk character tersebut. setelah diubah ke nilai ascii, nilai tersebut dikurangi sebesar input angka yang diberikan. setelah semua dikurangi dengan angka yang diinput, semua angka dalam ascii tersebut diubah kembali menjadi character.
+
 ## Bab 3 - Fungsi dan Prosedur
 ### Problem 10
 
@@ -123,8 +201,23 @@ Buatlah sebuah program yang menghitung nilai faktorial dari sebuah bilangan bula
 ***
 Masukan N: **6**
 
+Solusi :
 N! = 720
 ***
+solusi :
+def faktorial(N):
+	if(N==1):
+		return 1;
+	else:
+		return (N*faktorial(N-1));
+
+n=input("Masukan N: ")
+N=int(n)
+faktor=faktorial(N);
+print ("N! =",faktor)
+
+Penjelasan :
+fungsi yang dibuat akan berbentuk rekursif. hal ini dapat dilihat pada kode bagian def faktorial. di dalam fungsi faktorial ini, akan selalu memanggil fungsi faktorial lagi sampai suatu waktu, yaitu sampai parameter pada fungsi bernilai 1.
 
 ## Bab 4 - *Array*
 ### Problem 9
@@ -157,6 +250,37 @@ Masukkan koefisien x^0 : **2**
 Maka hasil turunannya adalah 3x^2 + 10x^0 + 2x^0
 ***
 
+solusi :
+def inputKoefisien(N):
+	kata="Masukkan koefisien x^"+str(N)+" : "
+	arr=input(kata)
+	return (int(arr))
+
+
+
+n=input("Masukkan pangkat paling besar : ")
+N=int(n)
+pangkatPertama=N
+array=[]
+while (pangkatPertama>=0):
+	arr=inputKoefisien(pangkatPertama)
+	array.append(int(arr))
+	pangkatPertama=pangkatPertama-1
+
+pangkat=N
+hasil=''
+while (pangkat>0):
+	isi=array[0]*pangkat
+	array.pop(0)
+	pangkat=pangkat-1
+	if (pangkat == N-1):
+		hasil=hasil+"Maka hasilnya adalah "+str(isi)+"x^"+str(pangkat)+" "
+	else:
+		hasil=hasil+"+ "+str(isi)+"x^"+str(pangkat)+" "
+print (hasil)
+		
+penjelasan :
+pada program yang saya buat, penggunaan array terjadi untuk penyimpanan koefisien untuk setiap variabel persamaan. untuk mendapatkan hasil turunan dari persamaan, array yang berisi semua koefisien akan diambil/dihapus dari array dengan mengalikan dengan nilai pangkat variabel. di akhir program, array akan berisi kosong, karena setiap mencari nilai turunan, nilai dari array akan dihapus.
 
 ## Bab 5 - Matriks dan File Eksternal
 
@@ -189,7 +313,45 @@ Banyaknya benteng yang tidak saling serang adalah 2
 
 -----------------------------------
 
+solusi :
+file = open("chess.txt","r")
+N= int(file.readline())
 
+mat=[]
+mat=[line.split() for line in file]
+print ("matriks loaded!")
+result=[-1,-1,-1,-1]
+for i in range(0,len(mat)):
+	result_baris=0
+	result_kolom=0
+	for j in range(0,len(mat[i])):
+		result_baris=result_baris+int(mat[i][j])
+		if (int(mat[i][j])==1):
+			result_kolom=j
+	if (result_baris == 1):
+		result[i]=result_kolom
+	else:
+		result[i]=-1
+
+k=0
+tabrak=0
+while (k<N):
+	if (result[k]==-1):
+		k=k+1
+	else:
+		kolom=result[k]
+		result_kolom_new=0
+		for i in range(0,N):
+			result_kolom_new=result_kolom_new+int(mat[i][kolom])
+		if(result_kolom_new==1):
+			tabrak=tabrak+1
+		k=k+1
+print ("Banyaknya benteng yang tidak saling serang adalah "+ str(tabrak))	
+
+penjelasan :
+berdasarkan program yang saya buat, pertamanya, setiap baris dihitung jumlahnya, jika di satu barisnya berjumlah 1, maka akan dicatat posisi banteng di dalam sebuah array, jika dalam satu baris jumlahnya lebih dari 1 tidak akan disimpan dalam sebuah array dengan memberikan nilai -1 di sebuah array.
+
+setelah tiap barisnya sudah dicek maka untuk tiap kolomnya dicek. jika banteng di baris tersebut hanya ada 1, maka akan dicek apakah di kolom banteng tersebut ada banteng yang lain atau tidak. jika di kolom tersebut tidak ada banteng lagi maka akan ditambah ke sebuah variabel yang menunjukkan berapa banyak banteng yang tidak berhadapan dengan banteng lain.
 
 
 
