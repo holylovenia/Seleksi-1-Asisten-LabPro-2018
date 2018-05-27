@@ -42,8 +42,8 @@ Dapat dilihat bahwa seluruh bilangan kelipatan 3 atau 7 tidak disebutkan, kecual
 
 **Format Input dan Output** 
 (Elemen baris setelah tanda “:” pada runtime merupakan input dari pengguna)
-```
-Masukan N: 25  
+<pre>
+Masukan N: <b>25</b>  
 1  
 2  
 4  
@@ -61,16 +61,16 @@ Masukan N: 25
 23  
 24  
 25  
-```
-```
-Masukan N: 10  
+</pre>
+<pre>
+Masukan N: <b>10</b>
 1  
 2  
 4  
 5  
 8  
 10  
-```
+</pre>
 ---------------------------------
 
 ### Bab 3 Problem 12
