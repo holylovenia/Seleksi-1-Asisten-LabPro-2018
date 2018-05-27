@@ -127,7 +127,7 @@ int main() {
 ```
 
 ---------------------------------
-### Problem 10
+### Chapter 2 Problem 10
 
 Seorang mahasiswa ingin menentukan bilangan terendah kedua dan terbesar kedua dari **N** buah bilangan. Diasumsikan **N** selalu lebih besar dari **1**. Buatlah program untuk membantu mahasiswa tersebut.
 
@@ -146,7 +146,7 @@ Bilangan tertinggi kedua adalah 34
 ```
 
 ---------------------------------
-### Solusi Problem 10
+### Solusi Chapter 2 Problem 10
 
 Cukup melakukan linear scan pada array untuk menemukan jawabannya
 
@@ -230,7 +230,7 @@ int main() {
 ```
 
 ---------------------------------
-### Problem 9
+### Chapter 3 Problem 9
 
 Diberikan 2 bilangan bulat A dan B (1 ≤ A, B ≤ 100000000), buatlah program yang menampilkan semua palindrom antara A dan B inklusif.
 
@@ -271,7 +271,7 @@ TIDAK ADA
 Buatlah suatu fungsi yang memeriksa apakah suatu bilangan adalah bilangan palindrome atau bukan.
 
 ---------------------------------
-### Solusi Problem 9
+### Solusi Chapter 3 Problem 9
 
 Melakukan iterasi inklusif dari A ke B dan mengecek apakah bilangan sebuah palindrom dengan fungsi
 
@@ -327,7 +327,7 @@ int main() {
 ```
 
 ---------------------------------
-### Problem 8
+### Chapter 4 Problem 8
 
 Terdapat sebuah array. Tentukan tiga angka a, b, dan c pada array tersebut yang memenuhi nilai a+b^2 = c dengan a != b != c
 
@@ -355,7 +355,7 @@ tidak ada nilai a b c yang memenuhi
 ***
 
 ---------------------------------
-### Solusi Problem 8
+### Solusi Chapter 4 Problem 8
 
 Cukup melakukan pengecekan keberadaan nilai C untuk setiap pasangan (A,B) yang merupakan elemen array
 
@@ -447,7 +447,7 @@ int main() {
 ```
 
 ---------------------------------
-### Problem 7
+### Chapter 5 Problem 7
 
 Spons akan membuat selai dari saus *jellyfish*. Menurut resep rahasia yang dia terima dari Tuan Krab, selai dengan rasa terbaik dihasilkan dari perpaduan dua ekor *jellyfish* dari jenis Spongian dan Patrician, dengan bobot total kedua ekor *jellyfish* tersebut adalah `X`. Spons pun pergi ke pasar untuk membeli *jellyfish* yang diperlukan. Di pasar, pedagang telah menyiapkan daftar bobot *jellyfish* yang tersedia dari masing-masing jenis (elemen masing-masing daftar *unique*). Pedagang ini merupakan orang yang sangat sistematis, sehingga daftar tersebut disimpan dalam bentuk matriks persegi yang masing-masing elemennya terurut membesar. Spons perlu untuk mengetahui berapa banyak pasangan bobot *jellyfish* jenis Spongian dan Patrician yang dapat dia gunakan untuk menghasilkan selai terbaik. Tugas Anda adalah untuk membantu Spons menghitung banyaknya pasangan bobot yang dapat ia gunakan tersebut.
 
@@ -489,7 +489,7 @@ Banyak pasangan adalah 4
 Keterangan: pasangan yang memenuhi adalah (1, 20), (5, 16), (8, 13) dan (11, 10).
 
 ---------------------------------
-### Solusi Problem 7
+### Solusi Chapter 5 Problem 7
 
 Menggunakan double pointer untuk mengecek pasangan elemen pada matriks yang nilainya sesuai target
 
