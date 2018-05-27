@@ -85,13 +85,13 @@ dan mengembalikan false jika ada yang tidak sama.}
 {Kamus Lokal}
 var
     i: integer;
-    diff: boolean;
+    diff1, diff2: boolean;
 
 {Algoritma Lokal}
 begin
     i:= 0;
-    diff:= false;
-    while((not diff) and (i <= (length-2))) do 
+    diff1:= false;
+    while((not diff1) and (i <= (length-2))) do 
     begin
         if(map[i][i] = map[i+1][i+1]) then
         begin
@@ -99,10 +99,23 @@ begin
         end
         else
         begin
-            diff := true;
+            diff1 := true;
         end;
     end;
-    cekDiagonal := not diff;
+    i:=0;
+    diff2:= false;
+    while((not diff2) and (i <= (length-2))) do 
+    begin
+        if(map[i][length-i-1] = map[i+1][length-i-2]) then
+        begin
+            i:= i+1
+        end
+        else
+        begin
+            diff2 := true;
+        end;
+    end;
+    cekDiagonal := (not diff1) or (not diff2);
 end;
 
 {Algoritma Utama}

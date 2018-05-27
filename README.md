@@ -50,6 +50,7 @@ Karena Anda hanya boleh mengeluarkan batu atau kertas saja, maka agar tidak kala
 
 ---------------------------------
 **Penjelasan Solusi**
+
 Setelah menerima input dari user, dilakukan percabangan jika user memilih mengeluarkan batu maka akan mengeluarkan output kertas, jika user memilih mengeluarkan gunting, maka akan mengeluarkan output batu, dan jika user memilih mengeluarkan kertas, maka akan mengeluarkan output kertas lagi karena untuk mengalahkan kertas harus menggunakan gunting, sedangkan hanya bisa menggunakan batu atau kertas.
 
 ---------------------------------
@@ -82,6 +83,7 @@ Dan pada bulan keempat, uang Tuan Vin menjadi (3641 + 1000) + (3641 + 1000) * 10
 
 ---------------------------------
 **Penjelasan Solusi**
+
 Setelah menerima input dari user, akan dilakukan pengulangan sebanyak lama menabung, setiap pengulangan akan dilakukan penambahan ke saldo bank yang merupakan variabel dengan nama "bank". Setelah itu dari saldo yang ada akan ditambahkan dengan bunga yang didapat pada bulan tersebut, lalu hasil tersebut yang dicetak ke layar.
 
 ---------------------------------
@@ -107,6 +109,7 @@ Mahasiswa tersebut akan menang!
 
 ---------------------------------
 **Penjelasan Solusi**
+
 Terdapat dua fungsi pembantu pada solusi ini. 
 1. Pertama adalah fungsi pembantu untuk mengetahui apakah terdapat angka 7 di dalam nomor urut yang dimasukan. Fungsi ini akan melihat dari satuan dengan cara melakukan operasi modulo pada nomor yang dimasukkan, jika hasil yang didapat bukan 7, maka input fungsi akan dilakukan pembagian bulat 10, lalu dilihat lagi satuannya dan seterusnya. 
 2. Kedua adalah fungsi pembantu untuk menentukan apakah nomor urut tersebut akan memenangkan pertandingan atau tidak. Yaitu dengan melihat apakah angkanya habis dibagi dengan 7 dan juga mengandung angka 7.
@@ -117,6 +120,7 @@ Setelah itu dengan menggunakan kedua fungsi di atas dan menggunakan percabangan 
 ---------------------------------
 
 ### Problem 4
+[[source code]](src/4-Problem04.pas)
 
 Charlie adalah salah satu tamu undangan dalam suatu acara pernikahan. Pesta pernikahan ini merupakan pesta pernikahan yang unik, karena semua mobil diparkirkan dalam rentang nilai tertentu. Namun ketika Charlie kembali, mobil Charlie hilang. Sialnya, ia lupa dengan nomor platnya. Buatlah program yang dapat menentukan nomor plat mobil yang dimiliki Charlie
 
@@ -156,10 +160,19 @@ Masukkan 4 nomor mobil yang ada:
 
 Tidak ada mobil yang merupakan mobil Charlie
 ***
+---------------------------------
+**Penjelasan Solusi**
 
+Terdapat dua fungsi pembantu pada solusi ini. 
+1. Fungsi min, fungsi untuk mencari nilai minimal dalam suatu array 
+2. Fungsi iFind, fungsi untuk mencari nilai indeks dari bilangan yang diinput
+Pertama program akan menerima input dari user berupa banyaknya bilangan dan bilangan-bilangan yang dimasukkan. Lalu dari bilangan-bilangan yang ada itu akan diambil nilai minimal yang ada. Setelah itu akan dicek dari bilangan minimal dalam array sampai ke (minimal + banyak bilangan -1). Jika ada bilangan yang dilewat ketika dilakukan penambahan satu per satu, maka keluar dari pengulangan dan mengeluarkan output bilangan tersebut, jika sampai akhir tidak ada bilangan yang dilewat, maka mobil Charlie tidak ditemukan.
+
+---------------------------------
 ## Bab 5 - Matriks dan File Eksternal
 ---------------------------------
 ### Problem 3
+[[source code]](src/5-Problem03.pas)
 
 Tuan Krab sedang bernostalgia dengan masa kecilnya. Dia mengajak Anda untuk bermain Tic-Tac-Toe. 
 Bagi Anda yang belum pernah bermain Tic-Tac-Toe, tidak perlu khawatir! Tuan Krab dengan senang hati akan menjelaskannya. Pada permainan ini, setiap pemain akan mengisi suatu *cell matrix* dengan karakter tertentu. Besarnya matriks yang digunakan tergantung pada kesepakatan para pemain, namun harus berupa *square matrix*. Pada permainan ini, Anda menggunakan karakter `x` dan Tuan Krab menggunakan karakter `o`. Permainan akan dimenangkan oleh pemain yang berhasil membuat suatu diagonal, baris, atau kolom yang semua *cell*-nya berisi karakter yang sama.  
@@ -185,6 +198,15 @@ xoo
 result loaded!
 Pemenangnya adalah Anda
 ```
+---------------------------------
+**Penjelasan Solusi**
+
+Terdapat tiga fungsi pembantu pada solusi ini. 
+1. Fungsi cekBaris, fungsi untuk mengecek apakah baris memiliki elemen yang sama
+2. Fungsi cekKolom, fungsi untuk mengecek apakah kolom memiliki elemen yang sama
+3. Fungsi cekDiagonal, fungsi untuk mengecek apakah diagonal memiliki elemen yang sama
+Pertama akan dilakukan pembacaan dari file eksternal, dan setelah itu dimasukkan ke dalam sebuah matriks dengan elemen bertipe char. Setelah itu akan dilakukan pengecekan secara diagonal terlebih dahulu. Jika ada diagonal yang memiliki elemen sama, maka program menemukan pemenang dan dicetak, jika tidak akan dilakukan pengulangan untuk pengecekan baris dan kolom, dimulai dengan mengecek baris 1, kolom 1, baris 2, kolom 2, dan seterusnya. Jika setelah semua baris diperiksa tidak ditemukan pemenang, maka akan dikeluarkan output tidak ada pemenang
+
 -----------------------------------
 
 Dicky Adrian - 13516050
