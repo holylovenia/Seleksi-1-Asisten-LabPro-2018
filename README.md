@@ -286,6 +286,11 @@ begin
 end.
 ```
 
+#### Penjelasan Solusi
+Langkah kerja solusi adalah sebagai berikut:
+1. Program akan menerima input berupa *integer* `x`
+2. Program memiliki 2 fungsi, yaitu
+
 ------------------
 
 ### Bab 4 Problem 11
