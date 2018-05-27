@@ -116,7 +116,7 @@ end.
 
 #### Penjelasan Solusi
 Langkah kerja solusi adalah sebagai berikut:
-1. Program pada awalnya akan meminta input pengguna. Input berupa 3 data mahasiswa dan setiap mahasiswa akan memiliki nama dan nilai. 
+1. Program pada awalnya akan meminta input pengguna. Input berupa 3 data mahasiswa dan setiap mahasiswa akan memiliki *string* `nama` dan *integer* `nilai`. 
 2. Program akan membandingkan nilai mahasiswa dan akan dicari seluruh kemungkinan. Kemungkinan terbagi menjadi 6, yaitu:  
 ```
 - 123
@@ -203,7 +203,7 @@ end.
 
 #### Penjelasan Solusi
 Langkah kerja solusi adalah sebagai berikut:  
- 1. Program awalnya akan meminta input berupa `limit` (batas).
+ 1. Program awalnya akan meminta input berupa *integer* `limit` (batas).
  2. Program akan mengiterasi dari `1` hingga `limit` dan iterator akan disimpan pada variabel `i`
  3. `i` akan dicek dan terdapat dua kemungkinan, yaitu:  
   a. `i` merupakan angka selain kelipatan `3` atau `7` namun boleh kelipatan `3 * 7` (21), maka `i` akan dicetak  
@@ -385,6 +385,20 @@ begin
 end.
 ```
 
+#### Penjelasan Solusi
+Langkah kerja solusi adalah sebagai berikut:  
+ 1. Program meminta input jumlah NIM yang akan diinput yaitu *integer* `n`
+ 2. Program akan meminta sebanyak `n` input *integer* `NIM` dan memasukkannya pada array `nim`
+ 3. Program akan menginisiasi `i` sebagai indeks untuk iterasi array. `i` diset indeks pertama pada array
+ 4. Menginisasi `count = 1` untuk mencatat jumlah kemunculan `nim[i]`
+ 5. Program akan menginisiasi `j` sebagai indeks untuk iterasi array (iterasi di dalam). `j` diset `i + 1`
+ 6. Setiap `nim[j]` akan dicek apakah sama dengan `nim[i]` sehingga terdapat 2 kemungkinan, yaitu:  
+  a. apabila sama akan mengubah `nim[j]` menjadi `-1` dan mencatat bahwa `nim[i]` telah muncul sebanyak `+1` kali `count = count + 1`    
+  b. apabila berbeda maka tidak ada perubahan
+ 7. Melakukan langkah 5 untuk `j = i + 1` hingga `j = n`
+ 8. Mencetak jumlah kemunculan yang didapatkan `count`
+ 9. Melakukan langkah 4, 5, 6 untuk `i = 1` hingga `i = n`. Terdapat catatan khusus apabila `nim[i] = -1` maka tidak melakukan iterasi kedua
+
 ----------------------------
 
 ### Bab 5 Problem 10
@@ -524,5 +538,18 @@ begin
     writeln('Banyak bidang tanah yang dapat dibeli adalah ', count);
 end.
 ```
+
+#### Penjelasan Solusi
+Langkah kerja solusi adalah sebagai berikut:
+ 1. Membaca file yang menyimpan data matriks dan akan menyimpan jumlah baris/kolom *integer* `n`
+ 2. Program meminta input kelipatan uang yang dimiliki *integer* `factor`
+ 3. Menginisasi `count = 0` untuk mencatat jumlah tanah yang dapat dibeli
+ 4. Melakukan iterasi pada 2 titik. 2 titik dipilih untuk memastikan agar setiap iterasi menghasilkan kotak. Dengan syarat `titik 1 < titik 2` `(titik1.x <= titik2.x dan titik1.y < titik2.y)`
+ 5. Pada setiap iterasinya dihitung jumlah nilai `sum` pada kotak tersebut. Misalkan `(1,1) (2,2)` maka isi dari kotak tersebut adalah `(1,1) + (1,2) + (2,1) + (2,2)`. Setelah dihitung terdapat dua kemungkinan, yaitu:  
+  a. `sum` habis dibagi `factor` maka total tanah yang dapat dibeli bertambah 1 `count = count + 1`  
+  b. `sum` tidak habis dibagi `factor` maka tidak terjadi apa-apa
+ 6. Melakukan iterasi pada `titik 2` hingga mencapai `(n,n)` untuk setiap `titik 1`
+ 7. Melakukan iterasi pada `titik 1` hingga mencapai `(n,n)`
+ 8. Mencetak jumlah tanah yang dapat dibeli `count`
 
 -----------------------------------
