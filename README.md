@@ -46,12 +46,10 @@ Hint: hanya ada 8 posisi yang menentukan pemenang dalam tic tac toe
 ---------------------------------
 ### Solusi Problem 11
 
-
-
-
-'''
-
-'''
+```
+#include <bits/stdc++.h>
+using namespace std;
+```
 
 ---------------------------------
 ### Problem 10
