@@ -54,6 +54,7 @@ Titik (0,0) berada di titik origin
 ***
 
 Source code:
+```Pascal
 program Bab1Problem4;
 
 procedure ReadPosition(var x:integer; var y:integer);
@@ -102,7 +103,7 @@ begin
 	ReadPosition(xPosition,yPosition);
 	PrintPosition(xPosition,yPosition);
 end.
-
+```
 ---------------------------------
 
 
