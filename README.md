@@ -407,23 +407,29 @@ begin
     begin
         readln(tab2[i]);
     end;
-
+    
+    //flag untuk menandakan apabila tidak ada kekayaan negara tetangga yang tidak dimiliki oleh negara adolf
     flag := TRUE;
     for i:= 1 to N2 do
     begin
+        //melakukan pengecekan apakah kekayaan tetangga dimiliki oleh adolf
         tabValidasi[i] := isExist(tab2[i], tab1, N1 );
+        //jika negara adolf tidak memiliki kekayaan tetangga untuk pertama kalinya
+        //maka flag diubah kefalse
         if ( not tabValidasi[i] and flag ) then
         begin
             flag := false;
             writeln('Negara adolf tidak memiliki :');
             writeln(tab2[i]);
         end
+        // jika negara adolf tidak memiliki lebih dari 2 dari jumlah kekayaan negara tetangga
         else if( not tabValidasi[i] ) then
              begin
                 writeln(tab2[i]);
              end;
     end;
 
+    //jika flag masih true maka semua kekayaan tetangga dimiliki oleh negara adolf 
     if ( flag ) then
         writeln('Negara adolf memiliki segalanya');
 end.
@@ -492,16 +498,20 @@ begin
 end;
 
 begin
+    // inisialisasi awal
     for i:= 1 to MaxIndex do
         for j := 0 to MaxIndex do
             tab[i][j] := 0;
+    //isMagic adalah penanda matriks adalab MagicSquare
     isMagic := True;
 
+    // membuka file untuk dibaca
     Assign(fileS,'matriks.txt');
     reset(fileS);
 
     readln(fileS,c);
 
+    // memasukan matriks pada file ke memori local ( tab )
     for i:= 1 to charToInt(c) do
     begin
         readln(fileS, s);
@@ -526,12 +536,15 @@ begin
     len := charToInt(c);
     sum := 0;
     
+    //menghitung jumlah baris pertama dan disimpan pada sum
     for k := 1 to len do
     begin
         sum := sum + tab[1][k];
     end;
 
-    // cek baris dan kolom
+    // cek untuk setiap jumlah baris dan kolom sama dengan sum
+    // jika tidak maka isMagic false
+    // jika ya maka is Magic tetap true
     k := 1;
     while ( (k <= len) and (isMagic) ) do
     begin
@@ -549,6 +562,7 @@ begin
         k := k + 1;
     end;
 
+    // pengecekan terhadap diagonal 1 (sum 1) dan diagonal 2 (sum2)
     sum1 := 0;
     sum2 := 0;
     k := 1;
@@ -561,10 +575,13 @@ begin
         l := l - 1;
         if( k > len) then
         begin
+            // apabila sum1 atau sum2 tidak sama dengan sum
+            // maka isMagic menjadi false
             if ( (sum1 <> sum) or (sum2 <> sum) ) then
                 isMagic := false;
         end;
     end;
+    
 
     if(isMagic) then
         writeln('YES')
