@@ -92,7 +92,7 @@ Pada 7 hari pertama, harga sewa hanya 3000. Setelah itu, harga sewa naik menjadi
 
 #### Source Code
 
-[here](1-Problem06.pas)
+[1-Problem06](1-Problem06.pas)
 
 -----------------------
 
@@ -101,6 +101,8 @@ Pada 7 hari pertama, harga sewa hanya 3000. Setelah itu, harga sewa naik menjadi
 Menerima masukan user yaitu harga sewa pokok (P), batas waktu sewa (T), tambahan harga sewa (D), serta waktu lama tuan vin meminjam (L). Jika waktu tuan vin meminjam tidak melebihi batas waktu sewa, maka harga sewa yang harus dibayar hanya L * P, namun jika melebihi batas waktu sewa, harga sewa perharinya akan ditambah dengan D setelah melewati batas waktu sewa.
 
 -----------------------
+----------------------------
+------
 
 ## Bab 2 - Pengulangan
 ---------------------------------
@@ -124,7 +126,17 @@ Kelompok dengan anggota tersedikit adalah kelompok 3
 
 #### Source Code
 
+[2-Problem05](2-Problem05.pas)
 
+-----------------------
+
+#### Penjelasan Solusi
+
+Menerima masukan jumlah kelompok dari user, yaitu N, kemudian jika N > 0, akan menerima masukan jumlah anggota kelompok pertama dan dimasukkan dalam variabel sementara yaitu M. M juga dinobatkan terlebih dahulu sebagai nilai minimal, sebagai variabel min, sehingga nama kelompok tersedikit, yaitu result, akan diisi dengan kelompok 1. Kemudian akan dilakukan looping untuk menerima masukan N untuk setiap kelompok, jika jumlah kelompok lebih dari satu, dan dimasukkan ke variabel sementara M. Kemudian untuk setiap M akan dibandingkan dengan nilai variabel min, jika M tersebut lebih kecil daripada min, maka nilai min akan diupdate dengan M tersebut, result juga akan diupdate dengan nama kelompok. Sehingga result akhir itulah yang akan dicetak sebagai kelompok dengan anggota tersedikit.
+
+-----------------------
+----------------------------
+------
 
 ## Bab 3 - Fungsi dan Prosedur
 
@@ -167,8 +179,20 @@ Bilangan prima diantara 10 sampai 25 adalah:
 23
 ***
 
-------------------
------------------
+-----------------------
+
+#### Source Code
+
+[3-Problem04](3-Problem04.pas)
+
+-----------------------
+
+#### Penjelasan Solusi
+
+Pada kasus kali ini, digunakan fungsi isPrime dengan parameter suatu angka, misalkan x, yang berguna untuk mengembalikan true jika bilangan x tersebut merupakan bilangan prima. Dalam fungsi tersebut akan dicek apakah bilangan tersebut dapat dibagi oleh semua angka dari 2 hingga x div 2, jika dapat dibagi sekali saja, akan mengembalikan nilai false. Setelah itu sistem akan melakukan looping dari range nilai A ke B atau B ke A, jika angka tersebut menghasilkan nilai true akan dicetak ke layar.
+
+-----------------------
+----------------------------
 ------
 
 ## Bab 4 - *Array*
@@ -214,8 +238,21 @@ Erma
 Hans
 ***
 
------------------
------------------
+-----------------------
+
+#### Source Code
+
+[4-Problem03](4-Problem03.pas)
+
+-----------------------
+
+#### Penjelasan Solusi
+
+Menerima masukan jumlah tamu ke dalam variabel N, kemudian akan dibuat deret Fibonacci dengan prosedur makeFibonacci yang akan membuat deret sebelum angka tersebut, misalkan angka 9 akan menghasilkan deret 0 1 1 2 3 5 8, dan akan disimpan ke dalam sebuah array bernama arrayfibonacci. Setelah itu, sistem akan menerima masukan nama tamu sebanyak N kali yang kemudian akan disimpan ke dalam sebuah array, yaitu arraytamu. Kemudian akan dicek urutan pemasukannya, apakah angka urutan tersebut merupakan Fibonacci atau tidak, dengan menggunakan fungsi isFibonacci yang akan mengembalikan true jika sebuah angka ada di dalam arrayfibonacci. Jika urutan tersebut merupakan anggota dari arrayfibonacci, nama tamu akan dimasukkan ke dalam sebuah array yang bernama arrayhasil. Arrayhasil inilah yang akan menjadi output dari sistem.
+
+-----------------------
+----------------------------
+------
 
 ## Bab 5 - Matriks dan File Eksternal
 
@@ -247,6 +284,31 @@ result exported!
 8 5 2
 9 6 3
 ```
-----------------------------
+-----------------------
+
+#### Source Code
+
+[5-Problem02](5-Problem02.pas)
+
+-----------------------
+
+#### Penjelasan Solusi
+
+Sebuah file yang berisi matriks berukuran NxN akan dibaca kemudian akan dimasukkan ke dalam array 2 dimensi atau matriks bernama matrix. Lalu sistem menerima masukan banyak rotasi dari user ke dalam variabel bernama Nrotasi. Jika Nrotasi dapat dibagi 4, maka hasil rotasi akan tetap dengan matriks sebelumnya. Lalu jika Nrotasi dibagi 4 menghasilkan sisa 1, maka penulisan matriks yang sebelumnya dari perbaris dulu dari atas ke bawah kemudian perbaris tersebut akan ditulis perkolom dari kiri kanan, akan menjadi perkolom terlebih dahulu dari kanan ke kiri, kemudian dari kolom tersebut akan ditulis perbaris dari atas ke bawah. Contoh :
+- Matriks Awal
+```
+1 2 3
+4 5 6
+7 8 9
+```
+- Matriks Hasil
+```
+7 4 1
+8 5 2
+9 6 3
+```
+Selain itu, jika Nrotasi dibagi 4 menghasilkan sisa 2, maka penulisan matriks akan menjadi perbaris terlebih dahulu dari bawah ke atas, kemudian perbaris tersebut akan ditulis perkolom dari kanan ke kiri. Begitu juga untuk kasus jika Nrotasi dibagi 4 menghasilkan sisa 3, penulisan matriks akan berubah menjadi perkolom terlebih dahulu dari kiri ke kanan, kemudian perkolom tersebut akan ditulis perbaris dari bawah ke atas.
+
+-----------------------
 ----------------------------
 ------

@@ -3,12 +3,12 @@ program fototuankrab;
 // {$APPTYPE CONSOLE}
 uses sysutils;
 var
-	matrix : array[1..100, 1..100] of integer;
-	result : array[1..199, 1..199] of integer;
-	N, Nrotasi : integer;
-	F : TextFile;
-	i, j, m, k: integer;
-	Fout : Text;
+	matrix : array[1..100, 1..100] of integer; // matrix : matriks yang dibaca dari sebuah file
+	result : array[1..199, 1..199] of integer; // result : matriks yang telah dirotasi
+	N, Nrotasi : integer; // N : banyak baris dan kolom matriks, Nrotasi : banyak sebuah rotasi dilakukan
+	F : TextFile; // Variabel file yang akan diread
+	i, j, m, k: integer; // Variabel looping
+	Fout : Text; // Variabel file yang akan diwrite
 begin
 	// Baca File
 	assign(F, 'image.txt');
@@ -95,6 +95,7 @@ begin
 	begin
 		assign(Fout, 'result.txt');
 		rewrite(Fout);
+		writeln(Fout, N);
 		for i:=1 to N do
 		begin
 			for j:=1 to N do
