@@ -11,6 +11,7 @@ Tuan Vin ingin meminta bantuan Anda. Tuan Vin diminta untuk mengurutkan nilai uj
 
 #### Format Input dan Output
 input di-**bold**
+*Contoh*
 <pre>
 Masukan Nama 1: <b>Kevin</b>
 Masukan Nilai 1: <b>70</b>
@@ -33,6 +34,7 @@ Dapat dilihat bahwa seluruh bilangan kelipatan 3 atau 7 tidak disebutkan, kecual
 
 #### Format Input dan Output
 input di-**bold**
+*Contoh*
 <pre>
 Masukan N: <b>25</b>  
 1  
@@ -76,6 +78,7 @@ Ia baru saja belajar mengenai fungsi komposisi sehingga ia ingin mencoba untuk m
 
 #### Format Input dan Output
 input di-**bold**
+*Contoh*
 <pre>
 Masukan nilai x: <b>4</b>
 
@@ -88,6 +91,7 @@ f(g(f(x))) = -1453
 </pre>
 
 Anda diwajibkan membuat fungsi f(x) dan g(x).
+
 ------------------
 
 ### Bab 4 Problem 11
@@ -96,6 +100,7 @@ Mei ditugaskan untuk mencatat absensi seluruh mahasiswa yang hadir. Setiap kali 
 
 #### Format Input dan Output 
 input di-**bold**
+*Contoh*
 <pre>
 Masukkan jumlah kertas kehadiran : <b>9</b>
 Masukkan NIM mahasiswa : <b>89</b>
@@ -124,7 +129,7 @@ Tuan Krab ingin membuka cabang baru dari Krasti Krab. Oleh karena itu, dia perlu
 *Input* berupa matriks yang merepresentasikan harga petak tanah disimpan dalam file eksternal `land.txt`. Pada file eksternal ini, baris pertama berisi bilangan bulat positif `N` yang merepresentasikan ukuran matriks. `N` baris berikutnya berisi `N` buah bilangan bulat positif yang merupakan harga petak tanah pada *cell* tersebut. Pada saat *runtime*, diinputkan bilangan bulat `K` yang merepresentasikan pecahan uang yang dibawa oleh Tuan Krab.
 *Output* berupa informasi banyaknya bidang tanah yang dapat dibeli oleh Tuan Krab.
 
-**Contoh**
+*Contoh*
 - land.txt
 
 ```
@@ -140,7 +145,7 @@ Tuan Krab ingin membuka cabang baru dari Krasti Krab. Oleh karena itu, dia perlu
 matriks loaded!
 Pecahan uang: <b>4</b>
 Banyak bidang tanah yang dapat dibeli adalah 6
-<pre>
+</pre>
 
 *Keterangan:*
 Ada 6 buah bidang tanah yang dapat dibeli.
