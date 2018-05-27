@@ -6,11 +6,11 @@ Name : Muhammad Farhan
 
 
 ## Daftar Isi
-- [Bab 1 - Problem 2](#1-decision-making—problem-2)
-- [Bab 2 - Problem 1](#2-loop—problem-1)
-- [Bab 3 - Problem 12](#3-function-and-procedure—problem-12)
-- [Bab 4 - Problem 11](#4-array—problem-11)
-- [Bab 5 - Problem 10](#5-matrix-and-external-file—problem-10)
+- [Bab 1 - Problem 2](#1-decision-making---problem-2)
+- [Bab 2 - Problem 1](#2-loop---problem-1)
+- [Bab 3 - Problem 12](#3-function-and-procedure---problem-12)
+- [Bab 4 - Problem 11](#4-array---problem-11)
+- [Bab 5 - Problem 10](#5-matrix-and-external-file---problem-10)
 
 
 ## 1. Decision Making - Problem 2
