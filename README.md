@@ -34,18 +34,6 @@ Petunjuk:
 
 - [Bab 1 - Percabangan](#bab-1---percabangan)
 - [Bab 2 - Pengulangan](#bab-2---pengulangan)
-  - [Problem 1](#problem-1-1)
-  - [Problem 2](#problem-2-1)
-  - [Problem 3](#problem-3-1)
-  - [Problem 4](#problem-4-1)
-  - [Problem 5](#problem-5-1)
-  - [Problem 6](#problem-6-1)
-  - [Problem 7](#problem-7-1)
-  - [Problem 8](#problem-8-1)
-  - [Problem 9](#problem-9-1)
-  - [Problem 10](#problem-10-1)
-  - [Problem 11](#problem-11-1)
-  - [Problem 12](#problem-12-1)
 - [Bab 3 - Fungsi dan Prosedur](#bab-3---fungsi-dan-prosedur)
   - [Problem 1](#problem-1-2)
   - [Problem 2](#problem-2-2)
@@ -88,10 +76,8 @@ Petunjuk:
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
-------
 
 ## Bab 1 - Percabangan
----------------------------------
 ### Problem 8
 
 Diketahui ada 5 jenis mineral (A, B, C, D, E) dan bahan-bahan makanan berikut mengandung mineral berikut:
@@ -199,210 +185,8 @@ void printResult(bool &A, bool &B, bool &C, bool &D, bool &E) {
 }
 ```
 
----------------------------------
 
 ## Bab 2 - Pengulangan
----------------------------------
-### Problem 1
-
-
-Karena bosan belajar, sekumpulan anak TPB memutuskan untuk bermain. Pada permainan ini, anak TPB tersebut secara bergantian menyebutkan bilangan natural secara berurutan. Namun, mereka tidak boleh menyebutkan angka kelipatan **3** atau **7**. Misal jika mereka bermain sampai angka 25, bilangan yang akan mereka ucapkan adalah sebagai berikut:
-**1, 2, 4, 5, 8, 10, 11, 13, 16, 17, 19, 20, 21, 22, 23, 24, 25**
-
-
-Dapat dilihat bahwa seluruh bilangan kelipatan 3 atau 7 tidak disebutkan, kecuali kelipatan 3 dan 7 (yaitu 21). Karena tidak ingin kalah terus menerus, seorang mahasiswa membuat program untuk membantunya bermain. Program tersebut menerima input berupa suatu bilangan bulat N dan mencetak seluruh angka yang harus disebutkan sampai bilangan N.
-
-
-**Format Input dan Output** 
-(Elemen baris setelah tanda “:” pada runtime merupakan input dari pengguna)
-```
-Masukan N :25  
-1  
-2  
-4  
-5  
-8  
-10  
-11  
-13  
-16  
-17  
-19  
-20  
-21  
-22  
-23  
-24  
-25  
-```
-```
-Masukan N :10  
-1  
-2  
-4  
-5  
-8  
-10  
-```
----------------------------------
-
-
-### Problem 2
-
-Seorang mahasiswa mengklasifikasikan sebuah bilangan menjadi 3 kategori, yaitu **bilangan A**, **bilangan B**, dan **bilangan C**. 
-- **Bilangan A** adalah bilangan yang seluruh faktornya kurang dari nilai bilangan tersebut.
-- **Bilangan B** adalah bilangan yang seluruh faktornya sama dari nilai bilangan tersebut.
-- **Bilangan C** adalah bilangan yang seluruh faktornya lebih dari nilai bilangan tersebut. 
-
-
-Yang disebut faktor pada sebuah bilangan **N** adalah bilangan yang dapat membagi bilangan **N** sampai habis dan tidak sama dengan bilangan **N** tersebut. 
-Bantulah mahasiswa tersebut dengan membuat program yang membaca angka dari **X** sampai **Y**, lalu menerima inputan tipe bilangan apa yang diinginkan, lalu mencetak seluruh bilangan tersebut ke layar. Jika tidak ada, maka cetak **Tidak ada**.
-
-
-**Format Input & Output**
-*(Elemen baris setelah tanda “:” pada runtime merupakan input dari pengguna)*
-```
-Masukan X :1  
-Masukan Y :10  
-Masukan tipe bilangan :B  
-Tipe bilangan B pada rentang 1 sampai 10 adalah  
-6  
-```
-*(penjelasan : bilangan 6 memiliki faktor (1,2,3) yang nilai totalnya adalah 6)*
-```
-Masukan X :5  
-Masukan Y :10  
-Masukan tipe bilangan :A  
-Tipe bilangan A pada rentang 5 sampai 10 adalah  
-5  
-7  
-8  
-9  
-10  
-```
-*(penjelasan : bilangan 5 memiliki faktor (1) )*
-```
-Masukan X :5  
-Masukan Y :10  
-Masukan tipe bilangan :C  
-Tipe bilangan C pada rentang 1 sampai 10 adalah  
-Tidak ada
-```
----------------------------------
-
-
-### Problem 3
-
-
-Karena bosan belajar kalkulus, seorang mahasiswa membuat sebuah deret. Deret tersebut sama dengan deret fibonacci, namun setiap bertemu bilangan yang habis dibagi **3**, maka nilai bilangan tersebut ditambahkan **1**. 
-Sebagai contoh, 10 nilai deret pertama adalah sebagai berikut :
-**1, 1, 2, 4, 7, 11, 19, 31, 50, 82, ...**
-
-
-**Penjelasan :** 
-Untuk bilangan keempat, seharusnya nilainya adalah 3, namun karena 3 habis dibagi 3, maka nilainya ditambah 1 menjadi 4 
-
-
-Mahasiswa tersebut ingin membuat program, karena ia merasa deret ini sangatlah hebat. Bantulah mahasiswa tersebut!
-
-
-**Format Input & Output**
-*(Elemen baris setelah tanda “:” pada runtime merupakan input dari pengguna)*
-```
-Masukkan banyaknya bilangan :10 
-10 bilangan pertama dari deret adalah  
-1  
-1  
-2  
-4  
-7  
-11  
-19  
-31  
-50  
-82  
-```
-```
-Masukkan banyaknya bilangan :3 
-10 bilangan pertama dari deret adalah  
-1  
-1  
-2  
-```
----------------------------------
-
-
-### Problem 4
-
-
-Seorang asisten diminta untuk menghitung jumlah mahasiswa yang lulus dan yang tidak lulus. Seorang mahasiswa dianggap lulus jika nilainya **lebih besar** atau **sama dengan 60**. Karena malas, asisten tersebut meminta anda untuk membuat program untuk membantunya. 
-
-
-**Format Input & Output**
-*(Elemen baris setelah tanda “:” pada runtime merupakan input dari pengguna)*
-```
-Banyak mahasiswa :4 
-Nilai anak ke-1 :50 
-Nilai anak ke-2 :90  
-Nilai anak ke-3 :55 
-Nilai anak ke-4 :90 
-Total mahasiswa yang lulus adalah 2  
-Total mahasiswa yang tidak lulus adalah 2  
-```
-```
-Banyak mahasiswa :2
-Nilai anak ke-1 :76
-Nilai anak ke-2 :100 
-Total mahasiswa yang lulus = 2  
-Total mahasiswa yang tidak lulus = 0  
-```
----------------------------------
-
-
-### Problem 5
-
-
-Terdapat sebuah permainan, dimana terdapat N buah kelompok, dan masing - masing kelompok memiliki **M** orang anggota kelompok. Banyaknya anggota kelompok bisa berbeda - beda antar kelompok. Sebuah kelompok dianggap menang jika kelompok tersebut mengetahui kelompok berapa yang memiliki anggota paling sedikit. Bantulah kelompok tersebut untuk memenangkan permainan.
-
-
-**Format Input & Output**
-*(Elemen baris setelah tanda “:” pada runtime merupakan input dari pengguna)*
-```
-Masukan jumlah kelompok :3
-Masukan jumlah anggota kelompok 1 :10 
-Masukan jumlah anggota kelompok 2 :12 
-Masukan jumlah anggota kelompok 3 :9 
-Kelompok dengan anggota tersedikit adalah kelompok 3
-```
----------------------------------
-
-
-### Problem 6
-
-
-Seorang mahasiswa menabung di sebuah bank.Banknya tempat mahasiswa tersebut menabung menggunakan sistem bunga majemuk.Karena kesulitan menghitung, mahasiswa tersebut ingin mengetahui berapa jumlah uang per bulannya. Selain itu, ia juga berencana menabung secara konsisten setiap bulannya. Bantulah ia untuk menghitung tabungannya.
-
-
-**Format Input & Output**
-*(Elemen baris setelah tanda “:” pada runtime merupakan input dari pengguna)*
-```
-Masukan uang tabungan :1000 
-Masukan persen bunga :10
-Masukan lama menabung :4 
-Tabungan pada bulan ke-1 = 1100  
-Tabungan pada bulan ke-2 = 2310  
-Tabungan pada bulan ke-3 = 3641  
-Tabungan pada bulan ke-4 = 5105  
-```
-
-
-Penjelasan : Uang Tuan Vin pada bulan pertama adalah 1000 + 100 = 1100. Pada bulan kedua, uang Tuan
-Vin menjadi (1100 + 1000) + (1100 + 1000) * 10% = 2310. Pada bulan ketiga, (2310 + 1000) + (2310 + 1000) * 10% =  3641.
-
-Dan pada bulan keempat, uang Tuan Vin menjadi (3641 + 1000) + (3641 + 1000) * 10% =  5105. Anda dapat mengabaikan seluruh digit dibelakang koma.
-
-
-
 ### Problem 7
 
 
@@ -423,137 +207,35 @@ Masukkan N :4
     |
     | 
 ```
+### Solusi
+Dari gambar dapat dilihat bahwa untuk ukuran sebesar `N = 4`, akan dibuat sebuah bentuk dengan `lebar = 9` dan `tinggi = 9`. Maka hubungan antar ukuran dan lebar/tinggi adalah `lebar/tinggi = N * 2 + 1`. Pada persoalan dapat dilihat juga bahwa bentuk `|`, `-` hanya digambarkan ketika kursor berada di tengah (baik vertikal maupun horizontal). Maka dari itu pada program kedua simbol tersebut hanya akan digambarkan ketika nilai `iterator horizontal/vertikal = N` dengan perhitungan dimulai dari `0`. Untuk bentuk `+`, bentuk ini hanya digambar ketika kursor berada di tengah, yang terjadi ketika nilai `iterator horizontal dan vertikal = N`.
+```cpp
+#include <iostream>
 
----------------------------------
-
-
-
-### Problem 8
-
-
-Agar dapat lulus dari kuliah, seorang mahasiswa dituntut untuk dapat menyebutkan bilangan prima diantara **A** dan **B**. Bantulah mahasiswa tersebut untuk menyebutkan bilangan prima tersebut.
-
-
-**Catatan :** 
-Buatlah suatu fungsi yang mengecek apakah suatu bilangan merupakan bilangan prima atau bukan
-
-
-**Format Input & Output**
-*(Elemen baris setelah tanda “:” pada runtime merupakan input dari pengguna)*
+int main() {
+    int N;
+    std::cout << "Masukan N :";
+    std::cin >> N;
+    for (int i = 0; i <= N * 2; i++) {
+        for (int j = 0; j <= N * 2; j++) {
+            if (i == N) {
+                if (j == N)
+                    std::cout << "+";
+                else 
+                    std::cout << "-";
+            }
+            else {
+                if (j == N)
+                    std::cout << "|";
+                else
+                    std::cout << " ";
+            }
+        }
+        std::cout << std::endl;
+    }
+}
 ```
-Masukkan nilai A :1 
-Masukkan nilai B :10
-Bilangan prima diantara 1 sampai 10 adalah
-2  
-3  
-5  
-7  
-```
-```
-Masukkan nilai A :10
-Masukkan nilai B :20
-Bilangan prima diantara 10 sampai 20 adalah 
-11  
-13  
-17  
-19
-```
----------------------------------
 
-
-
-### Problem 9
-
-
-Seorang mahasiswa harus mencetak dokumen tugasnya. Karena hari sudah subuh dan harus dikumpulkan pada pagi hari, maka ia harus menentukan percetakan terdekat dari data yang tersedia. Buatlah program untuk membantu mahasiswa tersebut.
-
-
-**Format Input & Output**
-*(Elemen baris setelah tanda “:” pada runtime merupakan input dari pengguna)*
-```
-Masukan lokasi mahasiswa tersebut  
-X :1
-Y :0
-Masukan banyaknya percetakan :3 
-Masukan posisi percetakan 1  
-X :1
-Y :6
-Masukan posisi pedagang 2  
-X :0  
-Y :0  
-Masukan posisi pedagang 3  
-X :5 
-Y :7 
-Pedagang terdekat adalah pedagang 2.
-```
-Hint : buatlah fungsi yang menghitung jarak 2 titik.
-
-
-
-### Problem 10
-
-
-Seorang mahasiswa ingin menentukan bilangan terendah kedua dan terbesar kedua dari **N** buah bilangan. Diasumsikan **N** selalu lebih besar dari **1**. Buatlah program untuk membantu mahasiswa tersebut.
-
-
-**Format Input & Output**
-*(Elemen baris setelah tanda “:” pada runtime merupakan input dari pengguna)*
-```
-Masukan jumlah bilangan :5  
-Bilangan ke-1 :4 
-Bilangan ke-2 :78
-Bilangan ke-3 :25 
-Bilangan ke-4 :20 
-Bilangan ke-5 :34
-Bilangan terendah kedua adalah 20
-Bilangan tertinggi kedua adalah 34
-```
----------------------------------
-
-
-
-### Problem 11
-
-
-Suatu program didesain untuk mengenkripsi sebuah teks. Caranya adalah dengan mengubah karakter setiap hurufnya (kecuali tanda baca) dengan aturan menggeser sebanyak N. Misal jika N adalah 2, maka teks **i love you!** akan berubah menjadi **k nqxg aqw!**. 
-Anda ditugaskan untuk memecahkan isi teks terenkripsi yang diberikan dan juga diberikan besarnya nilai **N**
-
-
-**Format Input & Output**
-*(Elemen baris setelah tanda “:” pada runtime merupakan input dari pengguna)*
-```
-Masukan teks terenkripsi :k nqxg aqw!
-Masukan nilai N :2
-Teks aslinya adalah "i love you!"
-```
----------------------------------
-
-
-
-### Problem 12
-
-
-Setelah selesai sidang tugas akhir di ITB, seorang mahasiswa ingin membuka sebuah restoran. Mahasiswa itu pun mengadakan survey, dan ternyata mahasiswa ITB senang makan pizza. Oleh karenanya, mahasiswa tersebut memutuskan untuk menjual pizza. Karena malas, mahasiswa tersebut ingin mengetahui berapa kali ia harus melakukan pemotongan pizza untuk memotong pizza tersebut menjadi **N** bagian. Contohnya adalah sebagai berikut.
-
-
-
-
-Dapat dilihat pada gambar, untuk memotong pizza menjadi **4** bagian, mahasiswa tersebut perlu memotong pizza sebanyak **2** kali. Untuk menghitung jumlah pemotongan yang dibutuhkan, maka mahasiswa tersebut memutuskan untuk membuat sebuah program. Program tersebut menerima angka jumlah pemotongan, dan akan mengeluarkan jumlah potongan maksimal yang didapat. Berikut ini adalah contoh masukan dan keluaran dari program dari program
-
-
-**Format Input & Output**
-*(Elemen baris setelah tanda “:” pada runtime merupakan input dari pengguna)*
-```
-Masukan jumlah pemotongan :2  
-Potongan maksimal yang didapat adalah 4  
-
-
-Masukan jumlah pemotongan :7  
-Potongan maksimal yang didapat adalah 29  
-```
-**Hint :** 
-Rumus untuk mengitung jumlah pemotongan ke n adalah
-*f(n) = n + f(n - 1)*, dimana f(0) = 1
 
 -----------------------
 -----------------------
