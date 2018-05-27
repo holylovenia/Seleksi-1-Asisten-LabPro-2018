@@ -96,7 +96,7 @@ end.
 + Pada persoalan ini, dibentuk dua tipe baru - *name* dan *score* - yang dapat memperjelas tipe data dari tiap variabel. Saat meminta input kedua dan ketiga digunakan variabel *tempName* dan *tempScore* yang berfungsi untuk menampung instans sementara yang kemudian digunakan untuk dibandingkan dengan input lainnya.
 + Pada input user pertama, input dimasukkan pada *stName* dan *stScore* yang menyatakan peringkat pertama.
 + Pada input user selanjutnya, dilakukan validasi yang berfungsi untuk menentukan peringkat diantara ketiganya.
-+ Validasi tidak dilakukan pada akhir program, sebab dapat membentuk sebuah validasi yang lebih kompleks.
++ Validasi tidak dilakukan pada akhir program, sebab dapat membentuk sebuah validasi yang lebih kompleks.  
 \* Tidak terdapat variabel *rdScore*, sebab nilai hanya perlu dibandingkan, sudah disimpan pada variabel *tempScore*, dan tidak diinstruksikan untuk menyimpan data.
 
 
@@ -252,8 +252,8 @@ end.
 
 + Membuat konstanta yang menyatakan NIM minimum dan NIM maksimum. Membuat array *attendance* dinamik yang merupakan data kehadiran mahasiswa. Membuat variabel berupa array *counter* untuk menampung jumlah kehadiran dari NIM minimum hingga NIM maksimum.
 + Ketika *user* memasukkan NIM, array *counter* pada indeks ke-NIM otomatis ditambahkan dengan 1.
-+ Iterasi dari NIM minimum hingga NIM maksimum dan mencetak NIM beserta jumlah kehadirannya yang bukan 0.
-\* Program ketika dieksekusi akan menimbulkan *warning*, hal tersebut disebabkan tidak diinisialisasi array *counter*. Hal tersebut tidak diperlukan, sebab nilai awal tiap elemen array integer adalah 0.
++ Iterasi dari NIM minimum hingga NIM maksimum dan mencetak NIM beserta jumlah kehadirannya yang bukan 0.  
+\* Program ketika dieksekusi akan menimbulkan *warning*, hal tersebut disebabkan tidak diinisialisasi array *counter*. Hal tersebut tidak diperlukan, sebab nilai awal tiap elemen array integer adalah 0.  
 \** Algoritma ini memerlukan array tambahan sebanyak MAX_NIM, tetapi kompleksitasnya adalah O(N + MAX_NIM) atau O(n).
 
 
@@ -273,7 +273,7 @@ Format Input dan Output Input berupa matriks yang merepresentasikan harga petak 
 ___
 matriks loaded!
 Pecahan uang : **4**
-Banyak bidang tanah yang dapat dibeli adalah 6
+Banyak bidang tanah yang dapat dibeli adalah 6  
 \**Keterangan*: Ada 6 buah bidang tanah yang dapat dibeli. Bidang tanah yang tersebut yaitu :
 ```
 17 11
@@ -364,5 +364,5 @@ end.
 ```
 
 + Membuat iterator titik (i, j) hingga (x, y), setiap iterasi dengan batasan i <= x dan j <= y dihitung jumlah harga petak.
-+ Hitung total petak dari titik (i, j) hingga (x, y), kemudian divalidasi.
++ Hitung total petak dari titik (i, j) hingga (x, y), kemudian divalidasi.  
 \* (i, j) dan (x, y) merepresentasikan posisi petak pada matriks.
