@@ -236,195 +236,7 @@ int main() {
 }
 ```
 
-
------------------------
------------------------
-------
-
 ## Bab 3 - Fungsi dan Prosedur
-### Problem 1
-Saat sedang mengerjakan PR kalkulus, seorang mahasiswa mendapatkan soal berikut.
-
-
-> Diberikan fungsi sebagai berikut.
-`f(x) = 2x^5 + 3x^4 + 9x^3 − x^2 + 3x − 2`  untuk semua bilangan bulat positif x kurang dari 30.
-Carilah nilai x berdasarkan nilai f(x) yang diberikan.
-
-
-Karena *deadline* PR kalkulus tinggal 1 jam lagi, bantulah mahasiswa tersebut untuk mengerjakan soal tersebut!
-
-
-**Format Input & Output (input di-*bold*)**
-***
-Masukan f(x) : **14**
-
-Nilai x adalah 1   
-***
-Masukan f(x) : **1700818**
-
-Nilai x adalah 15
-***
-Masukan f(x) : **2**
-
-Tidak ada x yang sesuai
-***
-
-
-**Catatan:**
-
-Anda diwajibkan membuat fungsi f(x) untuk nilainya dicocokan dengan masukan.
-
-
-
-### Problem 2
-
-Dalam dunia komputer, sering digunakan istilah *hexadecimal*, yaitu bilangan berbasis 16 (desimal adalah bilangan berbasis 10).Berikut adalah tabel yang membandingkan desimal dengan heksadesimal
-
-
-| Desimal | Heksadesimal | Desimal | Heksadesimal |
-| ------- | ------------ | ------- | ------------ |
-| 0       | 00           | 9       | 09           |
-| 1       | 01           | 10      | 0A           |
-| 2       | 02           | 11      | 0B           |
-| 3       | 03           | 12      | 0C           |
-| 4       | 04           | 13      | 0D           |
-| 5       | 05           | 14      | 0E           |
-| 6       | 06           | 15      | 0F           |
-| 7       | 07           | 16      | 10           |
-| 8       | 08           | 17      | 11           |
-
-
-Buatlah program yang menjumlahkan dua bilangan heksadesimal dua digit menjadi bilangan
-heksadesimal! (Buatlah fungsi HexToDec() dan DecToHex())
-
-
-**Format Input & Output (input di-*bold*)**
-***
-Masukan A : **11**
-
-Masukan B: **05**
-
-11 + 05 = 16
-***
-Masukan A : **1D**
-
-Masukan B: **2B**
-
-1D + 2B = 48
-***
-
-
-
-### Problem 3
-
-Bilangan komposit adalah bilangan yang memiliki minimal satu bilangan lain yang dapat habis membagi bilangan tersebut selain 1 dan bilangan itu sendiri. Buatlah program yang menentukan semua bilangan komposit diantara dua buah bilangan A dan B (0  ≤ A, B ≤ 100000) inklusif.
-Catatan : Buatlah fungsi yang memeriksa apakah sebuah bilangan adalah bilangan komposit atau bukan.
-
-
-**Format Input & Output (input di-*bold*)**
-***
-Masukkan nilai A : **0**
-
-Masukkan nilai B : **10**
-
-Bilangan komposit diantara 0 sampai 10 adalah:
-
-4
-
-6
-
-8
-
-9
-***
-Masukkan nilai A : **25**
-
-Masukkan nilai B : **10**
-
-Bilangan komposit diantara 10 sampai 25 adalah:
-
-12
-
-14
-
-15
-
-16
-
-18
-
-20
-
-21
-
-22
-
-24
-
-25
-***
-
-
-
-### Problem 4
-
-Bilangan prima adalah bilangan yang hanya habis dibagi oleh 1 dan bilangan itu sendiri. Buatlah program yang menentukan semau bilangan prima diantara dua buah bilangan A dan B (0  ≤ A, B ≤ 100000) inklusif.
-Catatan : Buatlah fungsi yang memeriksa apakah sebuah bilangan adalah bilangan prima atau bukan.
-
-
-**Format Input & Output (input di-*bold*)**
-***
-Masukkan nilai A : **0**
-
-Masukkan nilai B : **10**
-
-Bilangan prima diantara 0 sampai 10 adalah:
-
-2
-
-3
-
-5
-
-7
-***
-Masukkan nilai A : **25**
-
-Masukkan nilai B : **10**
-
-Bilangan prima diantara 10 sampai 25 adalah:
-
-11
-
-13
-
-17
-
-19
-
-23
-***
-
-
-
-### Problem 5
-
-Seorang mahasiswa sedang mengantri untuk mendapatkan nomor peserta dari lomba nyanyi yang ia ikuti. Ia pun sangat deg-degan karena kakeknya pernah bermimpi bila Tuan Vin mendapatkan nomor peserta Lucky 7, tuan Vin sudah pasti memenangkan lomba ini. Apa itu Lucky 7? Lucky 7 adalah bilangan yang mengandung digit 7 dan juga habis dibagi 7. Sebagai contoh 77 merupakan Lucky 7 sementara 76 bukan karena tidak habis dibagi 7. Diberikan nomor peserta yang didapatkan oleh mahasiswa tersebut, tentukan apakah mahasiswa tersebut akan memenangkan lomba menyanyi ini.
-
-
-**Format Input & Output (input di-*bold*)**
-***
-Masukan nomor peserta: 117
-
-Mahasiswa tersebut akan kalah!
-***
-Masukan nomor peserta: 77
-
-Mahasiswa tersebut akan menang!
-***
-
-
-
 ### Problem 6
 
 Menjelang akhir bulan ini, semua mahasiswa melakukan penghematan untuk biaya makan. Seorang mahasiswa memiliki akal untuk tidak hanya menghemat uang tetapi juga menghemat energi yang dia keluarkan.Ia mengetahui posisi seluruh penjual makanan yang harganya relatif sama dan ia berpikir bahwa ia dapat menghemat energi dengan pergi ke penjual paling dekat. Namun, ia terlalu malas untuk menentukan penjual paling dekat darinya (karena berpikir juga pakai energi).Bantulah mahasiswa tersebut menentukan penjual yang akan dikunjungi.Jika terdapat beberapa penjual dengan jarak sama, pilih yang mana saja.
@@ -461,185 +273,58 @@ Y : **1**
 Penjual terdekat adalah penjual 3.
 ***
 
-
-
-### Problem 7
-
-Segitiga Pascal adalah segitiga yang dibuat dimulai dari angka 1 dan tiap angka di baris kedua dan selanjutnya berasal dari jumlah dua angka di atasnya. Berikut contoh 5 baris pertama Segitiga Pascal:
-
-1
-
-1 1
-
-1 2 1
-
-1 3 3 1
-
-1 4 6 4 1
-
-
-
-Segitiga Pascal juga dapat dibentuk dari kombinatorik, dengan bilangan pada baris ke-i dan kolom ke-j bernilai C(i-1,j-1). Berikut adalah contoh penerapan pada 5 baris Segitiga Pascal.
-
-C(0,0)
-
-C(1,0) C(1,1)
-
-C(2,0) C(2,1) C(2,2)
-
-C(3,0) C(3,1) C(3,2) C(3,3)
-
-C(4,0) C(4,1) C(4,3) C(4,4) C(4,5)
-
-
-Buatlah sebuah program yang membuat Segitiga Pascal! (Buat fungsi Kombinasi(n, r) untuk
-memudahkan penghitungan)
-
-
-**Format Input & Output (input di-*bold*)**
-***
-Masukan jumlah baris: **5**
-
-1
-
-1 1
-
-1 2 1
-
-1 3 3 1
-
-1 4 6 4 1
-***
-
-
-
-### Problem 8
-
-Diberikan 2 bilangan positif a dan b. Tentukan nilai a^b!
-
-**Format Input & Output (input di-*bold*)**
-
-***
-Masukan A : **2**
-
-Masukan B : **10**
-
-2^10 = 1024
-***
-
-
-
-### Problem 9
-
-Diberikan 2 bilangan bulat A dan B (1 ≤ A, B ≤ 100000000), buatlah program yang menampilkan semua palindrom antara A dan B inklusif.
-
-
-**Format Input & Output (input di-*bold*)**
-***
-Masukkan nilai range bilangan A dan B : **10 100**
-
-Palindrome antara 10 dan 100 adalah:
-
-11
-
-22
-
-33
-
-44
-
-55
-
-66
-
-77
-
-88
-
-99
-***
-Masukkan nilai range bilangan A dan B : **12 21**
-
-Palindrome antara 10 dan 100 adalah:
-
-TIDAK ADA
-***
-
-
-**Catatan:** 
-Buatlah suatu fungsi yang memeriksa apakah suatu bilangan adalah bilangan palindrome atau bukan.
-
-
-
-### Problem 10
-
-Faktorial dari sebuah bilangan bulat N (N!) dapat dinyatakan dalam bentuk sebagai berikut.
-`N! = N x (N-1) x (N-2) x ... x 1`
-
-
-Buatlah sebuah program yang menghitung nilai faktorial dari sebuah bilangan bulat yang diberikan. misal N! (Catatan: Buat fungsi Faktorial(N) untuk menghitung nilai faktorial tersebut)
-
-
-**Format Input & Output (input di-*bold*)**
-***
-Masukan N: **6**
-
-N! = 720
-***
-
-
-
-### Problem 11
-
-Bilangan menanjak adalah bialngan yang memiliki angka pada digit satuan lebih kecil dari digit puluhan, pada digit puluhan lebih kecil dari digit ratusan, dan seterusnya. Buatlah sebuah program yang memeriksa apakah sebuah bilangan N (0 ≤ N < 2000000000) adalah bilangan menanjak atau bukan!
-
-
-**Format Input & Output (input di-*bold*)**
-***
-Masukkan N: **987654321**
-
-Bilangan 987654321 adalah bilangan menanjak.
-***
-Masukkan N: **1**
-
-Bilangan 1 adalah bilangan menanjak.
-***
-Masukkan N: **123456789**
-
-Bilangan 123456789 bukan bilangan menanjak.
-***
-
-
-
-### Problem 12
-
-Saat sedang kuliah kalkulus, seorang mahasiswa mendapatkan dua buah fungsi berikut.
-
-`f(x) = 2x − 9`
-
-`g(x) = x^3 + 7`
-
-
-Ia baru saja belajar mengenai fungsi komposisi sehingga ia ingin mencoba untuk menerapkannya pada kedua fungsi tersebut. Bantulah ia untuk menghitung nilai f(g(f(x))) diberikan nilai x!
-
-
-**Format Input & Output (input di-*bold*)**
-***
-Masukan nilai x: **4**
-
-f(g(f(x))) = 3
-***
-Masukan nilai x: **0**
-
-f(g(f(x))) = -1453
-***
-
-
-Anda diwajibkan membuat fungsi f(x) dan g(x).
-
-------------------
------------------
-------
+### Solusi
+Persoalan ini dapat diselesaikan tanpa menggunakan array. Caranya adalah setiap kali posisi penjual didapatkan. Jarak antar posisi mahasiswa dan posisi penjual itu akan dibandingkan dengan nilai jarak minimum yang ada. Jika memang itu adalah jarak minimum, posisi tersebut akan ditandai sebagai posisi minimum. Untuk nilai awal jarak minimum, digunakan library `<limits>` yang menyimpan nilai maksimum dari `double`.
+```cpp
+#include <iostream>
+#include <cmath>
+#include <limits>
+
+struct Position {
+    int x;
+    int y;
+};
+
+void assignPosisi(Position & posisi);
+void assignBanyakPenjual(int & banyakPenjual);
+double getJarak(Position & asal, Position & tujuan);
+
+int main() {
+    Position posisiMahasiswa;
+    double jarakMinimum = std::numeric_limits<double>::max();
+    int banyakPenjual, penjualTerdekat = -1;
+    std::cout << "Masukan posisi mahasiswa" << std::endl;
+    assignPosisi(posisiMahasiswa);
+    assignBanyakPenjual(banyakPenjual);
+    for (int i = 0; i < banyakPenjual; i++) {
+        Position posisiPenjual;
+        std::cout << "Masukan posisi penjual " << i + 1 << std::endl;
+        assignPosisi(posisiPenjual);
+        double jarak = getJarak(posisiMahasiswa, posisiPenjual);
+        if (jarak < jarakMinimum) {
+            jarakMinimum = jarak;
+            penjualTerdekat = i + 1;
+        }
+    }
+    std::cout << "Penjual terdekat adalah penjual " << penjualTerdekat << std::endl;
+}
+
+void assignPosisi(Position & posisi) {
+    std::cout << "X : ";
+    std::cin >> posisi.x;
+    std::cout << "Y : ";
+    std::cin >> posisi.y;
+}
+
+void assignBanyakPenjual(int & banyakPenjual) {
+    std::cout << "Masukan banyak penjual: ";
+    std::cin >> banyakPenjual;
+}
+
+double getJarak(Position & asal, Position & tujuan) {
+    return sqrt(pow(asal.x - tujuan.x, 2) + pow(asal.y - tujuan.y, 2));
+}
+```
 
 ## Bab 4 - *Array*
 
