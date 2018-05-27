@@ -140,7 +140,7 @@ Masukkan N :4
 ```
 
 ---------------------------------
-## Solusi
+### Solusi
 
 ```
 // Nama file: 2-Problem07.cpp
@@ -186,7 +186,7 @@ int main() {
 ```
 
 ---------------------------------
-## Penjelasan
+### Penjelasan
 
 Penyelesaian masalah ini terdiri dari 3 tahap utama.
 - Tahap pertama, garis vertikal bagian atas. Lakukan looping sebanyak N. Pada setiap iterasi, tulis karakter spasi sebanyak N kemudian karakter '|'.
@@ -238,7 +238,7 @@ Penjual terdekat adalah penjual 3.
 ***
 
 ---------------------------------
-## Solusi
+### Solusi
 
 ```
 // Nama file: 3-Problem06.cpp
@@ -293,7 +293,7 @@ int main() {
 ```
 
 ---------------------------------
-## Penjelasan
+### Penjelasan
 
 Untuk menentukan jarak paling dekat, kita harus menghitung jarak posisi mahasiswa dengan posisi masing-masing penjual. Jadi, fungsi yang dibutuhkan adalah fungsi untuk menghitung jarak posisi mahasiswa dengan posisi masing masing penjual. Seperti yang kita ketahui, rumus untuk menghitung jarak antar 2 posisi yang diketahui koordinatnya adalah akar kuadrat dari selisih posisi horizontal (x) kuadrat ditambah selisih posisi vertikal (y) kuadrat. Namun, karena perhitungan akar akan mengurangi efisiensi dan membutuhkan library tambahan, maka hasil perhitungan tanpa akar kuadrat dapat langsung digunakan. Selisih posisi masih perlu dikuadratkan karena jarak merupakan besaran skalar, sehingga nilai negatif perlu diantisipasi.
 
@@ -340,7 +340,7 @@ Array A lebih besar dari array B
 *Catatan : angka pasti positif*
 
 ---------------------------------
-## Solusi
+### Solusi
 
 ```
 // Nama file: 4-Problem05.cpp
@@ -385,7 +385,7 @@ int main() {
 ```
 
 ---------------------------------
-## Penjelasan
+### Penjelasan
 
 Pertama, terima input nilai N, kemudian nilai array dari pengguna sebanyak N untuk kedua array. Kemudian, lakukan perbandingan dengan looping versi while. Inisialisasi nilai i dengan 0, artinya lakukan perbandingan mulai dari indeks pertama. Looping akan terus dilakukan selama i masih lebih kecil dari N DAN nilai A[i] masih sama dengan nilai B[i]. Pada setiap iterasi, lakukan penambahan ke nilai i sebesar 1. Jadi, terdapat dua kondisi yang membuat looping ini berhenti, yaitu ketika i sudah sama dengan N ATAU A[i] sudah sama dengan B[i]. Setelah keluar dari looping, lakukan pengecekan untuk menentukan hasilnya. Jika i sudah sama dengan N, artinya array A sama dengan array B. Jika tidak, maka terdapat kondisi dimana A[i] tidak sama dengan B[i]. Terdapat dua kemungkinan, yaitu A[i] lebih kecil dari B[i], artinya array A lebih kecil dari array B, atau A[i] lebih besar dari B[i], artinya array A lebih besar dari array B.
 
@@ -428,7 +428,7 @@ result exported!
 ```
 
 ---------------------------------
-## Solusi
+### Solusi
 
 ```
 // Nama file: 5-Problem04.cpp
@@ -495,7 +495,7 @@ int main() {
 ```
 
 ---------------------------------
-## Penjelasan
+### Penjelasan
 
 Pertama, baca file matriks.txt dan baca baris pertama sebagai N, yaitu dimensi matriks. Lakukan looping sebanyak N untuk baris dan pada setiap iterasi lakukan looping sebanyak N untuk kolom, kemudian pada setiap iterasi baca nilai pada file tersebut. Simpan nilai tersebut pada matriks A dan matriks B. Terdapat dua matriks karena salah satu matriks akan bernilai tetap sebagai pengali matriks, yaitu matriks B. Matriks A merupakan matriks yang nilainya akan berubah sebagai matriks yang dikali.
 
