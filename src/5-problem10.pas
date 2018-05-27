@@ -19,7 +19,7 @@ var
 { ALGORTIMA }
 begin
     // nama file
-    nama := 'matriks.txt';
+    nama := 'land.txt';
 
     assign(fileMatriks, nama);
     reset(fileMatriks);
