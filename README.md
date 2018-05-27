@@ -115,7 +115,9 @@ end.
 ```
 
 #### Penjelasan Solusi
-Program pada awalnya akan meminta input pengguna. Input berupa 3 data mahasiswa dan setiap mahasiswa akan memiliki nama dan nilai. Nilai mahasiswa akan dibandingkan dan akan dicari seluruh kemungkinan. Kemungkinan terbagi menjadi 6, yaitu:  
+Langkah kerja solusi adalah sebagai berikut:
+1. Program pada awalnya akan meminta input pengguna. Input berupa 3 data mahasiswa dan setiap mahasiswa akan memiliki nama dan nilai. 
+2. Program akan membandingkan nilai mahasiswa dan akan dicari seluruh kemungkinan. Kemungkinan terbagi menjadi 6, yaitu:  
 ```
 - 123
 - 132
@@ -126,7 +128,7 @@ Program pada awalnya akan meminta input pengguna. Input berupa 3 data mahasiswa 
 ```
 *keterangan*: 312 artinya mahasiswa 3 peringkat pertama, mahasiswa 1 peringkat kedua, dan seterusnya.  
 
-Program akan memetakan seluruh kemungkinan yang ada sehingga terdapat percabangan bertingkat. Cabang pertama (`if` pertama) akan memeriksa siapa yang merupakan peringkat pertama. Lalu untuk cabang kedua (`if` kedua) akan memeriksa siapa yang merupakan peringkat kedua dan ketiga.
+3. Program akan memetakan seluruh kemungkinan yang ada sehingga terdapat percabangan bertingkat. Cabang pertama (`if` pertama) akan memeriksa siapa yang merupakan peringkat pertama. Lalu untuk cabang kedua (`if` kedua) akan memeriksa siapa yang merupakan peringkat kedua dan ketiga. Lalu mencetak peringkat ketika mengetahuinya.
 
 ---------------------------
 
@@ -198,6 +200,9 @@ begin
     end; 
 end.
 ```
+
+#### Penjelasan Solusi
+Program awalnya akan meminta input berupa `limit` (batas). Lalu, program akan mengiterasi
 ---------------------------------
 
 ### Bab 3 Problem 12
