@@ -28,6 +28,12 @@ Masukan satuan yang ingin diketahui: **R**
 Besar suhu dalam R: 32
 ***
 
+-------------------
+Algoritma melakukan perhitungan sesuai dengan satuan suhu yang dimasukan
+
+yang kemudian di konversi kesatuan suhu yang diinginkan
+
+-------------------
 
 ```
 program Problem9;
@@ -100,7 +106,7 @@ begin
         writeln('Besar suhu dalam ',SS2,' : ', result:0:2);
 end.
 ```
-
+-------------------------------
 ## Bab 2 - Pengulangan
 ### Problem 8
 
@@ -132,6 +138,11 @@ Bilangan prima diantara 10 sampai 20 adalah
 17  
 19
 ```
+---------------------------------
+Algoritma melakukan pencarian bilangan prima dengan membagi N dengan (2 .. akar N)
+
+apabila ada pembagian yang menyisakan nol maka N bukan bilangan prima
+
 ---------------------------------
 
 ```
@@ -217,6 +228,14 @@ Masukan jumlah baris: **5**
 
 1 4 6 4 1
 ***
+-------------------------------------
+Dengan memnfaatkan fungsi Kombinasi C(n,r) dengan memanfaatkan representasi matriks dengan ukuran (i,j)
+
+dimana i dan j sama dengan n
+
+maka akan diprint C(i,j) selama j <= i
+
+-------------------------------------
 
 ```
 program problem7;
