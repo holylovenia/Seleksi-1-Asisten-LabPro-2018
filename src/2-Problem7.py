@@ -21,7 +21,7 @@ def strV(N):
     res += "+"
     for i in range(N):
         res += "-"
-    return res          
+    return res
 
 if __name__ == '__main__':
     main()

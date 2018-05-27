@@ -4,7 +4,7 @@ def main():
         content = f.readlines()
     content = [x.strip() for x in content]
 
-    # Kewajiban menulis result loaded!
+    #result loaded!
     print("result loaded!")
 
     # put into matrix
