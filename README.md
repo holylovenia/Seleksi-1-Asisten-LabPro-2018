@@ -2,24 +2,6 @@
 -----------------------------------
 Azka Nabilah Mumtaz - 13516013
 
-- Silahkan fork GitHub berikut agar dapat dikerjakan pada GitHub kalian masing-masing *(private)*.
-- Pembagian soal dapat dilihat pada [tautan](https://docs.google.com/spreadsheets/d/1l8SNlbK4EI8wFb5_3pDDi3IfioO7VglCcPmfFCK2jJU/edit?usp=sharing) berikut ini.
-- Kerjakan persoalan berikut (sesuai dengan pembagian) menggunakan algoritma yang menurut Anda mempunyai kinerja terbaik.
-- Tuliskan penjelasan algoritma tersebut beserta *source code* pada saat pengumpulan.
-- Perhatikan, yang perlu dikumpulkan adalah:
-  - **README.md**, tolong hapus bagian yang tidak perlu. Readme minimal berisi hal-hal berikut:
-    - Keterangan pembuat (NIM dan Nama Lengkap)
-    - Deskripsi semua soal yang dikerjakan
-    - *Source code* solusi untuk semua soal yang dikerjakan
-    - Penjelasan solusi untuk semua soal yang dikerjakan
-  - Direktori **src**, berisi file-file solusi soal, dengan format nama file **X-ProblemYY.eks**
-    - **X** adalah nomor bab
-    - **YY** adalah nomor problem
-    - **eks** adalah ekstensi file solusi (sesuai bahasa pemrograman)
-    - Contoh: 4-Problem03.pas
-- Pemakaian fungsi bawaan yang berlebihan tidak diperbolehkan.
-- ***Deadline pull request:*** Minggu, 27 Mei 2018 pukul 23.59, dengan subjek **[NIM] - Seleksi 1 Asisten LabPro 2018** (contoh: 13515113 - Seleksi 1 Asisten LabPro 2018). Jangan lupa segera di-*public* setelah melakukan *deadline* berlalu.
-- *Have a nice day!*
 ------
 
 ------
