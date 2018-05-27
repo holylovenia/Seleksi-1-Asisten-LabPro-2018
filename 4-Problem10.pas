@@ -51,5 +51,6 @@ Begin
 			write(i);
 		end;
 	end;
+	write(' + c');
 	
 End.
