@@ -10,7 +10,7 @@
 Tuan Vin ingin meminta bantuan Anda. Tuan Vin diminta untuk mengurutkan nilai ujian antara 3 orang. Ini adalah hal yang mudah, tetapi Tuan Vin perlu memeriksa ratusan orang. Karena malas, Tuan Vin meminta bantuan Anda, yang jago membuat program. Nilai ketiga orang dijamin berbeda.
 
 #### Format Input dan Output
-input di-**bold**
+input di-**bold**  
 *Contoh*
 <pre>
 Masukan Nama 1: <b>Kevin</b>
@@ -24,6 +24,7 @@ Peringkat pertama adalah Richard
 Peringkat kedua adalah Albert
 Peringkat ketiga adalah Kevin
 </pre>
+---------------------------
 
 ### Bab 2 Problem 1
 #### Deskripsi
@@ -33,7 +34,7 @@ Karena bosan belajar, sekumpulan anak TPB memutuskan untuk bermain. Pada permain
 Dapat dilihat bahwa seluruh bilangan kelipatan 3 atau 7 tidak disebutkan, kecuali kelipatan 3 dan 7 (yaitu 21). Karena tidak ingin kalah terus menerus, seorang mahasiswa membuat program untuk membantunya bermain. Program tersebut menerima input berupa suatu bilangan bulat N dan mencetak seluruh angka yang harus disebutkan sampai bilangan N.
 
 #### Format Input dan Output
-input di-**bold**
+input di-**bold**  
 *Contoh*
 <pre>
 Masukan N: <b>25</b>  
@@ -77,7 +78,7 @@ Saat sedang kuliah kalkulus, seorang mahasiswa mendapatkan dua buah fungsi berik
 Ia baru saja belajar mengenai fungsi komposisi sehingga ia ingin mencoba untuk menerapkannya pada kedua fungsi tersebut. Bantulah ia untuk menghitung nilai f(g(f(x))) diberikan nilai x!
 
 #### Format Input dan Output
-input di-**bold**
+input di-**bold**  
 *Contoh*
 <pre>
 Masukan nilai x: <b>4</b>
@@ -99,7 +100,7 @@ Anda diwajibkan membuat fungsi f(x) dan g(x).
 Mei ditugaskan untuk mencatat absensi seluruh mahasiswa yang hadir. Setiap kali mahasiswa hadir, mahasiswa harus mengumpulkan kertas kehadiran berisi NIM kepada Karin. Buatlah program untuk membantu Karin mencatat berapa kali suatu mahasiswa hadir *NIM mahasiswa tidak lebih dari 3 digit*
 
 #### Format Input dan Output 
-input di-**bold**
+input di-**bold**  
 *Contoh*
 <pre>
 Masukkan jumlah kertas kehadiran : <b>9</b>
@@ -126,7 +127,7 @@ Rekap kehadiran mahasiswa :
 Tuan Krab ingin membuka cabang baru dari Krasti Krab. Oleh karena itu, dia perlu untuk membeli bidang tanah baru. Petak-petak tanah yang tersedia direpresentasikan dalam matriks berukuran `N`x`N`. Setiap petak tanah mempunyai harga masing-masing. Untuk membangun cabang dari Krasti Krab, dibutuhkan suatu bidang tanah yang berbentuk kotak. Namun, ternyata Tuan Krab hanya membawa uang dalam pecahan `K`. Karena tidak mau rugi, maka Tuan Krab mengambil keputusan hanya akan membeli bidang tanah dengan harga total berupa kelipatan `K`. Tugas Anda adalah mencari banyaknya bidang tanah yang dapat dibeli oleh Tuan Krab.
 
 #### Format Input dan Output
-*Input* berupa matriks yang merepresentasikan harga petak tanah disimpan dalam file eksternal `land.txt`. Pada file eksternal ini, baris pertama berisi bilangan bulat positif `N` yang merepresentasikan ukuran matriks. `N` baris berikutnya berisi `N` buah bilangan bulat positif yang merupakan harga petak tanah pada *cell* tersebut. Pada saat *runtime*, diinputkan bilangan bulat `K` yang merepresentasikan pecahan uang yang dibawa oleh Tuan Krab.
+*Input* berupa matriks yang merepresentasikan harga petak tanah disimpan dalam file eksternal `land.txt`. Pada file eksternal ini, baris pertama berisi bilangan bulat positif `N` yang merepresentasikan ukuran matriks. `N` baris berikutnya berisi `N` buah bilangan bulat positif yang merupakan harga petak tanah pada *cell* tersebut. Pada saat *runtime*, diinputkan bilangan bulat `K` yang merepresentasikan pecahan uang yang dibawa oleh Tuan Krab.  
 *Output* berupa informasi banyaknya bidang tanah yang dapat dibeli oleh Tuan Krab.
 
 *Contoh*
@@ -147,7 +148,7 @@ Pecahan uang: <b>4</b>
 Banyak bidang tanah yang dapat dibeli adalah 6
 </pre>
 
-*Keterangan:*
+*Keterangan:*  
 Ada 6 buah bidang tanah yang dapat dibeli.
 Bidang tanah yang tersebut yaitu
 
