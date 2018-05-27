@@ -26,7 +26,7 @@ Peringkat ketiga adalah Kevin
 </pre>
 
 #### Source code
-- src/1-problem02.pas
+- `src/1-problem02.pas`
 ```pas
 // Nama/NIM  : Muhammad Alif Arifin/13516078
 // Tema      : Percabangan -  Bab 1 Problem 2
