@@ -1,34 +1,12 @@
 # Seleksi 1 Asisten LabPro 2018
------------------------------------
-Petunjuk:
-
-- Silahkan fork GitHub berikut agar dapat dikerjakan pada GitHub kalian masing-masing *(private)*.
-- Pembagian soal dapat dilihat pada [tautan](https://docs.google.com/spreadsheets/d/1l8SNlbK4EI8wFb5_3pDDi3IfioO7VglCcPmfFCK2jJU/edit?usp=sharing) berikut ini.
-- Kerjakan persoalan berikut (sesuai dengan pembagian) menggunakan algoritma yang menurut Anda mempunyai kinerja terbaik.
-- Tuliskan penjelasan algoritma tersebut beserta *source code* pada saat pengumpulan.
-- Perhatikan, yang perlu dikumpulkan adalah:
-  - **README.md**, tolong hapus bagian yang tidak perlu. Readme minimal berisi hal-hal berikut:
-    - Keterangan pembuat (NIM dan Nama Lengkap)
-    - Deskripsi semua soal yang dikerjakan
-    - *Source code* solusi untuk semua soal yang dikerjakan
-    - Penjelasan solusi untuk semua soal yang dikerjakan
-  - Direktori **src**, berisi file-file solusi soal, dengan format nama file **X-ProblemYY.eks**
-    - **X** adalah nomor bab
-    - **YY** adalah nomor problem
-    - **eks** adalah ekstensi file solusi (sesuai bahasa pemrograman)
-    - Contoh: 4-Problem03.pas
-- Pemakaian fungsi bawaan yang berlebihan tidak diperbolehkan.
-- ***Deadline pull request:*** Minggu, 27 Mei 2018 pukul 23.59, dengan subjek **[NIM] - Seleksi 1 Asisten LabPro 2018** (contoh: 13515113 - Seleksi 1 Asisten LabPro 2018). Jangan lupa segera di-*public* setelah melakukan *deadline* berlalu.
-- *Have a nice day!*
-------
+----------------
 
 	Pembuat
 	Nama	: Tony
 	Nim		: 13516010
-
-------
-
-------
+	
+----------
+----------
 
 # Daftar Isi
 
@@ -129,8 +107,8 @@ int main(){
 #### Penjelasan
 Pada percabangan, bagian percabangan yang akan dimasukki adalah yang pertama sesuai kondisi.
 
-Input nilai berada pada rentang 0 hingga 100, sehingga pada kondisi pertama jika nilai lebih dari sama dengan 81 maka akan masuk percabangan pertama, 
-jika tidak akan di cek pada kondisi kedua dan seterusnya. jika sampai kondisi ke-4 tidak terpenuhi, maka akan masuk percabangan else.
+Input nilai berada pada rentang `0` hingga `100`, sehingga pada kondisi pertama jika nilai lebih dari sama dengan 81 maka akan masuk percabangan pertama, 
+jika tidak akan di cek pada kondisi kedua dan seterusnya. jika sampai kondisi ke-4 tidak terpenuhi, maka akan masuk percabangan `else`.
 
 ---------------------------------
 ---------------------------------
@@ -200,7 +178,7 @@ int main(){
 
 #### Penjelasan
 
-Untuk dapat melakukan input berulang sebanyak N perlu penggunaaan perulangan for.
+Untuk dapat melakukan input berulang sebanyak `N` perlu penggunaaan perulangan `for`.
 
 Dalam persoalan ini dapat digunakan variabel sebagai counter/penghitung untuk menghitung
 berapa banyak yang nilainya dibawah 60 ataupun sebaliknya dengan percabangan.
@@ -516,8 +494,8 @@ file tersebut sudah dibuka dengan menggunakan fungsi bawaan `is_open()`.
 Untuk membaca masukkan matriks berukuran `N` dapat digunakan perulangan `for` dalam perulangan `for` yang perulangan luar untuk indeks baris dan 
 perulangan dalam untuk indeks kolom.
 
-Suatu matriks dikatakan bysimmetric jika elemenya simetri terhadap kedua diagonal, sehingga jika ditarik gari diagonal dari kiri bawah ke kanan atas, maka elemen matriks pada indeks [i][j] sama dengan elemen matriks pada indeks [N-j-1][N-i-1],
-dan jika ditarik garis diagonal dari kiri bawah ke kanan atas, maka elemen matriks pada indeks [N-i-1][j] sama dengan elemen matriks pada indeks [N-j-1][i].
+Suatu matriks dikatakan bysimmetric jika elemenya simetri terhadap kedua diagonal, sehingga jika ditarik gari diagonal dari kiri bawah ke kanan atas, maka elemen matriks pada indeks `[i][j]` sama dengan elemen matriks pada indeks `[N-j-1][N-i-1]`,
+dan jika ditarik garis diagonal dari kiri bawah ke kanan atas, maka elemen matriks pada indeks `[N-i-1][j]` sama dengan elemen matriks pada indeks `[N-j-1][i]`.
 
 ------------------------------
 ------------------------------
