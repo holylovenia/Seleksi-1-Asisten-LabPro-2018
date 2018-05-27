@@ -2,30 +2,6 @@
 -----------------------------------
 Dibuat oleh : Prisila Michelle - 13516129
 
-Petunjuk:
-
-- Silahkan fork GitHub berikut agar dapat dikerjakan pada GitHub kalian masing-masing *(private)*.
-- Pembagian soal dapat dilihat pada [tautan](https://docs.google.com/spreadsheets/d/1l8SNlbK4EI8wFb5_3pDDi3IfioO7VglCcPmfFCK2jJU/edit?usp=sharing) berikut ini.
-- Kerjakan persoalan berikut (sesuai dengan pembagian) menggunakan algoritma yang menurut Anda mempunyai kInerja terbaik.
-- Tuliskan penjelasan algoritma tersebut beserta *source code* pada saat pengumpulan.
-- Perhatikan, yang perlu dikumpulkan adalah:
-  - **README.md**, tolong hapus bagian yang tidak perlu. Readme minimal berisi hal-hal berikut:
-    - Keterangan pembuat (NIM dan Nama Lengkap)
-    - Deskripsi semua soal yang dikerjakan
-    - *Source code* solusi untuk semua soal yang dikerjakan
-    - Penjelasan solusi untuk semua soal yang dikerjakan
-  - Direktori **src**, berisi file-file solusi soal, dengan format nama file **X-ProblemYY.eks**
-    - **X** adalah nomor bab
-    - **YY** adalah nomor problem
-    - **eks** adalah ekstensi file solusi (sesuai bahasa pemrograman)
-    - Contoh: 4-Problem03.pas
-- Pemakaian fungsi bawaan yang berlebihan tidak diperbolehkan.
-- ***Deadline pull request:*** Minggu, 27 Mei 2018 pukul 23.59, dengan subjek **[NIM] - Seleksi 1 Asisten LabPro 2018** (contoh: 13515113 - Seleksi 1 Asisten LabPro 2018). Jangan lupa segera di-*public* setelah melakukan *deadline* berlalu.
-- *Have a nice day!*
-------
-
-------
-
 ------
 
 # Daftar Isi
@@ -37,13 +13,13 @@ Petunjuk:
 - [Bab 1 - Percabangan](#bab-1---percabangan)
   - [Problem 5](#problem-5)
 - [Bab 2 - Pengulangan](#bab-2---pengulangan)
-  - [Problem 3](#problem-3-1)
+  - [Problem 3](#problem-3)
 - [Bab 3 - Fungsi dan Prosedur](#bab-3---fungsi-dan-prosedur)
-  - [Problem 2](#problem-2-2)
+  - [Problem 2](#problem-2)
 - [Bab 4 - *Array*](#bab-4---array)
-  - [Problem 1](#problem-1-3)
+  - [Problem 1](#problem-1)
 - [Bab 5 - Matriks dan File Eksternal](#bab-5---matriks-dan-file-eksternal)
-  - [Problem 12](#problem-12-4)
+  - [Problem 12](#problem-12)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
