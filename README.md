@@ -100,7 +100,7 @@ Maka hasil turunannya adalah 10x^1 + 2x^0
 </pre>
 
 <pre>
-Masukkan pangkat paling besar : **3**
+Masukkan pangkat paling besar : <b>3</b>
 
 Masukkan koefisien x^3 : <b>1</b>
 
