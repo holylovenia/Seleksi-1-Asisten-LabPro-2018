@@ -1,12 +1,12 @@
 # Seleksi 1 Asisten LabPro 2018
 
 
-NIM : 13516093
+NIM : 13516093. 
 Name : Muhammad Farhan
 
 
 ## Daftar Isi
-- [Bab 1 - Problem 2](##1.-Decision Making---Problem-2)
+- [Bab 1 - Problem 2](##1.-Decision-Making---Problem-2)
 - [Bab 2 - Problem 1](##2.-Loop---Problem-1-1)
 - [Bab 3 - Problem 12](##3.-Function-and-Procedure---Problem-12-2)
 - [Bab 4 - Problem 11](##4.-Array---Problem-11-3)
