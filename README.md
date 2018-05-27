@@ -4,7 +4,7 @@ Petunjuk:
 
 - Silahkan fork GitHub berikut agar dapat dikerjakan pada GitHub kalian masing-masing *(private)*.
 - Pembagian soal dapat dilihat pada [tautan](https://docs.google.com/spreadsheets/d/1l8SNlbK4EI8wFb5_3pDDi3IfioO7VglCcPmfFCK2jJU/edit?usp=sharing) berikut ini.
-- Kerjakan persoalan berikut (sesuai dengan pembagian) menggunakan algoritma yang menurut Anda mempunyai kinerja terbaik.
+- Kerjakan persoalan berikut (sesuai dengan pembagian) menggunakan algoritma yang menurut Anda mempunyai kInerja terbaik.
 - Tuliskan penjelasan algoritma tersebut beserta *source code* pada saat pengumpulan.
 - Perhatikan, yang perlu dikumpulkan adalah:
   - **README.md**, tolong hapus bagian yang tidak perlu. Readme minimal berisi hal-hal berikut:
