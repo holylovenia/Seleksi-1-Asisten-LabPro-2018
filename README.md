@@ -19,6 +19,7 @@ Anda mengeluarkan: **kertas**
 Penjelasan contoh 2:
 Karena Anda hanya boleh mengeluarkan batu atau kertas saja, maka agar tidak kalah Anda harus menang atau memaksa seri dengan mengeluarkan kertas lagi.
 -----------------------------------
+```
 /* NIM/NAMA	 : 18216011/Akbar Ghifari
  * TANGGAL	  : 21/05/18
  * SOAL		    : BAB 1 PROBLEM 7 (Batu dan kertas)
@@ -55,10 +56,11 @@ int main(){
             cout << "Masukan tidak diterima, silakan keluarkan batu atau kertas: ";
         }
     }
-    return 0;
+return 0;
 }
+```
 -----------------------------------
-------------PENJELASAN-------------
+**Penjelasan**
 Program menggunakan looping while untuk membersihkan input karena program mengharuskan user untuk selalu menang atau memaksakan seri dalam konstrain yang diberikan (hanya dapat menggunakan batu atau kertas). Program dimulai dengan deklarasi string input dan output dengan boolean valid atau tidaknya input yang diberikan. Setelah itu program akan memulai loop dengan statement kondisional yang akan memberikan output permintaan untuk melakukan input lagi jika input sebelumnya tidak valid. Jika input valid, program akan selesai karena user menang/seri sesuai dengan peraturan permainan.
 
 
@@ -86,6 +88,7 @@ Vin menjadi (1100 + 1000) + (1100 + 1000) * 10% = 2310. Pada bulan ketiga, (2310
 
 Dan pada bulan keempat, uang Tuan Vin menjadi (3641 + 1000) + (3641 + 1000) * 10% =  5105. Anda dapat mengabaikan seluruh digit dibelakang koma.
 -----------------------------------
+```
 /* NIM/NAMA	 : 18216011/Akbar Ghifari
  * TANGGAL	  : 21/05/18
  * SOAL		    : BAB 2 PROBLEM 6 (Tabungan Rutin Bunga Majemuk)
@@ -127,8 +130,9 @@ int main(){
     }
     return 0;
 }
+```
 -----------------------------------
-------------PENJELASAN-------------
+**Penjelasan**
 Program dimulai dengan deklarasi variabel dan input dari masing-masing variable. if-condition pertama akan menyaring keberadaan kasus khusus jika durasi = 0 (tabungan user tidak berbunga/ belum menabung). Selanjutnya jika bukan kasus khusus, input akan diproses dalam looping for untuk menambahkan bunga sesuai dengan saldo terakhir. Casting dari (100+bunga) menuju float diperlukan untuk menemukan hasil bagi yang tepat. Selanjutnya saldo akan ditambahkan nominal tabungan rutin dan loop akan berjalan terus hingga jumlah perkalian mencapai durasi tabungan yang diinginkan.
 
 
@@ -172,6 +176,7 @@ Bilangan prima diantara 10 sampai 25 adalah:
 23
 ***
 -----------------------------------
+```
 /* NIM/NAMA	 : 18216011/Akbar Ghifari
  * TANGGAL	  : 21/05/18
  * SOAL		    : BAB 3 PROBLEM 4 (Bilangan Prima)
@@ -226,8 +231,9 @@ int main(){
     }
     return 0;
 }
+```
 -----------------------------------
-------------PENJELASAN-------------
+**Penjelasan**
 Dengan menggunakan fungsi isPrime yang menentukan bilangan prima dengan membagi bilangan tersebut dari rentangnya hingga mencapai 1 (sebuah angka dinilai prima jika ia tidak habis dibagi dengan angka yang berada pada rentang 1-N (angka itu sendiri)), kita dapat menemukan bilangan-bilangan prima lainnya dari rentang A-B maupun B-A. Iterasi akan berjalan dari A sampai B (A lebih kecil dibandingkan B) yang akan melakukan print terhadap seluruh bilangan yang dinilai oleh fungsi isPrime merupakan bilangan prima.
 
 
@@ -274,6 +280,7 @@ Erma
 Hans
 ***
 -----------------------------------
+```
 /* NIM/NAMA	 : 18216011/Akbar Ghifari
  * TANGGAL	  : 21/05/18
  * SOAL		    : BAB 4 PROBLEM 3 (Tamu Pernikahan)
@@ -313,8 +320,9 @@ int main(){
 
     return 0;
 }
+```
 -----------------------------------
-------------PENJELASAN-------------
+**Penjelasan**
 Setelah input N dan i, iterasi untuk menetukan bilangan fibonacci dimulai dari 1 (temp_1, dan temp_2) karena Tamu urutan 1 akan muncul 2 kali jika kita mulai dari 0. Selanjutnya setiap i akan di print dengan melakukan penyimpanan 2 nilai sebelumnya dalam temp_1 dan temp_2 untuk memunculkan bilangan fibonacci setelahnya.
 
 
@@ -349,6 +357,7 @@ result exported!
 9 6 3
 ```
 -----------------------------------
+```
 /* NIM/NAMA	 : 18216011/Akbar Ghifari
  * TANGGAL	  : 21/05/18
  * SOAL		    : BAB 5 PROBLEM 2 (File Eksternal)
@@ -423,6 +432,7 @@ int main(){
 
     return 0;
 }
+```
 -----------------------------------
-------------PENJELASAN-------------
+**Penjelasan**
 Load dan save akan dilakukan ke file external image.txt dan result.txt. Pada dasarnya program hanya akan melakukan rotasi sesuai dengan jumlah yang diberikan (N), sehingga looping akan bekerja N mod 4 kali sesuai dengan input. Program akan memindahkan angka pada matriks pertama sesuai dengan posisi barunya pada matriks kedua, setelah itu matriks kedua akan dicopy ke matrix pertama agar iterasi dapat dilanjutkan.
