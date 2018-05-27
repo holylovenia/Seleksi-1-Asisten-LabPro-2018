@@ -3,10 +3,9 @@
 
 	Pembuat
 	Nama	: Tony
-	Nim		: 13516010
+	Nim	: 13516010
 	
-----------
-----------
+--------------
 
 # Daftar Isi
 
@@ -30,7 +29,6 @@
 ------------------------------------
 ------
 
-------
 
 ## Bab 1 - Percabangan
 ---------------------------------
@@ -488,7 +486,7 @@ int main(){
 
 #### Penjelasan
 
-Untuk membaca file dapat digunakan ifstream. jika ingin melakukan pembacaan maupun penulisan file harus terlebih dahulu membukan file dengan fungsi bawaan `open()` dan memastikan
+Untuk membaca file dapat digunakan `ifstream` pada library `fstream`. jika ingin melakukan pembacaan maupun penulisan file harus terlebih dahulu membukan file dengan fungsi bawaan `open()` dan memastikan
 file tersebut sudah dibuka dengan menggunakan fungsi bawaan `is_open()`.
 
 Untuk membaca masukkan matriks berukuran `N` dapat digunakan perulangan `for` dalam perulangan `for` yang perulangan luar untuk indeks baris dan 
