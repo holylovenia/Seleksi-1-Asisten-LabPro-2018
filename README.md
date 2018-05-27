@@ -12,13 +12,13 @@ Nama Lengkap : Maha William Chandra
 - [Bab 1 - Percabangan](#bab-1---percabangan)
   - [Problem 4](#problem-4)
 - [Bab 2 - Pengulangan](#bab-2---pengulangan)
-  - [Problem 3](#problem-3-1)
+  - [Problem 3](#problem-3)
 - [Bab 3 - Fungsi dan Prosedur](#bab-3---fungsi-dan-prosedur)
-  - [Problem 2](#problem-2-2)
+  - [Problem 2](#problem-2)
 - [Bab 4 - *Array*](#bab-4---array)
-  - [Problem 12](#problem-12-3)
+  - [Problem 12](#problem-12)
 - [Bab 5 - Matriks dan File Eksternal](#bab-5---matriks-dan-file-eksternal)
-  - [Problem 11](#problem-11-4)
+  - [Problem 11](#problem-11)
 
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
@@ -56,7 +56,6 @@ Masukkan nilai Y : **0**
 Titik (0,0) berada di titik origin
 ***
 
----------------------------------
 ---------------------------------
 
 
@@ -101,9 +100,6 @@ Masukkan banyaknya bilangan :3
 2  
 ```
 ---------------------------------
------------------------
------------------------
-------
 
 ## Bab 3 - Fungsi dan Prosedur
 ### Problem 2
@@ -179,9 +175,8 @@ Kunci yang harus diduplikat :
 
 202
 ***
+-----------------
 
------------------
------------------
 ## Bab 5 - Matriks dan File Eksternal
 ### Problem 11
 
@@ -211,5 +206,4 @@ Antrian terpanjang adalah 3
 
 -----------------------------------
 
-------
 
