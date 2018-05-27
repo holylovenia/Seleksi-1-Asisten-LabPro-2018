@@ -396,10 +396,81 @@ Yes
 ### Solusi
 ```
 
+// Nama file: 5-Problem01.cpp
+#include <iostream>
+#include <fstream>
+using namespace std;
+
+int main () {
+    // Buka file
+    ifstream fileinput;
+    fileinput.open("matriks.txt");
+    if (fileinput.is_open()) {
+        // Masukkan jumlah indeks matriks dari file
+        int idx;
+        bool bysim = true;
+        fileinput >> idx;
+        int soal[idx][idx];
+        // Masukkan isi file ke elemen matriks
+        for (int i = 0; i < idx; i++) {
+            for (int j = 0; j < idx; j++) {
+                fileinput >> soal[i][j];
+            }
+        }
+        fileinput.close();
+        cout << "Matrix loaded!" << endl;
+        // Cek bisymmetric
+        // Cek diagonal pertama
+        for (int i = 0; i < idx; i++) {
+            for (int j = i; j < idx; j++) {
+                if (soal[i][j] != soal[j][i]) {
+                    bysim = false;
+                    break;
+                }
+            }
+            if (!bysim) {
+                break;
+            }
+        }
+        // Cek diagonal kedua
+        for (int i = idx - 1; i >= 0; i--) {
+            for (int j = 0; j < idx - i; j++) {
+                if (soal[j][i] != soal[idx - 1 -i][idx - 1 - j]) {
+                    bysim = false;
+                    break;
+                }
+            }
+            if (!bysim) {
+                break;
+            }
+        }
+        // Tampilkan hasil cek
+        if (!bysim) {
+            cout << "No" << endl;
+        } else {
+            cout << "Yes" << endl;
+        }
+    } else {
+        // Tampilkan pesan error bila tidak ada file
+        cout << "File missing!!" << endl;
+    }
+    return 0;
+}
+
 ```
 
 ### Penjelasan
 
+Pertama program akan mencoba untuk membuka file. Bila file tidak bisa dibuka maka tampilkan pesan error sedangkan bila terbuka maka lakukan hal berikut: Masukkan baris pertama file ke dalam index untuk mengetahui banyak jumlah baris dan kolom yang akan dialokasikan. Setelah itu masukkan elemen-elemen matriks dari file. Setelah itu lakukan pengecekan bysimmetrix dengan melakukan dua kali looping, looping pertama mengecek kesamaan elemen berdasarkan diagonal pertama (kiri atas ke kanan bawah), looping kedua mengecek berdasarkan diagonal kedua (dari kiri bawah ke kanan atas). Sebagai contoh:
 
+- matriks.txt
+```
+3
+1 2 3
+2 5 4
+3 4 1
+```
+
+akan menghasilkan No karena soal[2][1] = 4 tidak sama dengan soal[1][0] = 2
 
 -----------------------------------
