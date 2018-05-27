@@ -111,7 +111,7 @@ elif 61 <= nilai <= 80:
 	indeks = 'B'
 	
 elif 81 <= nilai <= 100:
-
+	
 	indeks = 'A'
 
 #menampilkan nama dan indeks yang didapat
@@ -165,6 +165,30 @@ Masukkan banyaknya bilangan :3
 1  
 2  
 ```
+---------------------------------
+#### Source code :
+```
+n = int(input("Masukkan banyaknya bilangan :"))
+print(n, "bilangan pertama dari deret adalah")
+
+if n > 0:
+	prevprev = 0
+	fib = 1
+	print(fib)
+	
+	for i in range(0,n-1):
+		prev = fib
+		fib = prevprev + prev
+		if fib % 3 == 0:
+			fib = fib + 1
+		print(fib)
+		prevprev = prev
+```
+
+---------------------------------
+#### Penjelasan : 
+Program menerima masukan banyaknya bilangan pada deret. Setelah itu, print bilangan pertama yaitu 1, lalu lakukan iterasi sebanyak n-1 kali untuk menampilkan nilai-nilai pada deret. Digunakan variabel prev yang menyimpan angka terakhir, prevprev yang menyimpan angka sebelum prev, dan fib yang menyimpan jumlah dari prevprev dan prev. Pada setiap iterasi, nilai prev diset dengan nilai fib, lalu nilai fib diganti dengan nilai prevprev ditambah prev. Setelah itu, jika nilai fib bisa dibagi 3, maka nilai fib ditambah dengan 1. Tampilkan nilai fib dan set nilai prevprev dengan prev. Begitu seterusnya hingga setiap nilai pada deret telah ditampilkan. 
+
 ---------------------------------
 -----------------------
 -----------------------
