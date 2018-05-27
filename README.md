@@ -235,8 +235,8 @@ for ch in message:
 decodedMessage = ""
 
 for item in dmessage.split():
-
-   decodedMessage += chr(int(item))   
+	
+	decodedMessage += chr(int(item))   
 
 print ('Teks aslinya adalah "'+decodedMessage+'"')
 
