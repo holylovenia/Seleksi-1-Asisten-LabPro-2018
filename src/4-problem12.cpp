@@ -3,9 +3,10 @@ using namespace std;
 
 #define MAX 100
 
+
 /**
  * Tipe data elementCounter: Menyimpan jumlah kemunculan tiap elemen
- * unik pada array
+ * pada sebuah array (Distinct elements)
  */
 typedef struct {
     int arr[MAX];
@@ -14,7 +15,7 @@ typedef struct {
 } elementCounter;
 
 /**
- * Mengembalikan indeks kemunculan elemen array pada distArr array,
+ * Mengembalikan indeks kemunculan elemen array pada distinct array,
  * -1 apabila tidak ditemukan
  */
 int getElmtIdx(elementCounter distinctArr, int el) {
@@ -74,9 +75,6 @@ void printUniqueKey(elementCounter distArr) {
     }
 }
 
-/**
- * Main program
- */
 int main() {
     int arrKey[MAX];
     int n;

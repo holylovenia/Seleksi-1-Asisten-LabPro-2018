@@ -5,17 +5,21 @@ using namespace std;
 #define MAX 100
 
 typedef struct {
-    int elmt[MAX][MAX];
-    int row;
-    int col;
+    int elmt[MAX][MAX]; //container array of array
+    int row;            //baris
+    int col;            //kolom
 } Matrix;
 
+/**
+ * Membaca file berisi antrian dan merepresentasikannya
+ * ke dalam array of antrian(array).
+ */
 Matrix fileToMatrix() {
     Matrix Mat;
     ifstream inFile;
     int x;
 
-    inFile.open("data/queue.txt");
+    inFile.open("../data/queue.txt");
     if (inFile) {
         inFile >> x;
         Mat.row = x;
@@ -33,6 +37,10 @@ Matrix fileToMatrix() {
     return Mat;
 }
 
+/**
+ * Menghitung panjang sebuah antrian Q dengan
+ * jumlah slot = line
+ */
 int countPanjangAntrian(int Q[], int line) {
     int i = 0;
     bool stop = false;

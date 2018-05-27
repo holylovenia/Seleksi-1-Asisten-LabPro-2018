@@ -2,7 +2,6 @@
 using namespace std;
 
 /**
- * Mengalikan x sebanyak n kali
  * Mengembalikan x pangkat n
  */
 int power(int x, int n) {
@@ -22,9 +21,9 @@ int func (int x) {
 }
 
 /**
- * Mencari nilai x yang sesuai pada fungsi f(x). x < 30.
- * Mengembalikan nilai x berdasarkan nilai fx, -1 jika tidak ada nilai x
- * yang memenuhi nilai fx.
+ * Mencari nilai x berdasarkan nilai fx yang diketahui.
+ * Mengembalikan -1 jika tidak ada nilai x yang memenuhi 
+ * nilai fx. x lebih dari 30.
  */
 int getXFunction (int fx) {
     int i = 1;
@@ -40,9 +39,6 @@ int getXFunction (int fx) {
     return x;
 }
 
-/**
- * Main Program
- */
 int main() {
     int fx, x;
 
@@ -51,9 +47,9 @@ int main() {
 
     x = getXFunction(fx);
     if (x != -1) {
-        cout << "Nilai x adalah " << x;
+        cout << "Nilai x adalah " << x << endl;
     } else {
-        cout << "tidak ada";
+        cout << "Tidak ada x yang sesuai" << endl;
     }
     return 0;
 }

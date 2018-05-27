@@ -11,20 +11,21 @@ int main() {
     
     cout << "Titik (" << X << "," << Y << ") berada di ";
 
-    if (X>0 && Y>0) {
+    //cek setiap kondisi
+    if (X > 0 && Y > 0) {
         cout << "kuadran 1";
-    } else if (X<0 && Y>0) {
+    } else if (X < 0 && Y > 0) {
         cout << "kuadran 2";
-    } else if (X<0 && Y<0) {
+    } else if (X < 0 && Y < 0) {
         cout << "kuadran 3";
-    } else if (X>0 && Y<0) {
+    } else if (X > 0 && Y < 0) {
         cout << "kuadran 4";
-    } else if (X==0 && Y != 0) {
-        cout << "sumbu Y";
-    } else if (X!=0 && Y==0) {
+    } else if (X == 0 && Y == 0) {
+        cout << "titik origin";
+    } else if (Y == 0) {
         cout << "sumbu X";
     } else {
-        cout << "titik origin";
+        cout << "sumbu Y";
     }
 
     return 0;
