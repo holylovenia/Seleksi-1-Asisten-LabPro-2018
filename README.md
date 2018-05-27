@@ -1,34 +1,4 @@
-# Seleksi 1 Asisten LabPro 2018
------------------------------------
-Petunjuk:
-
-- Silahkan fork GitHub berikut agar dapat dikerjakan pada GitHub kalian masing-masing *(private)*.
-- Pembagian soal dapat dilihat pada [tautan](https://docs.google.com/spreadsheets/d/1l8SNlbK4EI8wFb5_3pDDi3IfioO7VglCcPmfFCK2jJU/edit?usp=sharing) berikut ini.
-- Kerjakan persoalan berikut (sesuai dengan pembagian) menggunakan algoritma yang menurut Anda mempunyai kinerja terbaik.
-- Tuliskan penjelasan algoritma tersebut beserta *source code* pada saat pengumpulan.
-- Perhatikan, yang perlu dikumpulkan adalah:
-  - **README.md**, tolong hapus bagian yang tidak perlu. Readme minimal berisi hal-hal berikut:
-    - Keterangan pembuat (NIM dan Nama Lengkap)
-    - Deskripsi semua soal yang dikerjakan
-    - *Source code* solusi untuk semua soal yang dikerjakan
-    - Penjelasan solusi untuk semua soal yang dikerjakan
-  - Direktori **src**, berisi file-file solusi soal, dengan format nama file **X-ProblemYY.eks**
-    - **X** adalah nomor bab
-    - **YY** adalah nomor problem
-    - **eks** adalah ekstensi file solusi (sesuai bahasa pemrograman)
-    - Contoh: 4-Problem03.pas
-- Pemakaian fungsi bawaan yang berlebihan tidak diperbolehkan.
-- ***Deadline pull request:*** Minggu, 27 Mei 2018 pukul 23.59, dengan subjek **[NIM] - Seleksi 1 Asisten LabPro 2018** (contoh: 13515113 - Seleksi 1 Asisten LabPro 2018). Jangan lupa segera di-*public* setelah melakukan *deadline* berlalu.
-- *Have a nice day!*
-------
-
-------
-
-------
-
-
 ## Bab 1 - Percabangan
----------------------------------
 ### Problem 7
 
 [[source code]](src/1-Problem07.pas)
@@ -55,7 +25,6 @@ Setelah menerima input dari user, dilakukan percabangan jika user memilih mengel
 
 ---------------------------------
 ## Bab 2 - Pengulangan
----------------------------------
 
 ### Problem 6
 [[source code]](src/2-Problem06.pas)
@@ -88,7 +57,6 @@ Setelah menerima input dari user, akan dilakukan pengulangan sebanyak lama menab
 
 ---------------------------------
 ## Bab 3 - Fungsi dan Prosedur
----------------------------------
 
 ### Problem 5
 [[source code]](src/3-Problem05.pas)
@@ -117,7 +85,6 @@ Setelah itu dengan menggunakan kedua fungsi di atas dan menggunakan percabangan 
 
 ---------------------------------
 ## Bab 4 - *Array*
----------------------------------
 
 ### Problem 4
 [[source code]](src/4-Problem04.pas)
@@ -170,7 +137,6 @@ Pertama program akan menerima input dari user berupa banyaknya bilangan dan bila
 
 ---------------------------------
 ## Bab 5 - Matriks dan File Eksternal
----------------------------------
 ### Problem 3
 [[source code]](src/5-Problem03.pas)
 
