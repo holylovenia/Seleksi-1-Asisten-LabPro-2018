@@ -444,7 +444,7 @@ Pertama, dilakukan pembacaan dari file eksternal bernama "matriks.txt", semua an
 Fungsi **calculateMagicConstant(n)** berisi rumus matematika untuk melakukan perhitungan bilangan magic constant dari suatu matriks berukuran **n**. Rumus tersebut dibedakan jika **n** ganjil dan genap. Jika Ganjil maka rumusnya **n * ((n * n + 1) / 2)**, sedangkan jika Genap maka rumusnya **(n * (n * n + 1)) / 2**. Magic Constant sendiri merupakan nilai penjumlahan tiap baris, kolom, dan diagonal dari sebuah matriks, jika ada salah satu baris atau kolom atau diagonal yang jumlahnya tidak sama dengan Magic Constant maka matriks tersebut bukanlah magic square matrix.
 
 Fungsi **createIndex(n)** adalah fungsi yang memudahkan untuk penjumlahan elemen-elemen matriks berdasarkan baris, kolom, dan diagonal. Untuk matriks berukuran n, akan terdapat n baris, n kolom, dan 2 diagonal. Contoh untuk matriks berukuran 3 maka matriks akan mempunyai indeks
-
+ ```
 (0,4,8)           (2,4,6)
 d1                d2
 
@@ -458,5 +458,5 @@ c1       c2       c3
 r1,r2,r3 merupakan indeks untuk elemen baris
 c1,c2,c3 merupakan indeks untuk elemen kolom
 d1,d2 merupakan indeks untuk elemen diagonal
-
+```
 Lalu pada list **matrix** di cek apakah tiap elemen berindeks **idx** pada **indexes** jumlahnya sama dengan **magicConstant**, jika ada satu saja yang jumlahnya berbeda maka matriks tersebut bukan magic squared matrix. 
