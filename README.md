@@ -100,42 +100,42 @@ Bilangan prima diantara 10 sampai 20 adalah
 
 SOURCE CODE
 
-#include <bits/stdc++.h>
+	#include <bits/stdc++.h>
 
-using namespace std;
-//mencetak sema bilangan prima diantara a dan b
-void primebetween(int a, int b)
-{
-	bool memo[b+1];
-	memo[2]=1;
-	for(int i=3; i<=b; i++)
+	using namespace std;
+	//mencetak sema bilangan prima diantara a dan b
+	void primebetween(int a, int b)
 	{
-		memo[i]=0;
-		int j=2;
-		bool prima=true;
-		while(prima && (j<=sqrt(i)))
+		bool memo[b+1];
+		memo[2]=1;
+		for(int i=3; i<=b; i++)
 		{
-			if(i%j==0)
-				prima=false;
-			else j++;
+			memo[i]=0;
+			int j=2;
+			bool prima=true;
+			while(prima && (j<=sqrt(i)))
+			{
+				if(i%j==0)
+					prima=false;
+				else j++;
+			}
+			if(prima) memo[i]=1;
 		}
-		if(prima) memo[i]=1;
+		for(int i=a; i<=b; i++)
+			if(memo[i]==1 && i>1) cout<<i<<"\n";
 	}
-	for(int i=a; i<=b; i++)
-		if(memo[i]==1 && i>1) cout<<i<<"\n";
-}
 
-int main()
-{
-	int a,b;
-	cout<<"Masukan nilai A :";
-	cin>>a;
-	cout<<"Masukan nilai B :";
-	cin>>b;
-	cout<<"Bilangan prima diantara "<<a<<" sampai "<<b<<" adalah\n";
-	primebetween(a,b);
-	return 0;
-}
+	int main()
+	{
+		int a,b;
+		cout<<"Masukan nilai A :";
+		cin>>a;
+		cout<<"Masukan nilai B :";
+		cin>>b;
+		cout<<"Bilangan prima diantara "<<a<<" sampai "<<b<<" adalah\n";
+		primebetween(a,b);
+		return 0;
+	}
 
 PENJELASAN SOLUSI
 
@@ -194,49 +194,49 @@ Masukan jumlah baris: **5**
 
 SOURCE CODE
 
-#include <bits/stdc++.h>
+	#include <bits/stdc++.h>
 
-using namespace std;
-//menghasilkan nilai C(n,r)
-long kombinatorik(int n, int r)
-{
-	long result=1;
-	if(r==0 || n==r) {}
-	else if(r>=n/2)
+	using namespace std;
+	//menghasilkan nilai C(n,r)
+	long kombinatorik(int n, int r)
 	{
-		for(int i=r+1; i<=n; i++)
+		long result=1;
+		if(r==0 || n==r) {}
+		else if(r>=n/2)
 		{
-			result*=i;
-			result/=i-r;
+			for(int i=r+1; i<=n; i++)
+			{
+				result*=i;
+				result/=i-r;
+			}
 		}
-	}
-	else
-	{
-		for(int i=n-r+1; i<=n; i++)
+		else
 		{
-			result*=i;
-			result/=i-n+r;
+			for(int i=n-r+1; i<=n; i++)
+			{
+				result*=i;
+				result/=i-n+r;
+			}
 		}
+		return result;
 	}
-	return result;
-}
 
-int main()
-{
-	int n;
-	cout<<"Masukan jumlah baris: ";
-	cin>>n;
-	for(int i=0; i<n; i++)
+	int main()
 	{
-		for(int j=0; j<=i; j++)
+		int n;
+		cout<<"Masukan jumlah baris: ";
+		cin>>n;
+		for(int i=0; i<n; i++)
 		{
-			if(j==0) cout<<kombinatorik(i, j);
-			else cout<<" "<<kombinatorik(i, j);
+			for(int j=0; j<=i; j++)
+			{
+				if(j==0) cout<<kombinatorik(i, j);
+				else cout<<" "<<kombinatorik(i, j);
+			}
+			cout<<"\n";
 		}
-		cout<<"\n";
+		return 0;
 	}
-	return 0;
-}
 
 PENJELASAN SOLUSI
 
@@ -318,52 +318,52 @@ Negara adolf memiliki segalanya
 
 SOURCE CODE
 
-#include <bits/stdc++.h>
+	#include <bits/stdc++.h>
 
-using namespace std;
-//menghasilkan true jika kekayaan bukan merupakan elemen pada array kekayaan_adolf
-bool isnotexist(string kekayaan, string kekayaan_adolf[], int n)
-{
-	bool notexist=true;
-	int i=0;
-	while(notexist && i<n)
+	using namespace std;
+	//menghasilkan true jika kekayaan bukan merupakan elemen pada array kekayaan_adolf
+	bool isnotexist(string kekayaan, string kekayaan_adolf[], int n)
 	{
-		if(kekayaan_adolf[i]==kekayaan)
-			notexist=false;
-		else i++;
-	}
-	return notexist;
-}
-
-int main()
-{
-	int n,m;
-	bool prov=false;
-	string kekayaan_adolf[100],kekayaan_tetangga[100];
-	cout<<"Masukkan jumlah kekayaan negara Adolf : ";
-	cin>>n;
-	cout<<"Masukkan kekayaan negara Adolf :\n";
-	for(int i=0; i<n; i++)
-		cin>>kekayaan_adolf[i];
-	cout<<"Masukkan jumlah kekayaan negara tetangga : ";
-	cin>>m;
-	cout<<"Masukkan kekayaan negara tetangga :\n";
-	for(int i=0; i<m; i++)
-		cin>>kekayaan_tetangga[i];
-	for(int i=0; i<m; i++)
-	{
-		bool temp=isnotexist(kekayaan_tetangga[i],kekayaan_adolf,n);
-		if(temp && !prov)
+		bool notexist=true;
+		int i=0;
+		while(notexist && i<n)
 		{
-			prov=true;
-			cout<<"Negara adolf tidak memiliki :\n"<<kekayaan_tetangga[i]<<"\n";
+			if(kekayaan_adolf[i]==kekayaan)
+				notexist=false;
+			else i++;
 		}
-		else if(temp)
-			cout<<kekayaan_tetangga[i]<<"\n";
+		return notexist;
 	}
-	if(!prov) cout<<"Negara adolf memiliki segalanya\n";
-	return 0;
-}
+
+	int main()
+	{
+		int n,m;
+		bool prov=false;
+		string kekayaan_adolf[100],kekayaan_tetangga[100];
+		cout<<"Masukkan jumlah kekayaan negara Adolf : ";
+		cin>>n;
+		cout<<"Masukkan kekayaan negara Adolf :\n";
+		for(int i=0; i<n; i++)
+			cin>>kekayaan_adolf[i];
+		cout<<"Masukkan jumlah kekayaan negara tetangga : ";
+		cin>>m;
+		cout<<"Masukkan kekayaan negara tetangga :\n";
+		for(int i=0; i<m; i++)
+			cin>>kekayaan_tetangga[i];
+		for(int i=0; i<m; i++)
+		{
+			bool temp=isnotexist(kekayaan_tetangga[i],kekayaan_adolf,n);
+			if(temp && !prov)
+			{
+				prov=true;
+				cout<<"Negara adolf tidak memiliki :\n"<<kekayaan_tetangga[i]<<"\n";
+			}
+			else if(temp)
+				cout<<kekayaan_tetangga[i]<<"\n";
+		}
+		if(!prov) cout<<"Negara adolf memiliki segalanya\n";
+		return 0;
+	}
 
 PENJELASAN SOLUSI
 
@@ -396,64 +396,64 @@ Yes
 
 SOURCE CODE
 
-#include <bits/stdc++.h>
+	#include <bits/stdc++.h>
 
-using namespace std;
+	using namespace std;
 
-int main()
-{
-	ifstream readfile;
-	int n,comp=0,sum,d1=0,d2=0;
-	bool magic=true;
-	readfile.open("matriks.txt");
-	if(readfile.is_open())
+	int main()
 	{
-		readfile>>n;
-		vector <vector <long long> > matrix(n, vector<long long>(n));
-		//pembacaan elemen matriks dan pengecekan kesamaan jumlah elemen per baris
-		for(int i=0; i<n; i++)
+		ifstream readfile;
+		int n,comp=0,sum,d1=0,d2=0;
+		bool magic=true;
+		readfile.open("matriks.txt");
+		if(readfile.is_open())
 		{
-			sum=0;
-			for(int j=0; j<n; j++)
-			{
-				readfile>>matrix[i][j];
-				if(i==0) comp+=matrix[i][j];
-				else sum+=matrix[i][j];
-			}
-			if(i!=0 && sum!=comp) magic=false;
-		}
-		//pengecekan kesamaan jumlah elemen pada kedua diagonal utama
-		if(magic)
-		{
+			readfile>>n;
+			vector <vector <long long> > matrix(n, vector<long long>(n));
+			//pembacaan elemen matriks dan pengecekan kesamaan jumlah elemen per baris
 			for(int i=0; i<n; i++)
 			{
-				d1+=matrix[i][i];
-				d2+=matrix[i][n-1-i];
+				sum=0;
+				for(int j=0; j<n; j++)
+				{
+					readfile>>matrix[i][j];
+					if(i==0) comp+=matrix[i][j];
+					else sum+=matrix[i][j];
+				}
+				if(i!=0 && sum!=comp) magic=false;
 			}
-			if(comp!=d1 || comp!=d2)
-				magic=false;
-		}
-		//pengecekan kesamaan jumlah elemen per kolom
-		int i=0;
-		while(magic && i<n)
-		{
-			sum=0;
-			for(int j=0; j<n; j++)
+			//pengecekan kesamaan jumlah elemen pada kedua diagonal utama
+			if(magic)
 			{
-				sum+=matrix[j][i];
+				for(int i=0; i<n; i++)
+				{
+					d1+=matrix[i][i];
+					d2+=matrix[i][n-1-i];
+				}
+				if(comp!=d1 || comp!=d2)
+					magic=false;
 			}
-			if(comp!=sum)
-				magic=false;
-			else i++;
+			//pengecekan kesamaan jumlah elemen per kolom
+			int i=0;
+			while(magic && i<n)
+			{
+				sum=0;
+				for(int j=0; j<n; j++)
+				{
+					sum+=matrix[j][i];
+				}
+				if(comp!=sum)
+					magic=false;
+				else i++;
+			}
+			cout<<"matriks loaded!\n";
+			if(magic) cout<<"Yes\n";
+			else cout<<"No\n";
+			readfile.close();
 		}
-		cout<<"matriks loaded!\n";
-		if(magic) cout<<"Yes\n";
-		else cout<<"No\n";
-		readfile.close();
+		return 0;
 	}
-	return 0;
-}
-
+		
 PENJELASAN SOLUSI
 
 Pada program utama kita memiliki variabel magic bertipe boolean yang bernilai true. Jika file bernama “matriks.txt” telah ditemukan dan dibuka, maka kita akan melakukan pembacaan dari file eksternal dan mendapatkan ukuran matriks, kemudian kita akan membaca elemen matriks tersebut, sambil sekalian menghitung dan mengecek jumlah elemennya per baris. Jumlah elemen di baris pertama akan kita jadikan sebagai nilai perbandingan untuk nilai-nilai hasil penjumlahan lainnya. Sehingga jumlah elemen di baris kedua hingga ke n akan dibandingkan dengan nilai di baris pertama. Jika nilainya tidak sama maka nilai boolean magic akan diubah menjadi false. Jika setelah itu nilai magic masih true maka akan dilanjutkan dengan mengecek kesamaan jumlah elemen pada kedua diagonalnya. Kemudian jika variabel magic masih bernilai true setelah melakukan pengecekan pada kedua diagonal utama, dilanjutkan dengan mengecek kesamaan jumlah elemen pada tiap kolom. Namun jika nilai magic ternyata sudah bernilai false saat akan melakukan pengecekan selanjutnya, maka pengecekan tidak dilanjutkan. Pada akhir program, jika magic bernilai true, maka program akan mencetak “Yes” dan sebaliknya akan mencetak “No” jika magic bernilai false.
