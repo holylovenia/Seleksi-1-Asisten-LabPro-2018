@@ -1,30 +1,5 @@
-# Seleksi 1 Asisten LabPro 2018
------------------------------------
-Petunjuk:
-
-- Silahkan fork GitHub berikut agar dapat dikerjakan pada GitHub kalian masing-masing *(private)*.
-- Pembagian soal dapat dilihat pada [tautan](https://docs.google.com/spreadsheets/d/1l8SNlbK4EI8wFb5_3pDDi3IfioO7VglCcPmfFCK2jJU/edit?usp=sharing) berikut ini.
-- Kerjakan persoalan berikut (sesuai dengan pembagian) menggunakan algoritma yang menurut Anda mempunyai kinerja terbaik.
-- Tuliskan penjelasan algoritma tersebut beserta *source code* pada saat pengumpulan.
-- Perhatikan, yang perlu dikumpulkan adalah:
-  - **README.md**, tolong hapus bagian yang tidak perlu. Readme minimal berisi hal-hal berikut:
-    - Keterangan pembuat (NIM dan Nama Lengkap)
-    - Deskripsi semua soal yang dikerjakan
-    - *Source code* solusi untuk semua soal yang dikerjakan
-    - Penjelasan solusi untuk semua soal yang dikerjakan
-  - Direktori **src**, berisi file-file solusi soal, dengan format nama file **X-ProblemYY.eks**
-    - **X** adalah nomor bab
-    - **YY** adalah nomor problem
-    - **eks** adalah ekstensi file solusi (sesuai bahasa pemrograman)
-    - Contoh: 4-Problem03.pas
-- Pemakaian fungsi bawaan yang berlebihan tidak diperbolehkan.
-- ***Deadline pull request:*** Minggu, 27 Mei 2018 pukul 23.59, dengan subjek **[NIM] - Seleksi 1 Asisten LabPro 2018** (contoh: 13515113 - Seleksi 1 Asisten LabPro 2018). Jangan lupa segera di-*public* setelah melakukan *deadline* berlalu.
-- *Have a nice day!*
-------
-
-------
-
-------
+### Nama  : Putu Gery Wahyu Nugraha
+### NIM   : 13516100
 
 # Daftar Isi
 
@@ -36,31 +11,7 @@ Petunjuk:
 - [Bab 2 - Pengulangan](#bab-2---pengulangan)
 - [Bab 3 - Fungsi dan Prosedur](#bab-3---fungsi-dan-prosedur)
 - [Bab 4 - *Array*](#bab-4---array)
-  - [Problem 1](#problem-1-3)
-  - [Problem 2](#problem-2-3)
-  - [Problem 3](#problem-3-3)
-  - [Problem 4](#problem-4-3)
-  - [Problem 5](#problem-5-3)
-  - [Problem 6](#problem-6-3)
-  - [Problem 7](#problem-7-3)
-  - [Problem 8](#problem-8-3)
-  - [Problem 9](#problem-9-3)
-  - [Problem 10](#problem-10-3)
-  - [Problem 11](#problem-11-3)
-  - [Problem 12](#problem-12-3)
 - [Bab 5 - Matriks dan File Eksternal](#bab-5---matriks-dan-file-eksternal)
-  - [Problem 1](#problem-1-4)
-  - [Problem 2](#problem-2-4)
-  - [Problem 3](#problem-3-4)
-  - [Problem 4](#problem-4-4)
-  - [Problem 5](#problem-5-4)
-  - [Problem 6](#problem-6-4)
-  - [Problem 7](#problem-7-4)
-  - [Problem 8](#problem-8-4)
-  - [Problem 9](#problem-9-4)
-  - [Problem 10](#problem-10-4)
-  - [Problem 11](#problem-11-4)
-  - [Problem 12](#problem-12-4)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -329,7 +280,6 @@ Masukkan array B : **5 8 7 6 1**
 
 Array A lebih kecil dari array B
 ***
-***
 Masukkan N : **4**
 
 Masukkan array A : **1 2 3 4**
@@ -337,7 +287,6 @@ Masukkan array A : **1 2 3 4**
 Masukkan array B : **1 2 3 4**
 
 Array A sama besar dengan array B
-***
 ***
 Masukkan N : **6**
 
@@ -398,92 +347,7 @@ int smallerThan(int N, int * arrayA, int * arrayB) {
 }
 ```
 
------------------
------------------
 ## Bab 5 - Matriks dan File Eksternal
-### Problem 1
-Pearl diajarkan mengenai suatu jenis matriks baru di sekolah, yaitu *bysimmetric matrix*. Matriks ini merupakan suatu matriks persegi berukuran `N`x`N` yang elemen-elemennya simetri terhadap kedua diagonalnya.
-Tugas Anda adalah untuk membantu Pearl menentukan apakah suatu matriks tergolong jenis *bysimmetrix*.
-**Format *Input* dan *Output***
-*Input* matriks diambil dari file eksternal `matriks.txt`. Pada file eksternal ini, baris pertama berisi bilangan bulat positif `N` yang merepresentasikan ukuran matriks. `N` baris berikutnya berisi `N` buah bilangan bulat yang merupakan elemen matriks tersebut.
-Jika matriks merupakan *bysimmetric matrix*, maka dituliskan **Yes** pada layar. 
-Sebaliknya, jika bukan *bysimmetric matrix*, maka dituliskan **No**.
-**Contoh**
-- matriks.txt
-```
-3
-1 2 3
-2 5 2
-3 2 1
-```
-- *runtime program*
-```
-matriks loaded!
-Yes
-```
------------------------------------
-
-
-### Problem 2
-
-Tuan Krab mempunyai kumpulan file foto jaman SMA-nya dulu. Selagi bernostalgia membuka satu-persatu foto tersebut, dia menyadari bahwa *skill* fotografi-nya dulu sangatlah buruk. Ternyata terdapat banyak foto yang posisinya tidak sesuai, sehingga dia perlu untuk melakukan rotasi pada foto tersebut. Dia pun meminta bantuan Anda dalam merotasi foto-foto tersebut.
-Sebagai seorang *programmer* handal, Anda berinisiatif untuk membuat program yang membantu dalam melakukan rotasi. 
-**Format *Input* dan *Output***
-*Input* foto berupa file `image.txt` yang merupakan file foto sederhana. Foto direpresentasikan dalam *square pixel matrix* `N x N`. Baris pertama file ini berisi bilangan bulat positif `N` yang merupakan ukuran matriks. `N` baris selanjutnya berisi `N` buah bilangan bulat non-negatif yang merepresentasikan warna *pixel* pada posisi tersebut. Kemudian pada saat *runtime*, program akan meminta masukan berupa bilangan bulat non-negatif `R` yang merupakan banyak **rotasi 90 derajat searah jarum jam** yang akan dilakukan pada file foto tersebut. *Output* berupa file `result.txt` dengan format yang sama dengan file *input*.
-**Contoh**
-(Elemen baris setelah tanda ":" pada *runtime* merupakan *input* dari  pengguna)
-- image.txt
-```
-3
-1 2 3
-4 5 6
-7 8 9
-```
-- *runtime program*
-```
-file loaded!
-Masukkan banyak rotasi : 1
-result exported!
-```
-- result.txt
-```
-3
-7 4 1
-8 5 2
-9 6 3
-```
------------------------------------
-
-
-### Problem 3
-
-Tuan Krab sedang bernostalgia dengan masa kecilnya. Dia mengajak Anda untuk bermain Tic-Tac-Toe. 
-Bagi Anda yang belum pernah bermain Tic-Tac-Toe, tidak perlu khawatir! Tuan Krab dengan senang hati akan menjelaskannya. Pada permainan ini, setiap pemain akan mengisi suatu *cell matrix* dengan karakter tertentu. Besarnya matriks yang digunakan tergantung pada kesepakatan para pemain, namun harus berupa *square matrix*. Pada permainan ini, Anda menggunakan karakter `x` dan Tuan Krab menggunakan karakter `o`. Permainan akan dimenangkan oleh pemain yang berhasil membuat suatu diagonal, baris, atau kolom yang semua *cell*-nya berisi karakter yang sama.  
-Sebagai *programmer* kepercayaan Tuan Krab, Anda diminta untuk menentukan siapakah pemain yang memenangkan permainan ini.
-**Format *Input* dan *Output***
-*Input* berupa file eksternal `result.txt` yang berisi informasi mengenai keadaan akhir permainan. Baris pertama berisi bilangan bulat positif `N`, merupakan ukuran matriks yang digunakan dalam permainan tersebut. `N` baris berikutnya berisi `N` buah karakter (tanpa dipisahkan spasi) yang merepresentasikan kondisi akhir dari matriks. Karakter yang digunakan adalah:
-- `x` : karakter milik Tuan Krab
-- `o` : karakter milik Anda
-- `-` : *cell* belum terisi (kosong)
-
-
-*Output* berupa pesan yang menginformasikan siapa pemenang dari permainan tersebut. Jika tidak ada pemenang, maka tuliskan `Tidak ada pemenang`.
-**Contoh**
-- result.txt
-```
-3
-xoo
--xo
--xo
-```
-- *runtime program*
-```
-result loaded!
-Pemenangnya adalah Anda
-```
------------------------------------
-
-
 ### Problem 4
 
 Pearl, anak dari Tuan Krab, sedang belajar matriks di sekolah. Dia mendapatkan PR untuk menghitung nilai eksponen dari suatu *square matrix*. Eksponen dari suatu matriks didefinisikan sebagai operasi `N`^`E`, yang ekuivalen dengan perkalian `N`x`N`x`N`x ... x `N` sebanyak `E` kali. Sebagai contoh, `N`^3 ekuivalen dengan `N`x`N`x`N`. Guru dari Pearl mempunyai motto hidup "*practices make perfect*", sehingga beliau memberikan banyak sekali soal PR. Pearl pun meminta bantuan Anda untuk dapat menyelesaikan PR nya.
@@ -516,295 +380,100 @@ result exported!
 10 10 7
 14 10 3
 ```
+### Solusi
+Persoalan ini dapat kita bagi menjadi tiga persoalan kecil, pertama adalah mendapatkan matrix dari file, kedua adalah mengkalkulasi nilai pangkat dari matriks tersebut, ketiga adalah menuliskan matrix tersebut ke dalam file. Untuk pembacaan dan penulisan semuanya dapat dilakukan dengan fungsi I/O sederhana pada c++. Namun pada kalkulasi pangkat kita harus membuat sebuah fungsi yang mampu mengalikan matriks sebanyak pangkat yang dimaksud. Perkalian matriks sendiri diatur oleh fungsi `multMatrix` dan perpangkatannya diatur oleh fungsi `powMatrix`.
+```cpp
+#include <iostream>
+#include <fstream>
+#include <string>
 
+void getMatrixLength(std::ifstream & file, int & N);
+void getMatrix(std::ifstream & file, int** matrix, int & N);
+void powMatrix(int** & matrix, int pow, int** & result, int & N);
+void multMatrix(int** & matrixA, int** & matrixB, int** & result, int & N);
+void outputMatrix(int** & matrix, int & N);
+void allocateMatrix(int** & matrix, int & N);
 
+int main() {
+    std::string line;
+    std::ifstream matrixFile ("matriks.txt");
+    if (matrixFile.is_open()) {
+        int N;
+        getMatrixLength(matrixFile, N);
+        // Alokasikan memori untuk matrix awal
+        int** matrix;
+        allocateMatrix(matrix, N);
+        // Ambil nilai matrix dari file
+        getMatrix(matrixFile, matrix, N);
+        std::cout << "file loaded!" << std::endl;
+        std::cout << "Masukan pangkat: ";
+        int power;
+        std::cin >> power;
+        // Alokasikan memori untuk matrix hasil
+        int** result;
+        allocateMatrix(result, N);
+        powMatrix(matrix, power, result, N);
+        outputMatrix(result, N);
+        std::cout << "result exported!" << std::endl;
+    }
+    else {
+        std::cout << "File tidak dapat dibuka" << std::endl;
+    }
+}
 
+void getMatrixLength(std::ifstream & file, int & N) {
+    file >> N;
+}
 
-### Problem 5
+void getMatrix(std::ifstream & file, int** matrix, int & N) {
+    for (int i = 0; i < N; i++) {
+        for (int j = 0; j < N; j++) {
+            file >> matrix[i][j];
+        }
+    } 
+}
 
-Tuan Krab mempunyai diberikan teka-teki oleh Plankton. Dia diberikan suatu matriks, kemudian dia diminta untuk menentukan apakah matriks tersebut merupakan *magic square* atau bukan. 
-*Magic square* merupakan suatu matriks persegi berukuran `N`x`N` dengan elemen yang berbeda-beda. Masing-masing elemen berada pada rentang dari 1 hingga `N`^2. Matriks tersebut dikatakan merupakan *magic square* jika penjumlahan elemen-elemen pada setiap kolom, baris, dan diagonal memiliki nilai yang sama.
-Karena cukup kesulitan, Tuan Krab meminta bantuan Anda untuk menyelesaikan permasalahan tersebut.
-**Format *Input* dan *Output***
-*Input* matriks diambil dari file eksternal `matriks.txt`. Pada file eksternal ini, baris pertama berisi bilangan bulat positif `N` yang merepresentasikan ukuran matriks. `N` baris berikutnya berisi `N` buah bilangan bulat yang merupakan elemen matriks tersebut. Jika matriks merupakan *magic square*, maka dituliskan **Yes** pada layar. Sebaliknya, jika bukan *magic square*, maka dituliskan **No**. 
-- matriks.txt
+void powMatrix(int** & matrix, int pow, int** & result, int & N) {
+    int** mult = matrix;
+    for (int i = 0; i < pow - 1; i++) {
+        int** resultMult;
+        allocateMatrix(resultMult, N);
+        multMatrix(mult, matrix, resultMult, N);
+        mult = resultMult;
+    }
+    for (int i = 0; i < N; i++) {
+        for (int j = 0; j < N; j++) {
+            result[i][j] = mult[i][j];
+        }
+    }
+}
 
+void multMatrix(int** & matrixA, int** & matrixB, int** & result, int & N) {
+    for (int i = 0; i < N; i++) {
+        for (int j = 0; j < N; j++) {
+            result[i][j] = 0;
+            for (int k = 0; k < N; k++) {
+                result[i][j] += matrixA[i][k] * matrixB[k][j];
+            }
+        }
+    }
+}
+
+void outputMatrix(int** & matrix, int & N) {
+    std::ofstream outputFile ("result.txt");
+    outputFile << N << std::endl;
+    for (int i = 0; i < N; i++) {
+        for (int j = 0; j < N; j++) {
+            outputFile << matrix[i][j] << " ";
+        }
+        outputFile << std::endl;
+    }
+}
+
+void allocateMatrix(int** & matrix, int & N) {
+    matrix = new int* [N];
+    for (int i = 0; i < N; i++) {
+        matrix[i] = new int[N];
+    }
+}
 ```
-3
-2   7   6
-9   5   1
-4   3   8
-```
-
-- *runtime program*
-
-```
-matriks loaded!
-Yes
-```
-
------------------------------------
-
-
-
-### Problem 6
-
-Pearl sedang belajar matriks di sekolahnya. Hari ini, Ibu Puff menerangkan mengenai *orthogonal matrix*. *Orthogonal matrix* merupakan suatu jenis matriks persegi `A` yang memenuhi sifat `A`x`(A^t)` = `I`, dimana `(A^t)` merupakan matriks transpose dari `A`, dan `I` adalah matriks identitas. Ibu Puff memberikan PR kepada murid-muridnya untuk menentukan apakah suatu matriks adalah *orthogonal matrix* atau bukan. Pearl meminta Anda sebagai *programmer* kepercayaan keluarga Krab untuk membantunya menyelesaikan permasalahan tersebut.
-
-**Format *Input* dan *Output***
-*Input* matriks diambil dari file eksternal `matriks.txt`. Pada file eksternal ini, baris pertama berisi bilangan bulat positif `N` yang merepresentasikan ukuran matriks. `N` baris berikutnya berisi `N` buah bilangan bulat yang merupakan elemen matriks tersebut. Jika matriks merupakan *orthogonal matrix*, maka dituliskan **Yes** pada layar. Sebaliknya, jika bukan *orthogonal matrix*, maka dituliskan **No**. 
-
-**Contoh**
-
-- matriks.txt
-
-```
-3
-1 0 0
-0 1 0
-0 0 1
-```
-
-- *runtime program*
-
-```
-matriks loaded!
-Yes
-```
-
------------------------------------
-
-
-
-### Problem 7
-
-Spons akan membuat selai dari saus *jellyfish*. Menurut resep rahasia yang dia terima dari Tuan Krab, selai dengan rasa terbaik dihasilkan dari perpaduan dua ekor *jellyfish* dari jenis Spongian dan Patrician, dengan bobot total kedua ekor *jellyfish* tersebut adalah `X`. Spons pun pergi ke pasar untuk membeli *jellyfish* yang diperlukan. Di pasar, pedagang telah menyiapkan daftar bobot *jellyfish* yang tersedia dari masing-masing jenis (elemen masing-masing daftar *unique*). Pedagang ini merupakan orang yang sangat sistematis, sehingga daftar tersebut disimpan dalam bentuk matriks persegi yang masing-masing elemennya terurut membesar. Spons perlu untuk mengetahui berapa banyak pasangan bobot *jellyfish* jenis Spongian dan Patrician yang dapat dia gunakan untuk menghasilkan selai terbaik. Tugas Anda adalah untuk membantu Spons menghitung banyaknya pasangan bobot yang dapat ia gunakan tersebut.
-
-**Definisi**
-Misalkan matriks `A` merupakan matriks dengan elemen terurut membesar yang berukuran `N`x`N`. Hal ini berarti untuk setiap bilangan bulat non-negatif `i`, `j` yang bernilai kurang dari `N`, maka berlaku `A[i][j]` < `A[i][j+1]` dan `A[i][N-1]` < `A[i+1][0]`.
-
-**Format *Input* dan *Output***
-*Input* matriks bobot ukuran diambil dari file eksternal `spongian.txt` dan `patrician.txt`. Pada file-file eksternal ini, baris pertama berisi bilangan bulat positif `N` yang merepresentasikan ukuran matriks. Perlu diperhatikan bahwa nilai `N` ini sama di kedua file. `N` baris berikutnya berisi `N` buah bilangan bulat yang merupakan elemen matriks tersebut. Pada saat *runtime*, pengguna akan memasukkan bilangan bulat positif `X` yang merupakan target jumlah bobot yang dicari oleh Spons.
- *Output* berupa banyaknya pasangan bobot dari kedua jenis *jellyfish* yang berjumlah `X`.
-
-**Contoh**
-
-- spongian.txt
-
-```
-3
-1 5 6
-8 10 11
-15 16 18
-```
-
-- patrician.txt
-
-```
-3
-2 4 7
-9 10 12
-13 16 20
-```
-
-- *runtime program*
-
-```
-matriks loaded!
-Masukkan target bobot: 21
-Banyak pasangan adalah 4
-```
-
-Keterangan: pasangan yang memenuhi adalah (1, 20), (5, 16), (8, 13) dan (11, 10).
-
-
-
-### Problem 8
-
-Tuan Krab sedang iseng bermain catur di waktu luangnya. Namun, Tuan Krab ingin mencoba sebuah permainan catur baru. Pada permainan ini, dia hanya menggunakan sejumlah benteng (*rook*). Selain itu, ukuran papan catur adalah `N`x`N` dengan `N` adalah bilangan bulat positif. Tantangannya adalah mencari banyaknya benteng yang tidak saling menyerang dengan benteng lain yang ada pada permainan. Bantulah Tuan Krab untuk menyelesaikan permainan ini!
-
-**Format *Input* dan *Output***
-*Input* kondisi papan permainan diambil dari file eksternal `chess.txt`. Kondisi permainan digambarkan dengan matriks berukuran `N`x`N`. Jika isi suatu *cell* matriks adalah 1, maka terdapat benteng pada *cell* tersebut. Sebaliknya jika berisi 0, maka *cell* tersebut kosong. Pada file eksternal ini, baris pertama berisi bilangan bulat positif `N` yang merepresentasikan ukuran matriks. `N` baris berikutnya berisi `N` buah bilangan bulat yang merupakan elemen matriks pada baris tersebut.
-*Output* berupa informasi mengenai banyak benteng yang tidak saling serang.
-
-**Contoh**
-
-- chess.txt
-
-```
-4
-1 0 0 1
-0 1 0 0
-0 0 1 0
-0 0 0 1
-```
-
-- *runtime program*
-
-```
-matriks loaded!
-Banyaknya benteng yang tidak saling serang adalah 2
-```
-
------------------------------------
-
-
-
-### Problem 9
-
-Kota Bikini Batem pada masa depan sudah penuh sesak dengan penduduk. Saking sesaknya, rumah-rumah penduduk saling berdekatan satu sama lain dan dapat digambarkan sebagai *cell* matriks persegi (berukuran `N`x`N`). Suatu hari, sebuah virus mematikan menyerang kota tersebut. Pada awalnya, hanya ada beberapa rumah yang terjangkit. Namun, dalam satu hari virus ini dapat menjangkit tetangga dari rumah tersebut. Tetangga dalam hal ini didefinisikan sebagai *cell-cell* yang bersinggungan dengan *cell* tersebut (satu *cell* maksimal mempunyai 8 tetangga). Tugas Anda adalah menghitung berapa lama waktu yang dibutuhkan (dalam hari) untuk virus tersebut menjangkit seluruh kota.
-
-**Format *Input* dan *Output***
-*Input* berupa kondisi awal kota ketika virus pertama kali menjangkit, yang disimpan dalam file eksternal `city.txt`. Rumah yang sehat direpresentasikan dengan karakter `H`, dan rumah yang terjangkit direpresentasikan dengan karakter `U`. Pada file eksternal ini, baris pertama berisi bilangan bulat positif `N` yang merepresentasikan ukuran matriks. `N` baris berikutnya berisi `N` buah karakter yang merupakan elemen matriks pada baris tersebut.
-*Output* berupa informasi mengenai lama waktu yang dibutuhkan hingga seluruh rumah di kota Bikini Batem terjangkit virus.
-
-**Contoh**
-
-- city.txt
-
-```
-3
-H H H
-H U H
-H H H
-```
-
-- *runtime program*
-
-```
-matriks loaded!
-Lama waktu apocalypse adalah 1 hari
-```
-
------------------------------------
-
-
-
-### Problem 10
-
-Tuan Krab ingin membuka cabang baru dari Krasti Krab. Oleh karena itu, dia perlu untuk membeli bidang tanah baru. Petak-petak tanah yang tersedia direpresentasikan dalam matriks berukuran `N`x`N`. Setiap petak tanah mempunyai harga masing-masing. Untuk membangun cabang dari Krasti Krab, dibutuhkan suatu bidang tanah yang berbentuk kotak. Namun, ternyata Tuan Krab hanya membawa uang dalam pecahan `K`. Karena tidak mau rugi, maka Tuan Krab mengambil keputusan hanya akan membeli bidang tanah dengan harga total berupa kelipatan `K`. Tugas Anda adalah mencari banyaknya bidang tanah yang dapat dibeli oleh Tuan Krab.
-
-**Format *Input* dan *Output***
-*Input* berupa matriks yang merepresentasikan harga petak tanah disimpan dalam file eksternal `land.txt`. Pada file eksternal ini, baris pertama berisi bilangan bulat positif `N` yang merepresentasikan ukuran matriks. `N` baris berikutnya berisi `N` buah bilangan bulat positif yang merupakan harga petak tanah pada *cell* tersebut. Pada saat *runtime*, diinputkan bilangan bulat `K` yang merepresentasikan pecahan uang yang dibawa oleh Tuan Krab.
-*Output* berupa informasi banyaknya bidang tanah yang dapat dibeli oleh Tuan Krab.
-
-**Contoh**
-(Elemen baris setelah tanda ":" pada *runtime* merupakan *input* dari  pengguna)
-
-- land.txt
-
-```
-3
-17 11 18
-10 15 20
-19 16 3
-```
-
-- *runtime program*
-
-```
-matriks loaded!
-Pecahan uang: 4
-Banyak bidang tanah yang dapat dibeli adalah 6
-```
-
-*Keterangan:*
-Ada 6 buah bidang tanah yang dapat dibeli.
-Bidang tanah yang tersebut yaitu
-
-```
-17 11
-```
-
-```
-10 15
-19 16
-```
-
-```
-17 11
-10 15
-18 16
-```
-
-```
-16
-```
-
-```
-11 18
-15 20
-```
-
-```
-20
-```
-
------------------------------------
-
-
-
-### Problem 11
-
-Krasti Krab telah semakin maju. Kini, telah ada `N` kasir yang dapat melayani penjualan. Masing-masing kasir memiliki slot antrian sepanjang `M`. Tuan Krab ingin mengetahui panjang antrian yang paling panjang di antara semua kasir yang ada. Dia meminta bantuan Anda untuk memecahkan masalah tersebut.
-
-**Format *Input* dan *Output***
-*Input* berupa kondisi antrian disimpan dalam file `queue.txt`. Dalam file tersebut, baris pertama berisi 2 bilangan bulat positif `N` dan `M` yang merepresentasikan banyak kasir dan panjang slot antrian untuk setiap kasir. `N` baris berikutnya berisi `M` bilangan 0 atau 1 yang merepresentasikan kondisi antrian pada suatu kasir. Jika bernilai 0, maka slot tersebut kosong. Sebaliknya jika bernilai 1, maka slot tersebut terisi. Diasumsikan bahwa pengunjung yang baru datang akan memilih suatu kasir dan  **langsung mengambil slot terdepan yang tersedia pada kasir tersebut**. Oleh karena itu, pada setiap baris antrian kasir, tidak ada angka 0 yang berada di sebelah kanan angka 1.
-*Output* berupa informasi mengenai panjang antrian terpanjang yang ada.
-
-**Contoh**
-
-- queue.txt
-
-```
-3 4
-0 0 1 1
-0 1 1 1
-0 0 0 0
-```
-
-- *runtime program*
-
-```
-file loaded!
-Antrian terpanjang adalah 3
-```
-
------------------------------------
-
-
-
-### Problem 12
-
-Tuan Krab ingin memperluas pasar untuk Krabi Pati. Kali ini dia berencana membangun Krasti Krab di pegunungan. Untuk Krasti Krab yang baru ini, dia ingin agar bangunannya berbentuk **persegi**. Namun, tanah yang tersedia di pegunungan tidaklah rata. Untuk menghemat anggaran, Tuan Krab hanya akan membangun pada bidang tanah yang rata saja (memiliki ketinggian sama). Kontur tanah di pegunungan direpresentasikan dalam *square matrix* berukuran `N`x`N` dimana nilai setiap elemennya menggambarkan ketinggian tanah di tempat tersebut. Tuan Krab meminta bantuan Anda untuk dapat menentukan luas maksimum dari Krasti Krab yang dapat dibangun.
-
-**Format *Input* dan *Output***
-*Input* berupa matriks kontur tanah disimpan dalam file eksternal `contour.txt`. Dalam file ini, baris pertama berisi bilangan bulat positif `N` yang merepresentasikan ukuran matriks. `N` baris berikutnya berisi `N` bilangan bulat yang masing-masing mewakili ketinggian tanah pada posisi tersebut. 
-*Output* berupa informasi luas maksimum Krasti Krab yang dapat dibangun pada lokasi tersebut.
-
-**Contoh**
-
-- contour.txt
-
-```
-4
-1 1 1 8
-1 1 1 6
-1 1 1 3
-2 2 2 2
-```
-
-- *runtime program*
-```
-file loaded!
-Luas maksimum Krasti Krab yang dapat dibangun adalah 9
-```
-----------------------------
-----------------------------
-------
-
-**Selamat Mengerjakan :)**
-
-------
-
-Arya Pradipta - Jordhy Fernando - Holy Lovenia - Kevin Jonathan - Pratama Agung - Vincent Hendryanto - William Aristea
