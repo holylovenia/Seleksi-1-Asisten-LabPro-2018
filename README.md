@@ -375,7 +375,21 @@ print("matriks loaded!")
 # Memroses dan menghasilkan keluaran
 print("Lama waktu apocalypse adalah " + str(whenApocalypse(matrix_in)) + " hari")
 ```
+
 Untuk menyelesaikan permasalahan ini, salah satu cara yang dapat digunakan adalah dengan "mensimulasikan" infeksi virus dari matriks masukan. Kemudian, dihitung berapa kali iterasi dilakukan sampai semua terinfeksi (sampai elemen dalam matriks semua berisi "U").
+
+Program terdiri dari empat fungsi/prosedur sebagai berikut :
+- ```LoadMatrix(filename)``` : Membaca file masukan (```filename```) dan membentuk matriks yang merepresentasikan masukan. Fungsi mengembalikan matriks tersebut jika file berhasil dimuat
+- ```isApocalypse(mat_in)``` : Memeriksa apakah kota sudah mencapai kondisi *apocalypse* atau belum, yaitu saat semua elemen dalam matriks masukan berisi "U". Fungsi mencari apakah masih ada elemen yang berisi "H", dimana artinya kondisi *apocalypse* belum dipenuhi. Mengembalikan ```False``` jika masih ada elemen yang berisi "H", sebaliknya mengembalikan ```True``` jika tidak ditemukan lagi elemen "H" dalam matriks, yang berarti kondisi *apocalypse* telah tercapai.
+- ```infect(mat_in,x,y)``` : Merubah elemen dalam ```mat_in``` di sekitar posisi ```(x,y)``` menjadi "U". Fungsi mengembalikan posisi-posisi yang diubah/terinfeksi.
+- ```whenApocalypse(mat_in)``` : Menghitung berapa lama kota mencapai kondisi *apocalypse*. Tahapan :
+  1. Inisialisasi *counter* ```days``` dengan ```0```.
+  2. Cek apakah kota sudah dalam apocalypse dengan fungsi ```isApocalypse(mat_in)```. Jika sudah, stop, kembalikan ```days```.
+  3. Cari elemen yang merupakan virus ("U"). Simpan posisinya.
+  4. Jika tidak ada virus yang ditemukan, kota tidak akan pernah mencapai kondisi *apocalypse*, stop.
+  5. Jika ada, tambahkan *counter* ```days``` sebanyak satu.
+  6. Untuk setiap posisi virus, jalankan fungsi ```infect(mat_in,x,y)``` dengan ```x``` dan ```y``` adalah posisi virus. Simpan hasil keluaran fungsi tersebut.
+  7. Ulangi langkah 2. Jika belum berhenti, gunakan hasil keluaran fungsi pada langkah keenam untuk iterasi selanjutnya. Kembali ke langkah kelima.
 
 [Back to top](#--seleksi-1-asisten-labpro-2018)
 

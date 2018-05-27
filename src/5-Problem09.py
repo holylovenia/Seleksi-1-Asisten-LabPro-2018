@@ -65,21 +65,28 @@ def whenApocalypse(mat_in):
                     infected.append((i,j))
         # Menularkan virus ke tetangganya.
         # Tetangga yang tertular disimpan di infected untuk iterasi selanjutnya
-        new_infected = []
-        for cell in infected:
-            new_infected += infect(mat_in,cell[1],cell[0])
-        infected = new_infected
-
-        while (not isApocalypse(mat_in)):
-            days += 1
+        if not infected:
+            days = -1
+        else:
             new_infected = []
             for cell in infected:
                 new_infected += infect(mat_in,cell[1],cell[0])
             infected = new_infected
+
+            while (not isApocalypse(mat_in)):
+                days += 1
+                new_infected = []
+                for cell in infected:
+                    new_infected += infect(mat_in,cell[1],cell[0])
+                infected = new_infected
     return days
 
 # Memuat file
 matrix_in = LoadMatrix("city.txt")
 print("matriks loaded!")
 # Memroses dan menghasilkan keluaran
-print("Lama waktu apocalypse adalah " + str(whenApocalypse(matrix_in)) + " hari")
+how_long = whenApocalypse(matrix_in)
+if (how_long < 0):
+    print("Tidak ada virus dalam kota. Apocalypse tidak akan terjadi.")
+else:
+    print("Lama waktu apocalypse adalah " + str(how_long) + " hari")
