@@ -39,6 +39,7 @@ Source code solusi
 ------------------
 Soal Bab 1 Problem 04
 ---------------------
+```
 x = int(input("Masukan nilai X : "))
 y = int(input("Masukan nilai Y : "))
 
@@ -59,9 +60,10 @@ else :
 	daerah = "kuadran 4"
 	
 print('Titik ({0},{1}) berada di {2}'.format(x, y, daerah))
-
+```
 Soal Bab 2 Problem 02
 ---------------------
+```
 # function that return the sum of all factor of a number
 def getSumOfAllFactor(x) :
 	if x==1 :
@@ -101,9 +103,11 @@ if not L:
 else :
 	for number in L:
 		print(number)
+```
 		
 Soal Bab 3 Problem 01
 ---------------------
+```
 # function to check if there is a number from 1 to 30 that solve the function = f
 def brute(P, f):
 	S = []
@@ -130,9 +134,11 @@ if not S:
 # print all x thth solve the function
 else:
 	print("Nilai x adalah {0}".format(*S, sep=","))
-	
+```	
 Soal Bab 4 Problem 12
 ---------------------
+```
+```
 #input total number of keys
 n = int(input("Masukan jumlah kunci yang ada : "))
 
@@ -165,9 +171,10 @@ for i in range(0, n):
 print("Kunci yang harus di duplikat :")
 for k in s:
 	print(k)
-
+```
 Soal Bab 5 Problem 11
 ---------------------
+```
 import sys
 
 # Input from file
@@ -197,7 +204,7 @@ for i in range(size[0]) :
 		maks = counter
 
 print("antrian terpanjang adalah {0}".format(maks))
-
+```
 ---------------------------------------------------------------------------------------
 Penjelasan solusi
 -----------------
@@ -216,6 +223,7 @@ Pada persoalan kali ini, yang kita lakukan adalah melakukan iterasi dari 1 sampa
 Soal Bab 4 Problem 12
 ---------------------
 Untuk persoalan ini yang kita lakukan setelah menerima semua input nomor kunci, buat array baru <array V>yang menunjukan apakah sebuah kunci mempuyai duplikat atau tidak, inisialisasi semua elemen array tersebut dengan 0, iterasi semua kunci, lalu lakukan pengecekan terhadap kunci kunci lain, jika ada kunci dengan nomor yang sama ubah nilai array V menjadi 1 untuk kedua kunci. iterasi array V, jika ada elemen array V yang bernilai 0 maka kunci dengan indeks tersebut di array belum memiliki duplikat, cetak nomor kunci ke layar.
+	
 Soal Bab 5 Problem 11
 ---------------------
 Untuk persoalan ini buat sebuah variabel maks yang menunjukan panjang maksimum antrian di krusty krab, inisialisasi maks dengan 0, lakukan iterasi pada setaiap baris array dari ujung, buat variabel baru counter yang menunjukan panjang antrian pada baris ini,lakukan iterasi pada  baris tersebut, selama tidak menemukan nilai 0, tambah variabel counter dengan 1, setelah selesai atau bertemu dengan angka 0, bandingkan variabel counter dengan variabel maks, jika variabel counter lebih dari maks ubah nilai variabel maks dengan nilai variabel counter. cetak variabel maks.
