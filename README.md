@@ -206,7 +206,7 @@ Langkah kerja solusi adalah sebagai berikut:
  1. Program awalnya akan meminta input berupa `limit` (batas).
  2. Program akan mengiterasi dari `1` hingga `limit` dan iterator akan disimpan pada variabel `i`
  3. `i` akan dicek dan terdapat dua kemungkinan, yaitu:  
-  a. `i` merupakan angka selain kelipatan `3` atau `7` namun boleh kelipatan `3 * 7` (21), maka `i` akan dicetak
+  a. `i` merupakan angka selain kelipatan `3` atau `7` namun boleh kelipatan `3 * 7` (21), maka `i` akan dicetak  
   b. selain itu, `i` tidak akan dicetak
 
 ---------------------------------
@@ -287,9 +287,12 @@ end.
 ```
 
 #### Penjelasan Solusi
-Langkah kerja solusi adalah sebagai berikut:
-1. Program akan menerima input berupa *integer* `x`
-2. Program memiliki 2 fungsi, yaitu
+Langkah kerja solusi adalah sebagai berikut:  
+ 1. Program akan menerima input berupa *integer* `x`
+ 2. Program memiliki 2 fungsi, yaitu  
+  a. `f(x) = 2x - 9`  
+  b. `g(x) = x^3 + 7`  
+ 3. Program akan memasukkan nilai `x` ke dalam fungsi `f(x)` lalu hasilnya akan dimasukkan ke dalam fungsi `g(x)` dan hasilnya akan dimasukkan ke dalam fungsi `f(x)`. Atau secara lebih mudahnya adalah memanggil `f(g(f(x)))`
 
 ------------------
 
