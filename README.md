@@ -414,6 +414,53 @@ Barang berhasil dijual
 Barang sudah habis, silahkan melakukan restok barang
 ***
 
+---------------------------------
+#### Source code :
+```
+n = int(input("Masukkan jumlah barang : "))
+
+barang = []
+for i in range(0,n):
+	x = input("Masukkan nama barang : ")
+	barang.append(x)
+
+while barang:
+	print("	1. Jual")
+	print("	2. Lihat stok")
+
+	menu = input("Pilihan menu : ")
+
+	if menu == '1':
+		chosenthing = input("Masukkan nama barang : ")
+		found = False
+		i = 0
+		while i < len(barang) and not found:
+			if barang[i] == chosenthing:
+				found = True
+			else:
+				i = i + 1
+
+		if found:
+			print("Barang berhasil dijual")
+			barang.remove(chosenthing)
+		else:
+			print("Barang tidak ada")
+
+	elif menu == '2':
+		print("Stok toko : ", end='')
+		for i in range(len(barang)):
+			if i < (len(barang)-1):
+				print(barang[i], end=', ')
+			else:
+				print(barang[i])
+
+print("Barang sudah habis, silahkan melakukan restok barang")
+```
+---------------------------------
+#### Penjelasan : 
+Program menerima masukan jumlah barang, lalu menerima masukan nama barang sejumlah masukan jumlah barang. Nama barang dimasukkan ke dalam sebuah list barang. Selama masih ada barang pada list barang, tampilkan menu, masukkan pilihan menu pada variabel menu, lalu jika yang dipilih adalah menu pertama, masukkan nama barang yang ingin dijual ke dalam variabel chosenthing, lalu cek apakah chosenthing terdapat di dalam list barang. Jika terdapat di list barang, jual barang tersebut, hapus dari list barang. Sedangkan jika tidak terdapat di list barang, tampilkan pesan "Barang tidak ada". Jika yang dipilih adalah menu kedua, tampilkan stok toko dengan menampilkan seluruh isi list barang. Ulangi hingga seluruh barang telah dijual.
+
+---------------------------------
 -----------------
 -----------------
 ## Bab 5 - Matriks dan File Eksternal
@@ -443,6 +490,57 @@ file loaded!
 Luas maksimum Krasti Krab yang dapat dibangun adalah 9
 ```
 ----------------------------
+---------------------------------
+#### Source code :
+```
+import sys,os
+
+def openfile(filename): #fungsi untuk membaca file
+	with open(os.path.join(sys.path[0], filename), 'r') as file:
+		size = int(file.readline())
+		matrix = []
+		for i in range(0,size):
+			string = file.readline()
+			string = string[:-1]
+			matrix.append(list(string))		
+			while ' ' in matrix[i]:
+				matrix[i].remove(' ')
+
+		return size, matrix
+
+def findsize(contour,size):
+	dp_matrix = []
+	for i in range(0,size):
+		dp_matrix.append([])
+
+	max_size = 0
+	
+	for i in range(0,size):
+		for j in range(0,size):
+			if i == 0 or j == 0:
+				dp_matrix[i].append(1)
+			else:
+				if contour[i][j] == contour[i-1][j] == contour[i][j-1] == contour[i-1][j-1]:
+					dp_matrix[i].append(min(min(dp_matrix[i][j-1], dp_matrix[i-1][j]), dp_matrix[i-1][j-1]) + 1)
+				else:
+					dp_matrix[i].append(1)
+
+			max_size = max(max_size, dp_matrix[i][j])
+
+	return max_size
+
+size,contour = openfile("contour.txt")
+
+n = findsize(contour,size)
+	
+print("file loaded!")
+print("Luas maksimum Krasti Krab yang dapat dibangun adalah", n*n)
+```
+---------------------------------
+#### Penjelasan : 
+Terdapat 2 fungsi yang digunakan oleh program ini, yaitu fungsi openfile dan fungsi findsize. Fungsi openfile berfungsi untuk membaca file text yang terdapat pada 1 folder dengan program. Fungsi ini mengembalikan ukuran dan matrix yang telah dibaca. Fungsi findsize berfungsi untuk mencari ukuran terbesar dari bidang tanah yang memiliki ketinggian yang sama (n). Fungsi ini menggunakan dp_matrix untuk menyimpan ukuran terbesar dari submatrix pada setiap titik. Submatrix dibentuk dengan mengecek barat, utara, dan barat laut dari sebuah titik. Luas dari bidang tanah yang memenuhi syarat adalah n*n.
+
+---------------------------------
 ----------------------------
 ------
 
