@@ -9,15 +9,16 @@ int main () {
     cin >> A;
     cout << "Masukkan nilai B : ";
     cin >> B;
+    
     if (A > B) {
-        A = max;
-        B = min;
+        max = A;
+        min = B;
     } else {
-        A = min;
-        B = max;
+        min = A;
+        max = B;
     }
     cout << "Bilangan komposit diantara " << min << " sampai " << max << " adalah :" << endl;
-    for (int i = min; i <= max; i++) {
+    for (int i = min+1; i < max; i++) {
         if (is_composite(i)) {
             cout << i << endl;
         }
@@ -27,7 +28,7 @@ int main () {
 
 bool is_composite(int n) {
     if (n <= 1) {
-        return true;
+        return false;
     }
     else if (n <= 3) {
         return false;
