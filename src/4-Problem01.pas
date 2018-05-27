@@ -1,3 +1,5 @@
+//Nama / NIM : Christian Kevin Saputra / 13516073
+
 Program Bab4_Array;
 
 var

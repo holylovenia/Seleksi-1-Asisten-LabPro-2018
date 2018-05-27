@@ -1,3 +1,5 @@
+//Nama / NIM : Christian Kevin Saputra / 13516073
+
 Program FungsiDanProsedur;
 
 function isComposite(n : integer):boolean;
