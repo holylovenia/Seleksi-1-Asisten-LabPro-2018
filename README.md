@@ -1,5 +1,5 @@
 # Seleksi 1 Asisten Laboratorium Programming 2018
-Oleh : Priagung Satyagama (13516089)
+Oleh : Dandy Arif Rahman(13516086)
 
 ## Bab 1 Percabangan - Problem 9
 ### Deskripsi Soal
@@ -10,7 +10,7 @@ C : R : (F-32) = 5 : 4 : 9
 Tuan Vin meminta bantuan Anda untuk dapat membaca suhu dengan lebih mudah
 
 **Format Input & Output (input di-*bold*)**
-***
+```
 Masukan satuan suhu termometer: **C**
 
 Masukan besar suhu: **40**
@@ -18,237 +18,198 @@ Masukan besar suhu: **40**
 Masukan satuan yang ingin diketahui: **R**
 
 Besar suhu dalam R: 32
-***
+```
 
 ### Source Code Solusi
-```Pascal
-program bab1_problem11;
-var
-    arr: array [0..2, 0..2] of char;
-    temp: char;
-    i, j: integer;
-begin
-    // membaca input
-    for i := 0 to 2 do
-    begin
-        for j := 0 to 2 do
-        begin
-            read(arr[i,j], temp);
-        end;
-        readln;
-    end;
+```Python
+#Nama	: Dandy Arif Rahman
+#NIM	: 13516086
+#Soal	: BAB 1 - Problem 9
 
-    if (arr[0,0] = arr[0,1]) and (arr[0,1] = arr[0,2]) then
-    begin
-        writeln('Pemain ', arr[0,0], ' menang');
-    end
-    else if (arr[1,0] = arr[1,1]) and (arr[1,1] = arr[1,2]) then
-    begin
-        writeln('Pemain ', arr[1,0], ' menang');
-    end
-    else if (arr[2,0] = arr[2,1]) and (arr[2,1] = arr[2,2]) then
-    begin
-        writeln('Pemain ', arr[2,0], ' menang');
-    end
-    else if (arr[0,0] = arr[1,0]) and (arr[1,0] = arr[2,0]) then
-    begin
-        writeln('Pemain ', arr[0,0], ' menang');
-    end
-    else if (arr[0,1] = arr[1,1]) and (arr[1,1] = arr[2,1]) then
-    begin
-        writeln('Pemain ', arr[0,1], ' menang');
-    end
-    else if (arr[0,2] = arr[1,2]) and (arr[1,2] = arr[2,2]) then
-    begin
-        writeln('Pemain ', arr[0,2], ' menang');
-    end
-    else if (arr[0,0] = arr[1,1]) and (arr[1,1] = arr[2,2]) then
-    begin
-        writeln('Pemain ', arr[0,0], ' menang');
-    end
-    else if (arr[2,0] = arr[1,1]) and (arr[1,1] = arr[0,2]) then
-    begin
-        writeln('Pemain ', arr[2,0], ' menang');
-    end
-    else
-    begin
-        writeln('Tidak ada yang menang');
-    end;
-end.
+deg1 = input("Masukan suhu satuan termometer: ")
+t1 = float(input("Masukan besar suhu: "))
+deg2 = input("Masukan satuan yang ingin diketahui: ")
+
+if (deg1 == "C"):
+	if (deg2 == "C"):
+		t2 = t1
+	elif (deg2 == "R"):
+		t2 = 4 / 5 * t1
+	elif (deg2 == "F"):
+		t2 = (9 / 5 * t1) + 32
+	else:
+		t2 = -1
+elif (deg1 == "R"):
+	if (deg2 == "C"):
+		t2 = 5 / 4 * t1
+	elif (deg2 == "R"):
+		t2 = t1
+	elif (deg2 == "F"):
+		t2 = (9 / 4 * t1) + 32
+	else:
+		t2 = -1
+elif (deg1 == "F"):
+	if (deg2 == "C"):
+		t2 = 5 / 9 * (t1 - 32)
+	elif (deg2 == "R"):
+		t2 = 4 / 9 * (t1 - 32)
+	elif (deg2 == "F"):
+		t2 = t1
+	else:
+		t2 = -1
+else:
+	t2 = -1
+
+if t2 == -1:
+	print("ERROR")
+else:	
+	print("Besar suhu dalam %s: %.2f" % (deg2, t2))
 ```
 ### Pembahasan Solusi
-Pertama-tama, input disimpan dulu dalam matriks karakter berukuran 3x3. Setelah itu, enumerasi semua kemungkinan menang (ada 8 kemungkinan posisi menang) dengan menggunakan percabangan (if-else atau menggunakan case). Kondisi else dari percabangan itu adalah ketika tidak ada pemain yang menang.
+Pertama, satuan suhu saat ini dimasukkan ke variabel **deg1**, nilai suhu saat ini dimasukkan ke variabel **t1**, dan satuan suhu yang diinginkan dimasukkan ke variabel **deg2**. Kemudian, program mengecek apakah **deg1** bernilai 'C' atau 'R' atau 'F'. Jika deg1 bernilai selain dari 3 karakter diatas maka nilai **t2** di-assign dengan nilai -9999. Setelah itu, dilakukan pengecekan nilai variabel **deg2** apakah bernilai 'C' atau 'R' atau 'F'. Jika **deg** bernilai selain dari 3 karakter diatas maka nilai **t2** di-assign dengan nilai -9999. Setelah diketahui nilai **deg1** dan **deg2**, dilakukan perhitungan konversi rumus dari **t1** menjadi **t2**. Di tahap terakhir, dilakukan pengecekan, jika nilai **t2** -9999 maka dikeluarkan pesan error, jika selain dari itu dikeluarkan nilai **t2**.
 
-## Bab 2 Pengulangan - Problem 10
+## Bab 2 Pengulangan - Problem 8
 ### Deskripsi Soal
-Seorang mahasiswa ingin menentukan bilangan terendah kedua dan terbesar kedua dari **N** buah bilangan. Diasumsikan **N** selalu lebih besar dari **1**. Buatlah program untuk membantu mahasiswa tersebut.
+Agar dapat lulus dari kuliah, seorang mahasiswa dituntut untuk dapat menyebutkan bilangan prima diantara **A** dan **B**. Bantulah mahasiswa tersebut untuk menyebutkan bilangan prima tersebut.
 
+**Catatan** : Buatlah suatu fungsi yang mengecek apakah suatu bilangan merupakan bilangan prima atau bukan
 
 **Format Input & Output**
-*(Elemen baris setelah tanda “:” pada runtime merupakan input dari pengguna)*
+*(Elemen baris setelah tanda ":" pada runtime merupakan input dari pengguna)*
 ```
-Masukan jumlah bilangan :5  
-Bilangan ke-1 :4 
-Bilangan ke-2 :78
-Bilangan ke-3 :25 
-Bilangan ke-4 :20 
-Bilangan ke-5 :34
-Bilangan terendah kedua adalah 20
-Bilangan tertinggi kedua adalah 34
+Masukkan nilai A :1 
+Masukkan nilai B :10
+Bilangan prima diantara 1 sampai 10 adalah
+2  
+3  
+5  
+7
+```
+```
+Masukkan nilai A :10
+Masukkan nilai B :20
+Bilangan prima diantara 10 sampai 20 adalah 
+11  
+13  
+17  
+19
 ```
 ---------------------------------
 
 ### Source Code Solusi
-```Pascal
-program bab2_problem10;
-var
-    max, max2, min, min2, n, i, val: integer;
-begin
-    write('Masukan jumlah bilangan :');
-    readln(n);
-    if n > 0 then
-        write('Bilangan ke-1 :');
-        readln(val);
-        max := val;
-        min := val;
-        write('Bilangan ke-2 :');
-        readln(val);
-        if val > max then
-        begin
-            max2 := max;
-            max := val;
-        end
-        else begin
-            max2 := val;
-        end;
-        if val < min then
-        begin
-            min2 := min;
-            min := val;
-        end
-        else begin
-            min2 := val;
-        end;
-    for i := 3 to n do
-    begin
-        write('Bilangan ke-', i, ' :');
-        readln(val);
-        if val > max then
-        begin
-            max2 := max;
-            max := val;
-        end 
-        else if val > max2 then 
-        begin
-            max2 := val;
-        end;
-        if val < min then
-        begin
-            min2 := min;
-            min := val;
-        end
-        else if val < min2 then
-        begin
-            min2 := val;
-        end;
-    end;
-    writeln('Bilangan terendah kedua adalah ', min2);
-    writeln('Bilangan tertinggi kedua adalah ', max2);
-end.
+```Python
+#Nama	: Dandy Arif Rahman
+#NIM	: 13516086
+#Soal	: BAB 2 - Problem 8
+from math import sqrt, floor
+
+ListPrime = []
+A = int(input("Masukkan nilai A :"))
+B = int(input("Masukkan nilai B :"))
+print("Bilangan prima antara %d sampai %d adalah" %  (A, B))
+
+for num in range(2, B + 1):
+	temp = floor(sqrt(num))
+	prime = True
+	for i in range(2, temp+1):	
+		if num % i == 0:
+			prime = False
+			break
+	if prime : ListPrime.append(num)
+for prime in ListPrime:
+	print(prime)
 ```
 
 ### Pembahasan Solusi
-Pertama-tama tentukan terlebih dahulu maksimum, maksimum ke 2, minimum, dan minimum ke 2 untuk 2 input pertama. setelah itu lakukan perulangan mulai dari input ke 3 sampai ke N sembari di cek apakah input nya melebihi maksimum atau sekedar melebihi maksimum ke 2, atau kurang dari minimum atau sekedar kurang dari minimum ke 2. dengan kondisi-kondisi tersebut, sesuaikan nilai minimum, maksimum, minimum ke 2, dan maksimum ke 2 seiring dengan berjalannya perulangan. Terakhir, print minimum ke 2 dan maksimum ke 2 ke layar.
+Pertama, input dari user dimasukan ke variabel **A** sebagai batas bawah dan input selanjutnya dimasukan ke variabel **B** sebagai batas atas. Kemudian dilakukan pengecekan bilangan prima dengan cara, dilakukan looping dari angka 2 hingga **B** misal variabel **num**, lalu �assign sebuah variabel **temp** dengan fungsi bawah dari akar **num**, kemudian dilakukan pengecekan dari angka 2 hingga **temp** misal **i**, jika **num** habis dibagi dengan dengan **i** maka num adalah bilangan prima, dan ditambahkan ke list bilangan prima pada variabel **ListPrime**.
 
 ## Bab 3 Fungsi dan Prosedur - Problem 9
 ### Deskripsi Soal
-Diberikan 2 bilangan bulat A dan B (1 ≤ A, B ≤ 100000000), buatlah program yang menampilkan semua palindrom antara A dan B inklusif.
+Segitiga Pascal adalah segitiga yang dibuat dimulai dari angka 1 dan tiap angka di baris kedua dan selanjutnya berasal dari jumlah dua angka di atasnya. Berikut contoh 5 baris pertama Segitiga Pascal:
+
+1
+
+1 1
+
+1 2 1
+
+1 3 3 1
+
+1 4 6 4 1
+
+Segitiga Pascal juga dapat dibentuk dari kombinatorik, dengan bilangan pada baris ke-i dan kolom ke-j bernilai C(i-1,j-1). Berikut adalah contoh penerapan pada 5 baris Segitiga Pascal.
+
+C(0,0)
+
+C(1,0) C(1,1)
+
+C(2,0) C(2,1) C(2,2)
+
+C(3,0) C(3,1) C(3,2) C(3,3)
+
+C(4,0) C(4,1) C(4,3) C(4,4) C(4,5)
+
+Buatlah sebuah program yang membuat Segitiga Pascal! (Buat fungsi Kombinasi(n, r) untuk memudahkan penghitungan)
 
 
 **Format Input & Output (input di-*bold*)**
 ***
-Masukkan nilai range bilangan A dan B : **10 100**
+Masukan jumlah baris: **5**
 
-Palindrome antara 10 dan 100 adalah:
+1
 
-11
+1 1
 
-22
+1 2 1
 
-33
+1 3 3 1
 
-44
-
-55
-
-66
-
-77
-
-88
-
-99
+1 4 6 4 1
 ***
-Masukkan nilai range bilangan A dan B : **12 21**
-
-Palindrome antara 10 dan 100 adalah:
-
-TIDAK ADA
-***
-
-
-**Catatan:** 
-Buatlah suatu fungsi yang memeriksa apakah suatu bilangan adalah bilangan palindrome atau bukan.
 
 ### Source Code Solusi
-```Pascal
-program bab3_problem9;
-var
-    a,b,i:longint;
-    found: boolean;
+```Python
+#Nama	: Dandy Arif Rahman
+#NIM	: 13516086
+#Soal	: BAB 3 - Problem 7
 
-function isPalindrom(num:longint): boolean;
-var
-    temp, reverse: longint;
-begin
-    temp := num;
-    reverse := 0;
-    while(temp <> 0) do
-    begin
-        reverse := reverse + (temp mod 10);
-        temp := temp div 10;
-        if (temp <> 0) then
-            reverse := reverse*10;
-    end;
-    
-    isPalindrom := num = reverse;
-end;
+def kombinasi(n, r):
+	if n == r  : result = 1
+	elif r == 0 : result = 1
+	else:
+		if (n - r) > r:
+			pembilang = 1
+			for i in range(n - r + 1, n + 1):
+				pembilang *= i
+			penyebut = 1
+			for i in range(1, r + 1):
+				penyebut *= i 
+		else:
+			pembilang = 1
+			for i in range(r + 1, n + 1):
+				pembilang *= i
+			penyebut = 1
+			for i in range(1, n - r + 1):
+				penyebut *= i 
+		result = pembilang / penyebut
+	return int(result)
 
-begin
-    write('Masukkan nilai range bilangan A dan B : ');
-    readln(a, b);
+def printSegitiga(n):
+	for i in range(1, n + 1):
+		for j in range(1, i + 1):
+			print(kombinasi(i - 1, j - 1), end='')
+		print()
 
-    found := false;
-    for i := a to b do
-    begin
-        if isPalindrom(i) then
-        begin
-            writeln(i);
-            found := true;
-        end;
-    end;
-
-    if not found then
-        writeln('TIDAK ADA');
-end.
+n = int(input("Masukan jumlah baris: "))
+printSegitiga(n)
 ```
 
 ### Pembahasan Solusi
-Pertama-tama, buat terlebih dahulu fungsi untuk mencari apakah suatu angka palindrom atau tidak. algoritma fungsi nya adalah sebagai berikut.
-- Tentukan angka yang merupakan reverse dari angka yang ingin kita cek. gunakan mod dan div
-- Cek apakah angka yang sudah di reverse tersebut sama dengan angka yang kita cari atau tidak. Jika sama, maka palindrom, jika tidak, maka bukan palindrom.
+Pertama, input jumlah baris dimasukan ke variabel **n**. Lalu dengan fungsi printSegitiga(n) gambar segitiga ditampilkan.
 
-Pada program utama, pertama-tama terima masukan longint A dan B, kemudian lakukan perulangan dari A dan B dan cek setiap angka nya apakah palindrom atau bukan, jika palindrom, print angka tersebut ke layar. Jika tidak ada angka palindrom, print 'TIDAK ADA'
+Program terdiri dari 2 fungsi yaitu **kombinasi(n,r)** dan **printSegitiga(n)**. Fungsi **kombinasi(n,r)** melakukan perhitungan nCr dengan cara, pertama, pengecekan nilai antara **n-r** dan **r** mana yang lebih besar, ini ditujukan untuk mempercepat perhitungan. Jika **n-r** lebih besar, dilakukan perhitungan ((n-r+1) x (n-r+2) x ... x (n)) / r!. Sedangkan jika **r** lebih besar dilakukan perhitungan ((r+1) x (r+2) x ... x (n)) / (n-r)!.
+
+Fungsi **printSegitiga(n)** menghasilkan gambar segitiga pascal dengan ukuran **n**. Pertama dilakukan looping sebanyak **n** dengan variabel **i** dan looping didalamnya sebanyak **i** dengan variabel **j**. Kemudian dilakukan pencetakan nilai **kombinasi(i-1, j-1)**.
 
 ## Bab 4 *Array* - Problem 8
 ### Deskripsi Soal
