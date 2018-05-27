@@ -483,31 +483,35 @@ Mengubah panjang array dinamik A menjadi sepanjang Len.
 #### Source Code
 **5-Problem08.pas**
 ```Pascal
-program bab5problem08;
+program bab5problem8;
 
-{ Digunakan untuk memanggil fungsi StrToInt }
+{ Digunakan untuk memanggil fungsi StrtoInt }
 uses Sysutils;
 
-{ 
-	Menyimpan informasi detail tentang benteng, seperti lokasi dan apakah benteng tersebut sudah dicek
-	untuk serangan terhadap atau dari benteng lain.
-}
+{ deklarasi tipe Tile }
 type
-	Bishop = record
-	x : integer;
-	y : integer;
-	checked : boolean;
+	Tile = record       { Struktur data Tile sebagai kotak dalam board catur }
+	bishop : integer;   { Menyimpan keberadaan benteng pada kotak catur. 1 jika ada, 0 jika tidak }
+	checked : boolean;  { Menyimpan apakah tile ini sudah dihitung saling serang jika ada benteng di tile ini }
 end;
 
-{
-	Mencatat kumpulan benteng di papan catur dalam Array
-}
-type
-	BishopArr = array of Bishop;
+type 
+	ChessBoard = record             { Struktur data ChessBoard sebagai papan catur beserta benteng yang ada }
+	board : array of array of Tile; { Menyimpan keadaan chessboard }
+	nBishop : integer;              { Menyimpan jumlah benteng dalam chessboard}
+end;
 
+{ deklarasi variabel gloal }
+var
+chess: ChessBoard;  { Kotak catur }
+len : integer;		{ Ukuran kotak catur }
+i, j, k: integer;   { Variabel iterator }
+count : integer;    { Penghitung jumlah banteng yang saling serang }
 
-function parseBishop(): BishopArr;
-{ Parsing dari file chess.txt ke dalam bishopArr }
+{ Deklarasi fungsi file parser }
+function ParseChessBoard(): ChessBoard;
+{ Parsing dari file chess.txt ke dalam matrix of Tile }
+
 	{ deklarasi variabel lokal }
 	var
 		chessFile : TextFile;
@@ -515,7 +519,7 @@ function parseBishop(): BishopArr;
 		s : string;
 		i, j: integer;
 		nb : integer; { menghitung jumlah benteng }
-		bishopList : bishopArr; { array of bishop }
+		board : array of array of Tile; { board }
 	{ algoritma parser }
 	begin
 		{ assign file chess.txt sebagai variabel chessFile }
@@ -525,7 +529,8 @@ function parseBishop(): BishopArr;
 		{ membaca nilai n, yaitu ukuran dari chessboard }
 		readln(chessFile, s);
 		n := StrToInt(s);
-		{ mengalokasikan array bishopList }
+		{ mengalokasikan matrix board }
+		setlength(board,n,n);
 		nb := 0;
 		i := 0;
 		while not eof(chessFile) do
@@ -535,15 +540,18 @@ function parseBishop(): BishopArr;
 			j := 0;
 			while (j < n) do
 			begin
-				{ mengisi tile pada board sesuai dengan lokasi benteng (bishop) dan status checked diisi FALSE }
+				{ mengisi tile pada board sesuai dengan keadaan benteng (bishop) dan status checked diisi FALSE }
 				if (s[2*j+1] = '1') then
-				{ Jika terdapat benteng, masukkan lokasi dan status checked bishop pada bishopList }
+				{ Jika terdapat bentang, tambahkan pada counter nb sebagai counter jumlah benteng pada board }
 				begin
-					setLength(bishopList, nb+1);
-					bishopList[nb].x := j;
-					bishopList[nb].y := i;
-					bishopList[nb].checked := False;
+					board[i, j].bishop := 1;
+					board[i, j].checked := False;
 					nb := nb + 1;
+				end
+				else if (s[2*j + 1] = '0') then
+				begin
+					board[i, j].bishop := 0;
+					board[i, j].checked := False;
 				end;
 			j := j + 1;
 			end;
@@ -551,107 +559,140 @@ function parseBishop(): BishopArr;
 		end;		 
 		{ menutup file }
 		Close(chessFile);
-		{ mengembalikan bishopList dari fungsi }
-		parseBishop := bishopList;
+		ParseChessBoard.board := board;
+		ParseChessBoard.nBishop := nb;
 	end;
 
-var
-	bishopList : BishopArr; { Array yang menyimpan seluruh lokasi benteng }
-	len : integer;			{ Jumlah benteng pada papan catur }
-	i, j: integer;			{ Iterator }
-	counter : integer;		{ Jumlah benteng yang saling serang }
-
-{ algoritma utama }
 begin
-	{ 
-		Membuat array of bishop yang akan diolah.
-		bishop telah terurut berdasarkan letak x dan y. 
-	}
-	bishopList := parseBishop();
+	{ Parsing chessboard dari file chess.txt }
+	chess := ParseChessBoard();
 	writeln('matriks loaded!');
-	{ menghitung banyaknya benteng }
-	len := length(bishopList); // bawaan
-	{ inisiasi counter sebagai penghitung jumlah benteng yang saling serang }
-	counter := 0;
-	{ Memproses tiap benteng }
+	{ Inisiasi panjang board dan counter jumlah benteng saling serang }
+	len := length(chess.board);
+	count := 0;
+	{ Memproses chessboard }
 	for i := 0 to len-1 do
 	begin
-		{  Mencari benteng lain yang lokasinya lebih kanan bawah }
-		for j := i+1 to len-1 do
+		for j := 0 to len-1 do
 		begin
-			{ Jika terdapat benteng yang mempunyai lokasi x atau y yang sama, tandai sebagai saling serang }
-			if(bishopList[i].x = bishopList[j].x) or (bishopList[i].y = bishopList[j].y) then
+			{ cek untuk chess[i,j] apakah ada benteng }
+			if (chess.board[i, j].bishop = 1) then
 			begin
-				{ 
-					Jika salah satu atau kedua benteng belum dihitung saling serang, hitung.
-					Buat elemen checked menjadi True, menandakan benteng sudah terhitung.
-				}
-				if not(bishopList[i].checked) then
+				{ cek secara horizontal mulai dari tile di sebelah kanannya jika ada benteng lain }
+				k := j+1;
+				while (k < len) do
 				begin
-					bishopList[i].checked := True;
-					counter := counter + 1;
+					{ 
+					    Jika terdapat benteng pada salah satu tile di sebelah kanannya, 
+					    cek kedua benteng apabila sudah pernah dicatat sebagai benteng yang saling serang
+					}
+					if (chess.board[i,k].bishop = 1) then
+					begin
+						{ Jika belum dicek, hitung benteng tersebut lalu catat sebagai saling serang }
+						if not(chess.board[i,j].checked) then 
+						begin
+							count := count + 1;
+							chess.board[i,j].checked := True;
+						end;
+						{ Jika belum dicek, hitung benteng lain tersebut lalu catat sebagai saling serang }
+						if not(chess.board[i,k].checked) then
+						begin
+							count := count + 1;
+							chess.board[i,k].checked := True;
+						end;
+						{ langsung keluar dari loop dan memeriksa tile lain  }
+						k := len;
+					end
+					{ Jika tidak ada benteng, cek tile sebelahnya sampai akhir dari kolom board }
+					else k := k + 1;
 				end;
-				if not(bishopList[j].checked) then
+				{ cek secara vertical mulai dari tile di bawahnya jika ada benteng lain }
+				k := i+1;
+				while (k < len) do
 				begin
-					bishopList[j].checked := True;
-					counter := counter + 1;
+					{ 
+					    Jika terdapat benteng pada salah satu tile di bawahnya, 
+					    cek kedua benteng apabila sudah pernah dicatat sebagai benteng yang saling serang
+					}
+					if (chess.board[k,j].bishop = 1) then
+					begin
+						{ Jika belum dicek, hitung benteng tersebut lalu catat sebagai saling serang }
+						if not(chess.board[i,j].checked) then 
+						begin
+							count := count + 1;
+							chess.board[i,j].checked := True;
+						end;
+						{ Jika belum dicek, hitung benteng lain tersebut lalu catat sebagai saling serang }
+						if not(chess.board[k,j].checked) then
+						begin
+							count := count + 1;
+							chess.board[k,j].checked := True;
+						end;
+						{ langsung keluar dari loop dan memeriksa tile lain  }
+						k := len;
+					end
+					{ Jika tidak ada benteng, cek tile di bawahnya sampai akhir dari baris board }
+					else k := k + 1;
 				end;
 			end;
 		end;
 	end;
-	{ Jumlah benteng yang tidak saling serang: len - counter }
-	writeln('Banyaknya benteng yang tidak saling serang adalah ', len - counter);
+	{ Jumlah benteng yang tidak saling serang adalah jumlah benteng dikurangi jumlah benteng yang saling serang }
+	writeln('Banyaknya benteng yang tidak saling serang adalah ',chess.nBishop - count);
 end.
+
 ```
 
 #### Penjelasan Solusi
 
 Untuk menyelesaikan permasalahan ini, pertama-tama akan didefinisikan struktur data dan fungsi yang berfungsi sebagai *parser* dari file `chess.txt` yang berisi dari kondisi board dan akan mengembalikan sekumpulan benteng. 
 
-Struktur data yang digunakan adalah `Bishop` dan `BishopArr`. Spesifikasi dari `Bishop` adalah sebagai berikut
+Struktur data yang digunakan adalah `Tile` dan `BishopArr`. Spesifikasi dari `Bishop` adalah sebagai berikut
 
 ```Pascal
 { 
-	Menyimpan informasi detail tentang benteng, seperti lokasi dan apakah benteng tersebut sudah dicek
-	untuk serangan terhadap atau dari benteng lain.
+  Tile berfungsi sebagai satuan kotak dalam board catur yang menyimpan keberadaan benteng dan apakah benteng
+  tersebut saling serang dengan benteng lain
 }
 type
-	Bishop = record
-	x : integer; 		{ Menyimpan posisi kolom dari benteng }
-	y : integer; 		{ Menyimpan posisi baris dari benteng }
-	checked : boolean; 	{ Jika True, benteng saling serang. Jika False, benteng tidak saling serang }
-end; 
+	Tile = record       { Struktur data Tile sebagai kotak dalam board catur }
+	bishop : integer;   { Menyimpan keberadaan benteng pada kotak catur. 1 jika ada, 0 jika tidak }
+	checked : boolean;  { Menyimpan apakah tile ini sudah dihitung saling serang jika ada benteng di tile ini }
+end;
 ```
 
-Spesifikasi dari `BishopArr` yang merupakan representasi kotak catur adalah sebagai berikut
+Spesifikasi dari `ChessBoard` yang merupakan representasi kotak catur adalah sebagai berikut
 
 ```Pascal
 {
-	Mencatat kumpulan benteng di papan catur dalam Array
+	Representasi kotak catur yang akan diolah. Menyimpan jumlah benteng apda bidak catur dan Matriks of Tile.
 }
-type
-	BishopArr = array of Bishop;
+type 
+	ChessBoard = record             { Struktur data ChessBoard sebagai papan catur beserta benteng yang ada }
+	board : array of array of Tile; { Menyimpan keadaan chessboard }
+	nBishop : integer;              { Menyimpan jumlah benteng dalam chessboard}
+end;
 ```
 
 Fungsi parser mempunyai spesifikasi sebagai berikut
 
 ```Pascal
 function ParseChessBoard(): ChessBoard;
-{ Parsing dari file chess.txt ke dalam BishopArr }
+{ Parsing dari file chess.txt ke dalam ChessBoard }
 ```
 
 Fungsi `ParseChessBoard()` akan mengembalikan ChessBoard yang akan diproses untuk mendapatkan jumlah benteng yang tidak saling serang.
 
 Untuk menghitung jumlah dari benteng yang tidak saling serang, langkah yang harus dilakukan adalah sebagai berikut 
-1. Parse `chess.txt` untuk mendapatkan bishopList yang bertipe bishopArr dan inisiasi nilai `counter = 0`.
-2. Periksa salah satu benteng dalam bishopList. (misal namanya benteng A).
-3. Periksa lokasi seluruh benteng lain dalam bishopList. (misal namanya benteng B).
-4. Jika benteng A dan benteng B ada dalam satu baris atau kolom, tandai benteng-benteng tersebut.
-5. Jika benteng A sebelumnya belum ditandai, `counter = counter + 1`.
-6. Jika benteng B sebelumnya belum ditandai, `counter = counter + 1`.
-7. Ulangi langkah 2 - 6 untuk seluruh benteng.
-8. Jumlah benteng yang tidak menyerang adalah 	jumlah benteng - counter` 
-
+1. Parse `chess.txt` untuk mendapatkan chess yang bertipe ChessBoard dan inisiasi nilai `counter = 0`.
+2. Periksa salah satu Tile. Periksa apabila suatu Tile mengandung Benteng (misal namanya Tile A).
+3. Jika terdapat Benteng, mulai pencarian untuk seluruh Tile di sebelah kanan dan di bawah Tile A (misal namanya Tile B).
+4. Jika pada salah satu Tile B terdapat benteng, periksa apabila benteng tersebut pernah dihitung saling serang.
+5. Jika Tile B belum pernah ditandai, tandai Tile B, counter = counter + 1. Hentikan pencarian pada arah kanan.
+6. Lakukan langkah 3-5 untuk pencarian pada arah ke bawah.
+7. Jika Tile A belum pernah ditandai, tandai Tile A, counter = counter + 1.
+8. Lakukan langkah 2-8 untuk semua tile.
+9. Jumlah benteng yang tidak saling serang = Jumlah benteng - counter
 
 Fungsi bawaan yang dipakai
 
