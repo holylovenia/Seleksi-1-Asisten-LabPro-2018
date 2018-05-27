@@ -134,10 +134,9 @@ if not S:
 # print all x thth solve the function
 else:
 	print("Nilai x adalah {0}".format(*S, sep=","))
-```	
+```
 Soal Bab 4 Problem 12
 ---------------------
-```
 ```
 #input total number of keys
 n = int(input("Masukan jumlah kunci yang ada : "))
@@ -227,4 +226,3 @@ Untuk persoalan ini yang kita lakukan setelah menerima semua input nomor kunci, 
 Soal Bab 5 Problem 11
 ---------------------
 Untuk persoalan ini buat sebuah variabel maks yang menunjukan panjang maksimum antrian di krusty krab, inisialisasi maks dengan 0, lakukan iterasi pada setaiap baris array dari ujung, buat variabel baru counter yang menunjukan panjang antrian pada baris ini,lakukan iterasi pada  baris tersebut, selama tidak menemukan nilai 0, tambah variabel counter dengan 1, setelah selesai atau bertemu dengan angka 0, bandingkan variabel counter dengan variabel maks, jika variabel counter lebih dari maks ubah nilai variabel maks dengan nilai variabel counter. cetak variabel maks.
-
