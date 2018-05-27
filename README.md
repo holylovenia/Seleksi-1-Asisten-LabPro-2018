@@ -176,6 +176,8 @@ if __name__ == '__main__':
 
 ### Penjelasan
 Kita akan membuat tanda plus berdasar nilai N. N melambangkan banyak kaki tanda plus. Fungsi strH dan strV dibuat berdasar nilai tersebut. strH adalah string untuk garis-garis horizontal. strV adalah string untuk garis-garis vertikal. Fungsi tersebut menggunakan loop for untuk garis | dan - sehingga jika N < 0 maka hasilnya sama dengan N = 0. Strateginya adalah menampilkan strH sebanyak N, lalu menampilkan strV, lalu menampilkan strH sebanyak N.
+
+
 ---------------------------------
 ---------------------------------
 
@@ -442,5 +444,6 @@ def solve(mat):
 ```
 
 ### Penjelasan
-Kita akan mencari siapa yang menang di tic-tac-toe. Caranya dengan mengecek tiap list horizontal, vertikal, dan diagonal. Tiap listnya dihitung banyak x dan o. Jika ada yang menang, keluarkan pemenangnya (return). Jika tidak, lanjutkan perhitungan. Jika tidak ada yang menang hingga kemungkinan terakhir, berarti tidak ada yang menang. 
+Kita akan mencari siapa yang menang di tic-tac-toe. Caranya dengan mengecek tiap list horizontal, vertikal, dan diagonal. Tiap listnya dihitung banyak x dan o. Jika ada yang menang, keluarkan pemenangnya (return). Jika tidak, lanjutkan perhitungan. Jika tidak ada yang menang hingga kemungkinan terakhir, berarti tidak ada yang menang.
+
 -----------------------------------
