@@ -85,6 +85,28 @@ Albert mendapat nilai B
 *** 
 
 ---------------------------------
+Source code :
+#menerima masukan nama dan nilai
+nama = input("Masukan Nama : ")
+nilai = int(input("Masukan Nilai : "))
+
+#menentukan indeks yang didapat dari masukan nilai
+if 0 <= nilai <= 20:	
+	indeks = 'E'
+elif 21 <= nilai <= 40:
+	indeks = 'D'
+elif 41 <= nilai <= 60:
+	indeks = 'C'
+elif 61 <= nilai <= 80:
+	indeks = 'B'
+elif 81 <= nilai <= 100:
+	indeks = 'A'
+
+#menampilkan nama dan indeks yang didapat
+print(nama, "mendapat nilai", indeks)  
+---------------------------------
+Penjelasan : 
+Program menerima masukan nama dan nilai, setelah itu masukan nilai dicek, apabila nilainya antara 0 sampai 20, indeksnya adalah E, apabila nilainya antara 21 sampai 40, indeksnya adalah D, apabila nilainya antara 41 sampai 60, indeksnya adalah C, apabila nilainya antara 61 sampai 81, indeksnya adalah B, dan apabila nilainya antara 81 sampai 100, maka indeksnya adalah A. Setelah itu, program menampilkan nama dan indeks yang didapat.
 ---------------------------------
 
 
