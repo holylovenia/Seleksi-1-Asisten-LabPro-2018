@@ -7,13 +7,35 @@ Dibuat oleh : Christian Kevin Saputra - 13516073
 # Bab 1 Problem 05
 
 -Deskripsi persoalan: 
-  Menerima input nama dan nilai (0 - 100) dari pengguna. Nilai kemudian dikonversi sesuai aturan berikut:
-    - 81 - 100: A
-    - 61 - 80: B
-    - 41 - 60: C
-    - 21 - 40: D
-    - 0 - 20: E
-  Setelah nilai dikonversi, program menampilkan nama dan nilai yang telah dikonversi ke layar.
+  ### Problem 5
+
+  Tuan Vin diminta oleh dosennya untuk mencatat nilai ujian dalam indeks A-E, sementara nilai yang disediakan dalam bentuk 0-100. Berikut adalah konversina:
+
+
+  - 81 - 100: A
+  - 61 - 80: B
+  - 41 - 60: C
+  - 21 - 40: D
+  - 0 - 20: E
+
+
+  Karena banyak nilai yang harus dicatat, Tuan Vin meminta bantuan Anda untuk memudahkan merubah nilai.
+
+
+  **Format Input & Output (input di-*bold*)**
+  ***
+  Masukan Nama : **Kevin**
+
+  Masukan Nilai : **88**
+
+  Kevin mendapat nilai A
+  ***
+  Masukan Nama : **Albert**
+
+  Masukan Nilai : **63**
+
+  Albert mendapat nilai B
+  ***
 
 -Source Code:
   ```
@@ -52,8 +74,30 @@ Dibuat oleh : Christian Kevin Saputra - 13516073
 # Bab 2 Problem 04
 
 -Deskrpsi Persoalan:
-  Program dapat menerima input berupa banyaknya siswa dan nilai dari siswa - siswa tersebut kemudian menentukan banyaknya siswa yang lulus dan tidak lulus.
-  Siswa dikatakan lulus apabila memiliki nilai >= 60.
+### Problem 4
+
+
+Seorang asisten diminta untuk menghitung jumlah mahasiswa yang lulus dan yang tidak lulus. Seorang mahasiswa dianggap lulus jika nilainya **lebih besar** atau **sama dengan 60**. Karena malas, asisten tersebut meminta anda untuk membuat program untuk membantunya. 
+
+
+**Format Input & Output**
+*(Elemen baris setelah tanda “:” pada runtime merupakan input dari pengguna)*
+```
+Banyak mahasiswa :4 
+Nilai anak ke-1 :50 
+Nilai anak ke-2 :90  
+Nilai anak ke-3 :55 
+Nilai anak ke-4 :90 
+Total mahasiswa yang lulus adalah 2  
+Total mahasiswa yang tidak lulus adalah 2  
+```
+```
+Banyak mahasiswa :2
+Nilai anak ke-1 :76
+Nilai anak ke-2 :100 
+Total mahasiswa yang lulus = 2  
+Total mahasiswa yang tidak lulus = 0  
+```
 
 -Source Code:
   ```
@@ -90,7 +134,54 @@ Dibuat oleh : Christian Kevin Saputra - 13516073
 # Bab 3 Problem 03
 
 -Deskripsi Persoalan:
-  Program dapat mencari semua bilangan komposit yang berada diantara dua bilangan A dan B secara **inklusif**.
+  ### Problem 3
+
+Bilangan komposit adalah bilangan yang memiliki minimal satu bilangan lain yang dapat habis membagi bilangan tersebut selain 1 dan bilangan itu sendiri. Buatlah program yang menentukan semua bilangan komposit diantara dua buah bilangan A dan B (0  ≤ A, B ≤ 100000) inklusif.
+Catatan : Buatlah fungsi yang memeriksa apakah sebuah bilangan adalah bilangan komposit atau bukan.
+
+
+**Format Input & Output (input di-*bold*)**
+***
+Masukkan nilai A : **0**
+
+Masukkan nilai B : **10**
+
+Bilangan komposit diantara 0 sampai 10 adalah:
+
+4
+
+6
+
+8
+
+9
+***
+Masukkan nilai A : **25**
+
+Masukkan nilai B : **10**
+
+Bilangan komposit diantara 10 sampai 25 adalah:
+
+12
+
+14
+
+15
+
+16
+
+18
+
+20
+
+21
+
+22
+
+24
+
+25
+***
 
 -Source Code:
   ```
@@ -155,7 +246,75 @@ Dibuat oleh : Christian Kevin Saputra - 13516073
 # Bab 4 Problem 01
 
 -Deskripsi Soal:
-  Program dapat menerima barang sejumlah n dan mencatat seluruh barang tersebut. Program dapat menerima perintah untuk menjual barang ataupun melihat stok barang dan akan selesai apabila semua barang telah terjual.
+### Problem 1
+Budi mengelola sebuah toko kelontong. Setiap hari ia harus mencatat seluruh barang yang ada di tokonya dan mencatat penjualan dari barang tersebut. Karena ia mudah lupa, ia membutuhkan program untuk mencatat daftar belanja tersebut. Buatlah program untuk mencatat inventaris dan penjualan toko milik budi
+
+**Format Input & Output (input di-*bold*)**
+***
+Masukkan jumlah barang : **4**
+
+Masukkan nama barang : **kecap**
+
+Masukkan nama barang : **mie**
+
+Masukkan nama barang : **gula**
+
+Masukkan nama barang : **telur**
+
+1. Jual
+2. Lihat stok
+
+Pilihan menu : **1**
+
+Masukkan nama barang : **kecap**
+
+Barang berhasil dijual
+
+1. Jual
+2. Lihat stok
+
+Pilihan menu : **2**
+
+Stok toko : mie, gula, telur
+
+1. Jual
+2. Lihat stok
+
+Pilihan menu : **1**
+
+Masukkan nama barang : **minyak**
+
+Barang tidak ada
+
+1. Jual
+2. Lihat stok
+
+Pilihan menu : **1**
+
+Masukkan nama barang : **mie**
+
+Barang berhasil dijual
+
+1. Jual
+2. Lihat stok
+
+Pilihan menu : **1**
+
+Masukkan nama barang : **gula**
+
+Barang berhasil dijual
+
+1. Jual
+2. Lihat stok
+
+Pilihan menu : **1**
+
+Masukkan nama barang : **telur**
+
+Barang berhasil dijual
+
+Barang sudah habis, silahkan melakukan restok barang
+***
 
 -Source Code:
 ```
@@ -250,8 +409,31 @@ Dibuat oleh : Christian Kevin Saputra - 13516073
 -----------------------------------
 # Bab 5 Problem 12
 
--Deskripsi Soal:
-  Program dapat membaca file eksternal 'contour.txt' yang berisi matrix kontur tanah dengan ketinggian yang berbeda - beda . Setelah file eksternal dibaca, program akan memproses matrix untuk menentukan luas maksimum persegi yang dapat dibuat dari matrix dengan ketinggian yang sama.
+### Problem 12
+
+Tuan Krab ingin memperluas pasar untuk Krabi Pati. Kali ini dia berencana membangun Krasti Krab di pegunungan. Untuk Krasti Krab yang baru ini, dia ingin agar bangunannya berbentuk **persegi**. Namun, tanah yang tersedia di pegunungan tidaklah rata. Untuk menghemat anggaran, Tuan Krab hanya akan membangun pada bidang tanah yang rata saja (memiliki ketinggian sama). Kontur tanah di pegunungan direpresentasikan dalam *square matrix* berukuran `N`x`N` dimana nilai setiap elemennya menggambarkan ketinggian tanah di tempat tersebut. Tuan Krab meminta bantuan Anda untuk dapat menentukan luas maksimum dari Krasti Krab yang dapat dibangun.
+
+**Format *Input* dan *Output***
+*Input* berupa matriks kontur tanah disimpan dalam file eksternal `contour.txt`. Dalam file ini, baris pertama berisi bilangan bulat positif `N` yang merepresentasikan ukuran matriks. `N` baris berikutnya berisi `N` bilangan bulat yang masing-masing mewakili ketinggian tanah pada posisi tersebut. 
+*Output* berupa informasi luas maksimum Krasti Krab yang dapat dibangun pada lokasi tersebut.
+
+**Contoh**
+
+- contour.txt
+
+```
+4
+1 1 1 8
+1 1 1 6
+1 1 1 3
+2 2 2 2
+```
+
+- *runtime program*
+```
+file loaded!
+Luas maksimum Krasti Krab yang dapat dibangun adalah 9
+```
 
 -Source Code:
   ```
@@ -343,4 +525,6 @@ Dibuat oleh : Christian Kevin Saputra - 13516073
 -Deskripsi Solusi:
   Program membaca matrix dari file 'contour.txt'. Matrix kemudian diproses untuk menentukan luas maksimum persegi terbesar yang dapat dibuat.
   Proses yang dilakukan untuk mencari maksimum persegi terbesar adalah dengan dynamic programming dimana terdapat sebuah matrix lain yang menyimpan nilai sisi persegi terbesar yang dapat dibuat (nilai N terbesar pada persegi N x N yang terbentuk) . Nilai N tersebut disimpan di dalam cell (i,j) dengan posisi (i,j) adalah titik paling kanan bawah pada persegi yang terbentuk. Setelah didapatkan nilai N terbesar, program akan mengeluarkan output luas yang didapatkan dari N x N.
+
+
 
