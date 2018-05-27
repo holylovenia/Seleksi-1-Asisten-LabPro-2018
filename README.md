@@ -149,7 +149,9 @@ Bilangan tertinggi kedua adalah 34
 ### Solusi Problem 10
 
 Cukup melakukan linear scan pada array untuk menemukan jawabannya
+
 Setiap nilai max/min berubah, update second max/min
+
 Tetap update second max/min jika ada bilangan yang sesuai walaupun nilai max/min tidak berubah
 
 ```
@@ -272,6 +274,7 @@ Buatlah suatu fungsi yang memeriksa apakah suatu bilangan adalah bilangan palind
 ### Solusi Problem 9
 
 Melakukan iterasi inklusif dari A ke B dan mengecek apakah bilangan sebuah palindrom dengan fungsi
+
 Pengecekan dilakukan dengan melakukan reverse pada bilangan lalu dicek kesamaannya dengan bilangan semula
 
 ```
