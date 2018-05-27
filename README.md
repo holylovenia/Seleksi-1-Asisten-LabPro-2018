@@ -16,6 +16,7 @@ Dibuat oleh : Christian Kevin Saputra - 13516073
   Setelah nilai dikonversi, program menampilkan nama dan nilai yang telah dikonversi ke layar.
 
 -Source Code:
+  ```
   Program Percabangan;
 
   var
@@ -43,7 +44,7 @@ Dibuat oleh : Christian Kevin Saputra - 13516073
 
     writeln(nama, ' mendapat nilai ', grade);
   end.
-
+  ```
 -Penjelasan Solusi:
   Solusi untuk persoalan ini adalah dengan menggunakan if dan else untuk semua kondisi pada penjelasan soal.
 
@@ -55,6 +56,7 @@ Dibuat oleh : Christian Kevin Saputra - 13516073
   Siswa dikatakan lulus apabila memiliki nilai >= 60.
 
 -Source Code:
+  ```
   Program Pengulangan;
 
   var
@@ -80,7 +82,7 @@ Dibuat oleh : Christian Kevin Saputra - 13516073
     writeln('Total mahasiswa yang lulus adalah ',lulus);
     writeln('Total mahasiswa yang tidak lulus adalah ',tidaklulus);
   end.
-
+  ```
 -Penjelasan Solusi:
  Solusi dari persoalan ini adalah dengan melakukan loop(pengulangan) sebanyak jumlah mahasiswa. Di dalam loop tersebut, didapatkan nilai dan ditentukan jumlah siswa yang lulus dan tidak lulus.
 
@@ -91,6 +93,7 @@ Dibuat oleh : Christian Kevin Saputra - 13516073
   Program dapat mencari semua bilangan komposit yang berada diantara dua bilangan A dan B secara **inklusif**.
 
 -Source Code:
+  ```
   Program FungsiDanProsedur;
 
   function isComposite(n : integer):boolean;
@@ -144,9 +147,9 @@ Dibuat oleh : Christian Kevin Saputra - 13516073
         writeln(i)
     end;
   end.
-
+  ```
 -Penjelasan Solusi:
-  Solusi untuk menyelesaikan solusi ini adalah dengan membuat sebuah fungsi untuk menentukan apakah suatu bilangan merupakan bilangan komposit atau bukan. Setelah terdapat fungsi tersebut, maka program akan mengeluarkan seluruh bilangan yang merupakan bilangan komposit.
+  Solusi untuk menyelesaikan soal ini adalah dengan membuat sebuah fungsi untuk menentukan apakah suatu bilangan merupakan bilangan komposit atau bukan. Setelah terdapat fungsi tersebut, maka program akan mengeluarkan seluruh bilangan yang merupakan bilangan komposit.
 
 -----------------------------------
 # Bab 4 Problem 01
@@ -155,6 +158,7 @@ Dibuat oleh : Christian Kevin Saputra - 13516073
   Program dapat menerima barang sejumlah n dan mencatat seluruh barang tersebut. Program dapat menerima perintah untuk menjual barang ataupun melihat stok barang dan akan selesai apabila semua barang telah terjual.
 
 -Source Code:
+```
   Program Bab4_Array;
 
   var
@@ -239,7 +243,7 @@ Dibuat oleh : Christian Kevin Saputra - 13516073
     end;
     writeln('Barang sudah habis, silahkan melakukan restok barang');
   end.
-
+```
 -Penjelasan solusi:
   Solusi untuk persoalan ini adalah dengan menyimpan seluruh barang ke dalam array. Saat akan menjual, program akan mengecek apakah nama barang yang akan dijual terdapat di dalam array atau tidak. Jika ada, maka barang tersebut akan dikeluarkan dari array dan mengurangi jumlah barang yang berada di dalam array. Apabila tidak terdapat barang dengan nama tersebut, program akan mengeluarkan pesan error dan kembali ke dalam menu pilihan. Program akan berhenti setelah seluruh barang terjual ( tidak terdapat barang lagi di dalam array ).
 
@@ -250,6 +254,7 @@ Dibuat oleh : Christian Kevin Saputra - 13516073
   Program dapat membaca file eksternal 'contour.txt' yang berisi matrix kontur tanah dengan ketinggian yang berbeda - beda . Setelah file eksternal dibaca, program akan memproses matrix untuk menentukan luas maksimum persegi yang dapat dibuat dari matrix dengan ketinggian yang sama.
 
 -Source Code:
+  ```
   Program Matriks_FileEksternal;
 
   function Min ( a ,b, c: integer) : integer;
@@ -333,7 +338,7 @@ Dibuat oleh : Christian Kevin Saputra - 13516073
     end;
     writeln('Luas maksimum Krasti Krab yang dapat dibangun adalah ',maxSize*maxSize);
   end.
-
+  ```
 
 -Deskripsi Solusi:
   Program membaca matrix dari file 'contour.txt'. Matrix kemudian diproses untuk menentukan luas maksimum persegi terbesar yang dapat dibuat.
