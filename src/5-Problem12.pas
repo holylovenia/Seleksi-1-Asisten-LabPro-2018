@@ -1,3 +1,5 @@
+//Nama / NIM : Christian Kevin Saputra / 13516073
+
 Program Matriks_FileEksternal;
 
 function Min ( a ,b, c: integer) : integer;

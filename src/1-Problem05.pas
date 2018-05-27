@@ -1,9 +1,11 @@
+//Nama / NIM : Christian Kevin Saputra / 13516073
+
 Program Percabangan;
 
 var
-	nama : string;
+	nama  : string;
 	nilai : integer;
-	grade: char;
+	grade : char;
 		
 Begin
 	write('Masukkan nama: ');
