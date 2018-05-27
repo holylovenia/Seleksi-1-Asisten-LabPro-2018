@@ -203,7 +203,7 @@ end.
 
 #### Penjelasan Solusi
 Langkah kerja solusi adalah sebagai berikut:
-_1. Program awalnya akan meminta input berupa `limit` (batas). 
+_1. Program awalnya akan meminta input berupa `limit` (batas).__
 _2. Program akan mengiterasi dari `1` hingga `limit` dan iterator akan disimpan pada variabel `i`
 _3. `i` akan dicek dan terdapat dua kemungkinan, yaitu:
 __a. `i` merupakan angka selain kelipatan `3` atau `7` namun boleh kelipatan `3 * 7` (21), maka `i` akan dicetak
