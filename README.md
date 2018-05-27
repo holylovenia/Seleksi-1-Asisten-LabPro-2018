@@ -86,38 +86,26 @@ Albert mendapat nilai B
 
 ---------------------------------
 #### Source code :
+```
 #menerima masukan nama dan nilai
-
 nama = input("Masukan Nama : ")
-
 nilai = int(input("Masukan Nilai : "))
 
 #menentukan indeks yang didapat dari masukan nilai
-
 if 0 <= nilai <= 20:
-
 	indeks = 'E'
-	
 elif 21 <= nilai <= 40:
-
 	indeks = 'D'
-	
 elif 41 <= nilai <= 60:
-
 	indeks = 'C'
-	
 elif 61 <= nilai <= 80:
-
 	indeks = 'B'
-	
 elif 81 <= nilai <= 100:
-	
 	indeks = 'A'
 
 #menampilkan nama dan indeks yang didapat
-
 print(nama, "mendapat nilai", indeks)  
-
+```
 ---------------------------------
 #### Penjelasan : 
 Program menerima masukan nama dan nilai, setelah itu masukan nilai dicek, apabila nilainya antara 0 sampai 20, indeksnya adalah E, apabila nilainya antara 21 sampai 40, indeksnya adalah D, apabila nilainya antara 41 sampai 60, indeksnya adalah C, apabila nilainya antara 61 sampai 81, indeksnya adalah B, dan apabila nilainya antara 81 sampai 100, maka indeksnya adalah A. Setelah itu, program menampilkan nama dan indeks yang didapat.
@@ -231,6 +219,125 @@ Masukan B: **2B**
 
 1D + 2B = 48
 ***
+---------------------------------
+#### Source code :
+```
+def Power(a,b):
+	result = 1
+
+	for i in range(0,b):
+		result = result * a
+
+	return result
+
+def HexToDec(hex):
+	pangkat = 1
+	result = 0
+
+	for i in range(0,2):
+		if hex[i] == '0':
+			result = result + 0
+		elif hex[i] == '1':
+			result = result + 1 * Power(16,pangkat)
+		elif hex[i] == '2':
+			result = result + 2 * Power(16,pangkat)
+		elif hex[i] == '3':
+			result = result + 3 * Power(16,pangkat)
+		elif hex[i] == '4':
+			result = result + 4 * Power(16,pangkat)
+		elif hex[i] == '5':
+			result = result + 5 * Power(16,pangkat)
+		elif hex[i] == '6':
+			result = result + 6 * Power(16,pangkat)
+		elif hex[i] == '7':
+			result = result + 7 * Power(16,pangkat)
+		elif hex[i] == '8':
+			result = result + 8 * Power(16,pangkat)
+		elif hex[i] == '9':
+			result = result + 9 * Power(16,pangkat)
+		elif hex[i] == 'A':
+			result = result + 10 * Power(16,pangkat)
+		elif hex[i] == 'B':
+			result = result + 11 * Power(16,pangkat)
+		elif hex[i] == 'C':
+			result = result + 12 * Power(16,pangkat)
+		elif hex[i] == 'D':
+			result = result + 13 * Power(16,pangkat)
+		elif hex[i] == 'E':
+			result = result + 14 * Power(16,pangkat)
+		elif hex[i] == 'F':
+			result = result + 15 * Power(16,pangkat)
+
+		pangkat = pangkat - 1
+
+	return result
+
+
+def DecToHex(dec):
+	result = []
+
+	while dec > 0:
+		remainder = dec % 16
+
+		if remainder == 0:
+			result.append('0')
+		elif remainder == 1:
+			result.append('1')
+		elif remainder == 2:
+			result.append('2')
+		elif remainder == 3:
+			result.append('3')
+		elif remainder == 4:
+			result.append('4')
+		elif remainder == 5:
+			result.append('5')
+		elif remainder == 6:
+			result.append('6')
+		elif remainder == 7:
+			result.append('7')
+		elif remainder == 8:
+			result.append('8')
+		elif remainder == 9:
+			result.append('9')
+		elif remainder == 10:
+			result.append('A')
+		elif remainder == 11:
+			result.append('B')
+		elif remainder == 12:
+			result.append('C')
+		elif remainder == 13:
+			result.append('D')
+		elif remainder == 14:
+			result.append('E')
+		elif remainder == 15:
+			result.append('F')
+
+		dec = dec // 16
+
+	hex = ''
+
+	for i in reversed(range(len(result))):
+		hex = hex + result[i] 
+
+	return hex
+
+A = input("Masukan A : ")
+B = input("Masukan B: ")
+
+resultA = HexToDec(A)
+resultB = HexToDec(B)
+
+resultinDec = resultA + resultB
+resultinHex = DecToHex(resultinDec)
+
+print(A, "+", B, "=", resultinHex)
+```
+
+---------------------------------
+#### Penjelasan : 
+Terdapat 3 fungsi yang digunakan oleh program ini, yaitu fungsi power, HexToDec, dan DecToHex. Fungsi Power(a,b) berfungsi untuk menghitung nilai a pangkat b. Fungsi HexToDec berfungsi untuk mengubah nilai hexadecimal 2 digit menjadi nilai decimal. Fungsi ini menggunakan 2 variabel yaitu variabel pangkat dan result. Dilakukan iterasi 2 kali, pada iterasi pertama, cek digit pertama dari hexadecimal, cocokkan nilainya dengan tabel, lalu tambahkan nilai result dengan rumus : nilai decimal dari digit hexadecimal * 16^pangkat. Nilai pangkat disesuaikan dengan posisi digit, jika pada posisi pertama, nilainya 1 sedangkan jika berada pada posisi kedua, nilainya 0. Setelah itu, kurangi nilai pangkat dan cek kembali digit kedua pada hexadecimal dengan cara sebelumnya, nilai result ditambahkan dari result sebelumnya dan ditambah dengan perhitungan rumus yang sama, hanya nilai pangkatnya sekarang 0. Setelah itu, kembalikan nilai result. Fungsi DecToHex berfungsi untuk mengubah nilai decimal menjadi hexadecimal. Fungsi ini menggunakan sebuah list yang bernama result dan variabel dec yang merupakan nilai decimal masukannya. Selama nilai dec tidak sama dengan 0, hitung remainder dengan melakukan mod pada nilai dec dengan 16. Setelah itu, remainder dicek sesuai tabel dan masukkan result dengan nilai hexadecimal yang sesuai. Selanjutnya, dilakukan div pada nilai dec dengan 16. Ulangi hingga nilai dec sama dengan 0. Setelah itu, karena result yang dihasilkan terbalik, maka buatlah string hex baru yang sesuai dengan cara melakukan concat dari nilai paling belakang pada list hingga ke nilai paling depan. Setelah itu kembalikan nilai hex yang dihasilkan. Program utama pada awalnya menerima nilai A dan B yang merupakan nilai hexadecimal 2 digit, lalu mengubah masing-masing nilai tersebut menjadi decimal, setelah itu dijumlahkan dan ubah hasil penjumlahan menjadi hexadecimal. Nilai penjumlahan yang sudah dalam hexadecimal kemudian ditampilkan. 
+
+---------------------------------
 ------------------
 -----------------
 ------
