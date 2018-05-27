@@ -114,6 +114,17 @@ begin
 end.
 ```
 
+#### Penjelasan Solusi
+Program pada awalnya akan meminta input pengguna. Input berupa 3 data mahasiswa dan setiap mahasiswa akan memiliki nama dan nilai. Nilai mahasiswa akan dibandingkan dan akan dicari seluruh kemungkinan. Kemungkinan terbagi menjadi 6, yaitu:  
+- 123
+- 132
+- 213
+- 231
+- 312
+- 321
+*keterangan*: 312 artinya mahasiswa 3 peringkat pertama, mahasiswa 1 peringkat kedua, dan seterusnya.  
+Program akan memetakan seluruh kemungkinan yang ada sehingga terdapat percabangan bertingkat. Cabang pertama (`if` pertama) akan memeriksa siapa yang merupakan peringkat pertama. Lalu untuk cabang kedua (`if` kedua) akan memeriksa siapa yang merupakan peringkat kedua dan ketiga.
+
 ---------------------------
 
 ### Bab 2 Problem 1
@@ -157,7 +168,7 @@ Masukan N: <b>10</b>
 </pre>
 
 #### Source Code
-- src/2-problem01.pas
+- `src/2-problem01.pas`
 ```pas
 // Nama/NIM  : Muhammad Alif Arifin/13516078
 // Tema      : Pengulangan - Bab 2 Problem 1
@@ -213,7 +224,7 @@ f(g(f(x))) = -1453
 Anda diwajibkan membuat fungsi f(x) dan g(x).
 
 #### Source Code
-- src/3-problem12.pas
+- `src/3-problem12.pas`
 ```pas
 // Nama/NIM  : Muhammad Alif Arifin/13516078
 // Tema      : Fungsi dan Prosedur - Bab 3 Problem 12
@@ -290,7 +301,7 @@ Rekap kehadiran mahasiswa :
 </pre>
 
 #### Source Code
-- src/4-problem11.pas
+- `src/4-problem11.pas`
 ```pas
 // Nama/NIM  : Muhammad Alif Arifin/13516078
 // Tema      : Array - Bab 4 Problem 11
@@ -363,7 +374,7 @@ Tuan Krab ingin membuka cabang baru dari Krasti Krab. Oleh karena itu, dia perlu
 *Output* berupa informasi banyaknya bidang tanah yang dapat dibeli oleh Tuan Krab.
 
 *Contoh*
-- land.txt
+- `land.txt`
 
 ```
 3
