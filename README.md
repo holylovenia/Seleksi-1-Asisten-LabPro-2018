@@ -104,8 +104,9 @@ begin
 	PrintPosition(xPosition,yPosition);
 end.
 ```
-Penjelasan:
-Pencarian solusi dilakukan dengan membaca posisi sebagai dua buah variabel bertipe integer dan kemudian dilakukan percabangan menggunakan IF untuk masing-masing kasus sehingga ada 7 buah percabangan.
+Penjelasan: 	
+Pencarian solusi dilakukan dengan membaca posisi sebagai dua buah variabel bertipe integer dan kemudian dilakukan percabangan 		menggunakan IF untuk masing-masing kasus sehingga ada 7 buah percabangan.
+
 ---------------------------------
 
 
@@ -192,6 +193,7 @@ end.
 ```
 Penjelasan:
 Program menghasilkan deret fibonacci dengan improvisasi sesuai permintaan soal dengan menggunakan for loops karena diketahui bilangan pencacah sebagai jumlah pengulangan yang perlu dilakukan.
+
 ---------------------------------
 
 ## Bab 3 - Fungsi dan Prosedur
@@ -420,8 +422,10 @@ begin
 	end;
 end.
 ```
-Penjelasan:
+
+Penjelasan: 
 Program menggunakan tipe data bentukan array yang berisi sebuah string yaitu nomor kunci yang diinput dan sebuah boolean untuk menandakan apakah nomor tersebut sudah diduplikat. Setiap kali nomor kunci diinput, akan dilakukan pengecekan pada array tersebut. Jika nomor tersebut ditemukan, maka boolean tersebut menjadi true. Jika tidak, dilakukan penambahan elemen baru pada array. Setelah itu, program mencetak kelayar setiap elemen array dengan nilai boolean = false.
+
 -----------------
 
 ## Bab 5 - Matriks dan File Eksternal
@@ -516,5 +520,6 @@ end.
 ```
 Penjelasan:
 Pertama program membaca input dari file eksternal dan menyimpan nilai panjang dan lebar matriks serta isi matriksnya yang merepresentasikan kasir dan antrian. Kemudian program melakukan searching secara traversal dari ATAS ke BAWAH sampai menemukan angka 1 yang pertama. Posisi angka 1 yang ditemukan menentukan panjang antrian.
+
 -----------------------------------
 
