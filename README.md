@@ -1,14 +1,7 @@
 # Seleksi 1 Asisten LabPro 2018
 -----------------------------------
 
-## Muhammad Nurraihan Naufal
-## 13516017
-
-------
-
-------
-
-------
+## Muhammad Nurraihan Naufal - 13516017
 
 ------
 
