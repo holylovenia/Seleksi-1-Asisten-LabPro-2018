@@ -32,5 +32,5 @@ begin
 			writeln(arrBarang[i], ' ', arrWarna[j]);
 		end;
 	end;
-	writeln('Terdapat ', i*j, ' ide yang mungkin');
+	writeln('Terdapat ', jumlahWarna*jumlahBarang, ' ide yang mungkin');
 end.
