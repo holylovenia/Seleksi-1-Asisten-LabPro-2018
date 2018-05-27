@@ -86,10 +86,10 @@ Masukan Nilai : **63**
 Albert mendapat nilai B
 ***
 
----------------------------------
+------------------------------
 ### Solusi
 
-```
+```cpp
 #include <iostream>
 
 using namespace std;
@@ -126,6 +126,12 @@ int main(){
 }
 ```
 
+#### Penjelasan
+Pada percabangan, bagian percabangan yang akan dimasukki adalah yang pertama sesuai kondisi.
+
+Input nilai berada pada rentang 0 hingga 100, sehingga pada kondisi pertama jika nilai lebih dari sama dengan 81 maka akan masuk percabangan pertama, 
+jika tidak akan di cek pada kondisi kedua dan seterusnya. jika sampai kondisi ke-4 tidak terpenuhi, maka akan masuk percabangan else.
+
 ---------------------------------
 ---------------------------------
 
@@ -159,7 +165,7 @@ Total mahasiswa yang tidak lulus = 0
 -----------------------
 ### Solusi
 
-```
+```cpp
 #include <iostream>
 
 using namespace std;
@@ -191,6 +197,13 @@ int main(){
 	return 0;
 }
 ```
+
+#### Penjelasan
+
+Untuk dapat melakukan input berulang sebanyak N perlu penggunaaan perulangan for.
+
+Dalam persoalan ini dapat digunakan variabel sebagai counter/penghitung untuk menghitung
+berapa banyak yang nilainya dibawah 60 ataupun sebaliknya dengan percabangan.
 
 -----------------------
 ------
@@ -248,7 +261,8 @@ Bilangan komposit diantara 10 sampai 25 adalah:
 
 ------------------
 ### Solusi
-```
+
+```cpp
 #include <iostream>
 
 using namespace std;
@@ -287,6 +301,15 @@ int main(){
 	return 0;
 }
 ```
+
+#### Penjelasan
+
+Untuk mengetahui apakah suatu nilai `N` komposit atau tidak dapat di cek  jika suatu nilai memiliki pembagi 
+bilangan bulat positif selain 1 dan angka itu sendiri. hal ini dapat dilakukan dengan menggunakan perulangan untuk angka dari `2` hingga `N-1`.
+Sutatu nilai `K` habis membagi bilangan `N`, jika `N` di modulo (%) `K` bernilai `0`.
+Untuk memperpendek kode di `main()` dapat digunakan fungsi bertipe `bool` (boolean) yang mengembalikkan `true` jika bilangan tersebut merupakan komposit dan `false` jika bilangan tersebut prima.
+
+Dalam fungsi `komposit`, dalam perrulangan `for`, jika ditemukan ada pembagi positif maka dapat langsung segera di `return true`, karena bilangan tersebut sudah pasti bilangan komposit.
 
 -----------------
 ------
@@ -361,7 +384,7 @@ Terdapat 15 ide yang mungkin
 -----------------
 ### Solusi
 
-```
+```cpp
 #include <iostream>
 
 using namespace std;
@@ -396,6 +419,16 @@ int main(){
 }
 ```
 
+#### Penjelasan
+Array merupakan salah satu struktur data dasar pada c++. Pada c++ indeks `array` dimulai pada indeks ke-0, sehingga indeks `array` yang dapat digunakan untuk `array` berukuran `N` adalah `0` sampai `N-1`.
+
+Pertama, yang dilakukan adalah membaca input dan menyimpannya dalam `array`. Untuk mengkombinasikan jawaban dapat digunakan perulangan `for` dalam perulangan `for`.
+Hal tersebut digunakan karena kita ingin memasangkan tiap barang dengan warna dari indeks `ke-0` hingga indeks warna `ke-(M-1)`, 
+sehingga akan ada M kali perulangan untuk tiap barang. jika terdapat `N` barang, maka dilakukan perulangan sebanyak `N` kali yang tiap barang dilakukan perulangan `M` kali.
+
+Perulangan `for` luar digunakan untuk indeks barang dan perulangan `for` dalam digunakan untuk indeks warna. akan terdapat `N*M` kombinasi.
+
+
 -----------------
 -----------------
 ## Bab 5 - Matriks dan File Eksternal
@@ -422,7 +455,7 @@ Yes
 -----------------------------------
 ### Solusi
 
-```
+```cpp
 #include <iostream>
 #include <fstream>
 
@@ -446,16 +479,16 @@ int main(){
 			}
 		}
 		bysimmetric = true;
-		for(int i=0;i<N/2;++i){
-			for(int j=0;j<N/2;++j){
-				if(matriks[i][j] != matriks[N-1-i][N-1-j]){
+		for(int i=0;i<N-1;++i){
+			for(int j=0;j<N-i-1;++j){
+				if(matriks[i][j] != matriks[N-1-j][N-1-i]){
 					bysimmetric = false;
 				}
 			}
 		}
-		for(int i=0;i<N/2;++i){
-			for(int j=0;j<N/2;++j){
-				if(matriks[N-1-i][j] != matriks[i][N-1-j]){
+		for(int i=0;i<N-1;++i){
+			for(int j=0;j<N-i-1;++j){
+				if(matriks[N-1-i][j] != matriks[j][N-1-i]){
 					bysimmetric = false;
 				}
 			}
@@ -474,5 +507,17 @@ int main(){
 	return 0;
 }
 ```
+
+#### Penjelasan
+
+Untuk membaca file dapat digunakan ifstream. jika ingin melakukan pembacaan maupun penulisan file harus terlebih dahulu membukan file dengan fungsi bawaan `open()` dan memastikan
+file tersebut sudah dibuka dengan menggunakan fungsi bawaan `is_open()`.
+
+Untuk membaca masukkan matriks berukuran `N` dapat digunakan perulangan `for` dalam perulangan `for` yang perulangan luar untuk indeks baris dan 
+perulangan dalam untuk indeks kolom.
+
+Suatu matriks dikatakan bysimmetric jika elemenya simetri terhadap kedua diagonal, sehingga jika ditarik gari diagonal dari kiri bawah ke kanan atas, maka elemen matriks pada indeks [i][j] sama dengan elemen matriks pada indeks [N-j-1][N-i-1],
+dan jika ditarik garis diagonal dari kiri bawah ke kanan atas, maka elemen matriks pada indeks [N-i-1][j] sama dengan elemen matriks pada indeks [N-j-1][i].
+
 ------------------------------
 ------------------------------

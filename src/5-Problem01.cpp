@@ -21,16 +21,16 @@ int main(){
 			}
 		}
 		bysimmetric = true;
-		for(int i=0;i<N/2;++i){
-			for(int j=0;j<N/2;++j){
-				if(matriks[i][j] != matriks[N-1-i][N-1-j]){
+		for(int i=0;i<N-1;++i){
+			for(int j=0;j<N-i-1;++j){
+				if(matriks[i][j] != matriks[N-1-j][N-1-i]){
 					bysimmetric = false;
 				}
 			}
 		}
-		for(int i=0;i<N/2;++i){
-			for(int j=0;j<N/2;++j){
-				if(matriks[N-1-i][j] != matriks[i][N-1-j]){
+		for(int i=0;i<N-1;++i){
+			for(int j=0;j<N-i-1;++j){
+				if(matriks[N-1-i][j] != matriks[j][N-1-i]){
 					bysimmetric = false;
 				}
 			}
