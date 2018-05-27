@@ -5,12 +5,15 @@ Oleh : Dandy Arif Rahman(13516086)
 ### Deskripsi Soal
 Tuan Vin ingin mengetahui suhu udara sekarang. Terdapat termometer pada dinding di dekatnya. Namun terkadang, satuan suhu yang tertulis tidak sesuai dengan yang ingin diketahuinya. Dari 3 jenis suhu R, C dan F, berikut adalah perbandingannya:
 
+
 C : R : (F-32) = 5 : 4 : 9
+
 
 Tuan Vin meminta bantuan Anda untuk dapat membaca suhu dengan lebih mudah
 
+
 **Format Input & Output (input di-*bold*)**
-```
+***
 Masukan satuan suhu termometer: **C**
 
 Masukan besar suhu: **40**
@@ -18,7 +21,7 @@ Masukan besar suhu: **40**
 Masukan satuan yang ingin diketahui: **R**
 
 Besar suhu dalam R: 32
-```
+***
 
 ### Source Code Solusi
 ```Python
@@ -70,12 +73,16 @@ Pertama, satuan suhu saat ini dimasukkan ke variabel **deg1**, nilai suhu saat i
 
 ## Bab 2 Pengulangan - Problem 8
 ### Deskripsi Soal
+
 Agar dapat lulus dari kuliah, seorang mahasiswa dituntut untuk dapat menyebutkan bilangan prima diantara **A** dan **B**. Bantulah mahasiswa tersebut untuk menyebutkan bilangan prima tersebut.
 
-**Catatan** : Buatlah suatu fungsi yang mengecek apakah suatu bilangan merupakan bilangan prima atau bukan
+
+**Catatan :** 
+Buatlah suatu fungsi yang mengecek apakah suatu bilangan merupakan bilangan prima atau bukan
+
 
 **Format Input & Output**
-*(Elemen baris setelah tanda ":" pada runtime merupakan input dari pengguna)*
+*(Elemen baris setelah tanda “:” pada runtime merupakan input dari pengguna)*
 ```
 Masukkan nilai A :1 
 Masukkan nilai B :10
@@ -83,7 +90,7 @@ Bilangan prima diantara 1 sampai 10 adalah
 2  
 3  
 5  
-7
+7  
 ```
 ```
 Masukkan nilai A :10
@@ -121,7 +128,7 @@ for prime in ListPrime:
 ```
 
 ### Pembahasan Solusi
-Pertama, input dari user dimasukan ke variabel **A** sebagai batas bawah dan input selanjutnya dimasukan ke variabel **B** sebagai batas atas. Kemudian dilakukan pengecekan bilangan prima dengan cara, dilakukan looping dari angka 2 hingga **B** misal variabel **num**, lalu �assign sebuah variabel **temp** dengan fungsi bawah dari akar **num**, kemudian dilakukan pengecekan dari angka 2 hingga **temp** misal **i**, jika **num** habis dibagi dengan dengan **i** maka num adalah bilangan prima, dan ditambahkan ke list bilangan prima pada variabel **ListPrime**.
+Pertama, input dari user dimasukan ke variabel **A** sebagai batas bawah dan input selanjutnya dimasukan ke variabel **B** sebagai batas atas. Kemudian dilakukan pengecekan bilangan prima dengan cara, dilakukan looping dari angka 2 hingga **B** misal variabel **num**, lalu ­assign sebuah variabel **temp** dengan fungsi bawah dari akar **num**, kemudian dilakukan pengecekan dari angka 2 hingga **temp** misal **i**, jika **num** habis dibagi dengan dengan **i** maka num adalah bilangan prima, dan ditambahkan ke list bilangan prima pada variabel **ListPrime**.
 
 ## Bab 3 Fungsi dan Prosedur - Problem 9
 ### Deskripsi Soal
@@ -137,6 +144,8 @@ Segitiga Pascal adalah segitiga yang dibuat dimulai dari angka 1 dan tiap angka 
 
 1 4 6 4 1
 
+
+
 Segitiga Pascal juga dapat dibentuk dari kombinatorik, dengan bilangan pada baris ke-i dan kolom ke-j bernilai C(i-1,j-1). Berikut adalah contoh penerapan pada 5 baris Segitiga Pascal.
 
 C(0,0)
@@ -149,7 +158,9 @@ C(3,0) C(3,1) C(3,2) C(3,3)
 
 C(4,0) C(4,1) C(4,3) C(4,4) C(4,5)
 
-Buatlah sebuah program yang membuat Segitiga Pascal! (Buat fungsi Kombinasi(n, r) untuk memudahkan penghitungan)
+
+Buatlah sebuah program yang membuat Segitiga Pascal! (Buat fungsi Kombinasi(n, r) untuk
+memudahkan penghitungan)
 
 
 **Format Input & Output (input di-*bold*)**
@@ -211,236 +222,241 @@ Program terdiri dari 2 fungsi yaitu **kombinasi(n,r)** dan **printSegitiga(n)**.
 
 Fungsi **printSegitiga(n)** menghasilkan gambar segitiga pascal dengan ukuran **n**. Pertama dilakukan looping sebanyak **n** dengan variabel **i** dan looping didalamnya sebanyak **i** dengan variabel **j**. Kemudian dilakukan pencetakan nilai **kombinasi(i-1, j-1)**.
 
-## Bab 4 *Array* - Problem 8
+## Bab 4 *Array* - Problem 6
 ### Deskripsi Soal
 
-Terdapat sebuah array. Tentukan tiga angka a, b, dan c pada array tersebut yang memenuhi nilai a+b^2 = c dengan a != b != c
+Adolf suka membandingkan kekayaan negaranya dan negara lain. Ia ingin mengetahui apa yang tidak dimiliki oleh negaranya di negara tetangga. Buatlah program untuk menentukan mana saja kekayaan negara tetangga yang tidak dimiliki oleh negara Adolf.
 
 **Format Input & Output (input di-*bold*)**
 ***
-Masukkan jumlah elemen array : **5**
+Masukkan jumlah kekayaan negara Adolf : **5**
 
-Masukkan isi array : **0 1 2 4 5 7**
+Masukkan kekayaan negara Adolf :
 
-nilai a b c yang memenuhi adalah :
+**Emas**
 
-[0,2,4]
+**Perak**
 
-[1,2,5]
+**Berlian**
 
-[4,1,5]
+**Tank**
 
+**Nuklir**
+
+Masukkan jumlah kekayaan negara tetangga : **7**
+
+Masukkan kekayaan negara tetangga :
+
+**Emas**
+
+**Perak**
+
+**Tank**
+
+**Nuklir**
+
+**Berlian**
+
+**Gedung**
+
+**Ternak**
+
+Negara adolf tidak memiliki :
+
+Gedung
+
+Ternak
 ***
 ***
-Masukkan jumlah elemen array : **3**
+Masukkan jumlah kekayaan negara Adolf : **5**
 
-Masukkan isi array : **0 1 2**
+Masukkan kekayaan negara Adolf :
 
-tidak ada nilai a b c yang memenuhi
+**Emas**
+
+**Perak**
+
+**Berlian**
+
+**Tank**
+
+**Nuklir**
+
+Masukkan jumlah kekayaan negara tetangga : **3**
+
+Masukkan kekayaan negara tetangga :
+
+**Emas**
+
+**Perak**
+
+**Tank**
+
+Negara adolf memiliki segalanya
 ***
 
 ### Source Code Solusi
-```Pascal
-program bab4_problem8;
-function evaluate(a,b,c:integer): boolean;
-begin
-    evaluate := a + b*b = c;
-end;
+```Python
+#Nama	: Dandy Arif Rahman
+#NIM	: 13516086
+#Soal	: BAB 4 - Problem 6
 
-var
-    arr: array[1..100000] of integer;
-    res: array[1..100000, 1..3] of integer;
-    a,b,c,n,i,j,k,idxRes:integer;
-    found: boolean;
+def selisihKekayaan(kekayaan1, kekayaan2) :	
+	#menghasilkan kekayaan2 yang tidak dimiliki oleh kekayaan1
+	diff = []
+	for k2 in kekayaan2 :
+		found = False
+		for k1 in kekayaan1 :
+			if k2 == k1 : 
+				found = True
+				break
+		if not found :
+			diff.append(k2)
+	return diff
 
-begin
-    write('Masukkan jumlah elemen array : ');
-    readln(n);
-    write('Masukkan isi array : ');
-    for i := 1 to n do
-    begin
-        read(arr[i]);
-    end;
+kekayaanAdolf = []
+kekayaanTetangga = []
 
-    found := false;
-    idxRes := 1;
-    for i := 1 to n-2 do
-    begin
-        for j := i+1 to n-1 do
-        begin
-            for k := j+1 to n do
-            begin
-                a := arr[i];
-                b := arr[j];
-                c := arr[k];
-                if evaluate(a,b,c) then
-                begin
-                    res[idxRes,1] := a;
-                    res[idxRes,2] := b;
-                    res[idxRes,3] := c;
-                    idxRes := idxRes + 1;
-                    found := true;
-                end
-                else if evaluate(a,c,b) then
-                begin
-                    res[idxRes,1] := a;
-                    res[idxRes,2] := c;
-                    res[idxRes,3] := b;
-                    idxRes := idxRes + 1;
-                    found := true;
-                end
-                else if evaluate(c,a,b) then
-                begin
-                    res[idxRes,1] := c;
-                    res[idxRes,2] := a;
-                    res[idxRes,3] := b;
-                    idxRes := idxRes + 1;
-                    found := true;
-                end
-                else if evaluate(c,b,a) then
-                begin
-                    res[idxRes,1] := c;
-                    res[idxRes,2] := b;
-                    res[idxRes,3] := a;
-                    idxRes := idxRes + 1;
-                    found := true;
-                end
-                else if evaluate(b,a,c) then
-                begin
-                    res[idxRes,1] := b;
-                    res[idxRes,2] := a;
-                    res[idxRes,3] := c;
-                    idxRes := idxRes + 1;
-                    found := true;
-                end
-                else if evaluate(b,c,a) then
-                begin
-                    res[idxRes,1] := b;
-                    res[idxRes,2] := c;
-                    res[idxRes,3] := a;
-                    idxRes := idxRes + 1;
-                    found := true;
-                end;
-            end;
-        end;
-    end;
-    if not found then
-        writeln('tidak ada nilai a b c yang memenuhi')
-    else begin
-        writeln('nilai a b c yang memenuhi adalah :');
-        for i := 1 to idxRes-1 do
-        begin
-            writeln('[', res[i, 1], ',', res[i, 2], ',', res[i, 3], ']');
-        end;
-    end;
-end.
+n1 = int(input("Masukkan jumlah kekayaan negara Adolf : "))
+print("Masukkan kekayaan negara Adolf :")
+for i in range(1, n1 + 1) :
+	kekayaanAdolf.append(input())
+
+n2 = int(input("Masukkan jumlah kekayaan negara tetangga : "))
+print("Masukkan kekayaan negara tetangga :")
+for i in range(1, n2 + 1) :
+	kekayaanTetangga.append(input())
+
+diff = selisihKekayaan(kekayaanAdolf, kekayaanTetangga)
+if not diff:
+	print("Negara adolf memiliki segalanya")
+else:
+	print("Negara Adolf tidak memiliki :")
+	for elem in diff:
+		print(elem)
 ```
 
 ### Pembahasan Solusi
-Pertama-tama, buatlah fungsi untuk mengevaluasi apakah suatu nilai a,b,c dapat memenuhi batasan. Kemudian pada program utama, permutasi 3 angka dari semua elemen array yang diinput oleh user. Terakhir, cek semua permutasi yang ada apakah bernilai true ketika di evaluasi, jika iya masukan ke himpunan solusi.
+Pertama, variabel **n1** di-*assign* dengan jumlah kekayaan negara Adolf, kemudian variabel list **kekayaanAdolf** di-*assign* dengan kekayaan Adolf sebanyak **n1**, variabel **n2** di-*assign* dengan jumlah kekayaan negara tetangga, kemudian variabel list **kekayaanTetangga** di-*assign* dengan kekayaan tetangga sebanyak **n2**. Lalu dilakukan proses pencarian kekayaan tetangga yang tidak dimiliki adolf menggunakan fungsi **selisihKekayaan(kekayaan1, kekayaan2)** yang hasilnya di-*assign* ke variabel **diff**.
 
-## Bab 5 Matriks dan File Eksternal - Problem 7
+Fungsi **selisihKekayaan(kekayaan1, kekayaan2)** menghasilkan list kekayaan2 yang tidak dimiliki kekayaan1, dengan cara iterasi seluruh **kekayaan2** dengan variabel **k2** lalu didalamnya iterasi lagi pada **kekayaan1** dengan variabel **k1** lalu dicek apakah **k2** terdapat di **kekayaan1** jika iya lanjut ke **k2** berikutnya, jika tidak tambahkan **k2** ke list kekayaan2 yang tidak dimiliki oleh k1 ke variabel **diff**.
+
+Setelah itu dilakukan pengecekan variabel **diff**, jika kosong maka dikeluarkan pesan **Negara adolf memiliki segalanya**, jika tidak dikeluarkan isi dari list **diff**
+
+## Bab 5 Matriks dan File Eksternal - Problem 5
 ### Deskripsi Soal
 
-Spons akan membuat selai dari saus *jellyfish*. Menurut resep rahasia yang dia terima dari Tuan Krab, selai dengan rasa terbaik dihasilkan dari perpaduan dua ekor *jellyfish* dari jenis Spongian dan Patrician, dengan bobot total kedua ekor *jellyfish* tersebut adalah `X`. Spons pun pergi ke pasar untuk membeli *jellyfish* yang diperlukan. Di pasar, pedagang telah menyiapkan daftar bobot *jellyfish* yang tersedia dari masing-masing jenis (elemen masing-masing daftar *unique*). Pedagang ini merupakan orang yang sangat sistematis, sehingga daftar tersebut disimpan dalam bentuk matriks persegi yang masing-masing elemennya terurut membesar. Spons perlu untuk mengetahui berapa banyak pasangan bobot *jellyfish* jenis Spongian dan Patrician yang dapat dia gunakan untuk menghasilkan selai terbaik. Tugas Anda adalah untuk membantu Spons menghitung banyaknya pasangan bobot yang dapat ia gunakan tersebut.
-
-**Definisi**
-Misalkan matriks `A` merupakan matriks dengan elemen terurut membesar yang berukuran `N`x`N`. Hal ini berarti untuk setiap bilangan bulat non-negatif `i`, `j` yang bernilai kurang dari `N`, maka berlaku `A[i][j]` < `A[i][j+1]` dan `A[i][N-1]` < `A[i+1][0]`.
+Tuan Krab mempunyai diberikan teka-teki oleh Plankton. Dia diberikan suatu matriks, kemudian dia diminta untuk menentukan apakah matriks tersebut merupakan *magic square* atau bukan. 
+*Magic square* merupakan suatu matriks persegi berukuran `N`x`N` dengan elemen yang berbeda-beda. Masing-masing elemen berada pada rentang dari 1 hingga `N`^2. Matriks tersebut dikatakan merupakan *magic square* jika penjumlahan elemen-elemen pada setiap kolom, baris, dan diagonal memiliki nilai yang sama.
+Karena cukup kesulitan, Tuan Krab meminta bantuan Anda untuk menyelesaikan permasalahan tersebut.
 
 **Format *Input* dan *Output***
-*Input* matriks bobot ukuran diambil dari file eksternal `spongian.txt` dan `patrician.txt`. Pada file-file eksternal ini, baris pertama berisi bilangan bulat positif `N` yang merepresentasikan ukuran matriks. Perlu diperhatikan bahwa nilai `N` ini sama di kedua file. `N` baris berikutnya berisi `N` buah bilangan bulat yang merupakan elemen matriks tersebut. Pada saat *runtime*, pengguna akan memasukkan bilangan bulat positif `X` yang merupakan target jumlah bobot yang dicari oleh Spons.
- *Output* berupa banyaknya pasangan bobot dari kedua jenis *jellyfish* yang berjumlah `X`.
-
-**Contoh**
-
-- spongian.txt
+*Input* matriks diambil dari file eksternal `matriks.txt`. Pada file eksternal ini, baris pertama berisi bilangan bulat positif `N` yang merepresentasikan ukuran matriks. `N` baris berikutnya berisi `N` buah bilangan bulat yang merupakan elemen matriks tersebut. Jika matriks merupakan *magic square*, maka dituliskan **Yes** pada layar. Sebaliknya, jika bukan *magic square*, maka dituliskan **No**. 
+- matriks.txt
 
 ```
 3
-1 5 6
-8 10 11
-15 16 18
-```
-
-- patrician.txt
-
-```
-3
-2 4 7
-9 10 12
-13 16 20
+2   7   6
+9   5   1
+4   3   8
 ```
 
 - *runtime program*
 
 ```
 matriks loaded!
-Masukkan target bobot: 21
-Banyak pasangan adalah 4
+Yes
 ```
 
-Keterangan: pasangan yang memenuhi adalah (1, 20), (5, 16), (8, 13) dan (11, 10).
+-----------------------------------
 
 ### Source Code Solusi
-```Pascal
-program bab5_problem7;
-uses sysutils;
-var
-    fspongian, fpatrician: TextFile;
-    nSpon, nPat, i, j, k, l, count, bobot: integer;
-    arrSpon, arrPat: array [1..1000, 1..1000] of integer;
+```Python
+#Nama	: Dandy Arif Rahman
+#NIM	: 13516086
+#Soal	: BAB 5 - Problem 5
 
-begin
-    // read file spongian.txt
-    assign(fspongian, 'spongian.txt');
-    reset(fspongian);
-    read(fspongian, nSpon);
-    for i := 1 to nSpon do
-    begin
-        for j := 1 to nSpon do
-        begin
-            read(fspongian, arrSpon[i,j]);
-        end;
-    end;
-    close(fspongian);
+def calculateMagicConstant(n):
+	if n % 2 == 0:
+		return int((n * (n * n + 1)) / 2)
+	else:
+		return int(n * ((n * n + 1) / 2)) 
 
-    // read patrician.txt
-    assign(fpatrician, 'patrician.txt');
-    reset(fpatrician);
-    read(fpatrician, nPat);
-    for i := 1 to nPat do
-    begin
-        for j := 1 to nPat do
-        begin
-            read(fpatrician, arrPat[i,j]);
-        end;
-    end;
+def createIndex(n):
+	#n is the size of the matrix
+	#createIndex(n) will return a list of indexes in row, column, and diagonal form
+	
+	listIndex = []
 
-    writeln('matriks loaded!');
+	#row Indexes
+	for i in range(0, n):
+		listRow = []
+		for j in range(0, n):
+			val = i * n + j
+			listRow.append(val)
+		listIndex.append(listRow)
 
-    write('Masukkan target bobot: ');
-    readln(bobot);
+	#column Indexes
+	for i in range(0, n):
+		listCol = []
+		for j in range(0, n):
+			val = i + j * n
+			listCol.append(val)
+		listIndex.append(listCol)
 
-    count := 0;
-    for i := 1 to nSpon do
-    begin
-        for j := 1 to nSpon do
-        begin
-            for k := 1 to nPat do
-            begin
-                for l := 1 to nPat do
-                begin
-                    if (arrSpon[i,j] + arrPat[k,l]) = bobot then
-                        count := count + 1;
-                end;
-            end;
-        end;
-    end;
-    writeln('Banyak pasangan adalah ', count);
+	#diagonal Indexes
+	listDiagonal = []
+	for i in range(0, n):
+		val = i + n * i
+		listDiagonal.append(val)
+	listIndex.append(listDiagonal)
 
-end.
+	listDiagonal = []
+	for i in range(1, n + 1):
+		val = i * (n - 1)
+		listDiagonal.append(val)
+	listIndex.append(listDiagonal)
+
+	return listIndex
+
+matrix = []
+
+for line in open('matriks.txt'):
+	for num in line.split():
+		matrix.append(int(num))
+print("matriks loaded!")
+
+n = matrix.pop(0)
+magicConstant = calculateMagicConstant(n)
+indexes = createIndex(n)
+
+for idx in indexes:
+	if sum(matrix[i] for i in idx) != magicConstant:
+		print("No")
+		break
+
+print("Yes")
 ```
 
 ### Pembahasan Solusi
-Pertama-tama, baca angka pertama pada file, kemudian loop bersarang dengan masing-masing looping sebanyak angka pertama tersebut, dan baca masing-masing angka selanjutnya yang kemudian disimpan dalam sebuah matriks. Setelah proses pembacaan file selesai, bandingkanlah setiap kemungkinan antara elemen matriks patrician dan matriks spongian, kemudian jika ditemukan jumlah antar 2 elemen tersebut yang sama dengan target bobot, maka tambahkan counter. Diakhir, print counter ke terminal.
+Pertama, dilakukan pembacaan dari file eksternal bernama "matriks.txt", semua angka yang ada di file tersebut dimasukan ke sebuah list **matrix**. Kemudian karena angka pertama yang merupakan ukuran matriks juga ikut terbaca ke list **matrix** maka elemen pertama list di pop dan dimasukan ke variabel **n**. Kemudian di-*assign* variabel **magicConstant** dengan fungsi **calculateMagicConstant(n)**, dan variabel **indexes** dengan fungsi **createIndex(n)**.
 
+Fungsi **calculateMagicConstant(n)** berisi rumus matematika untuk melakukan perhitungan bilangan magic constant dari suatu matriks berukuran **n**. Rumus tersebut dibedakan jika **n** ganjil dan genap. Jika Ganjil maka rumusnya **n * ((n * n + 1) / 2)**, sedangkan jika Genap maka rumusnya **(n * (n * n + 1)) / 2**. Magic Constant sendiri merupakan nilai penjumlahan tiap baris, kolom, dan diagonal dari sebuah matriks, jika ada salah satu baris atau kolom atau diagonal yang jumlahnya tidak sama dengan Magic Constant maka matriks tersebut bukanlah magic square matrix.
+
+Fungsi **createIndex(n)** adalah fungsi yang memudahkan untuk penjumlahan elemen-elemen matriks berdasarkan baris, kolom, dan diagonal. Untuk matriks berukuran n, akan terdapat n baris, n kolom, dan 2 diagonal. Contoh untuk matriks berukuran 3 maka matriks akan mempunyai indeks
+
+(0,4,8)           (2,4,6)
+d1                d2
+
+0        1        2   r1(0,1,2)
+3        4        5   r2(3,4,5) 
+6        7        8   r3(6,7,8)
+
+c1       c2       c3
+(0,3,6)  (1,4,7)  (2,5,8)
+
+r1,r2,r3 merupakan indeks untuk elemen baris
+c1,c2,c3 merupakan indeks untuk elemen kolom
+d1,d2 merupakan indeks untuk elemen diagonal
+
+Lalu pada list **matrix** di cek apakah tiap elemen berindeks **idx** pada **indexes** jumlahnya sama dengan **magicConstant**, jika ada satu saja yang jumlahnya berbeda maka matriks tersebut bukan magic squared matrix. 
